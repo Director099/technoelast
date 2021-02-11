@@ -1,0 +1,37 @@
+mixin page-header()
+  header.page-header
+    .container
+      .page-header__row
+        a.icon-btn(href="#")
+          svg(width="17" height="16")
+            use(href="img/symbols.svg#icon-phone")
+        +logo('index.html')
+          img(src='img/icon/logo.svg', alt='Логотип', width='116', height='13')
+        a.icon-btn(href="#")
+          svg(width="17" height="16")
+            use(href="img/symbols.svg#icon-mail")
+  nav.navigation
+    .container
+      .navigation__row.swipe-list
+        +burger('Меню').burger--square.navigation__burger
+        +tags-list({
+          list: [
+            {
+              text: 'Продукция', className: '',
+              attrs: {href: '#', }
+            },
+            {
+              text: 'Компания', className: '',
+              attrs: {href: '#', }
+            },
+            {
+              text: 'Новости', className: '',
+              attrs: {href: '#', }
+            },
+            {
+              text: 'Контакты', className: '',
+              attrs: {href: '#', }
+            }
+          ],
+          tagLinkTag: 'a'
+        })

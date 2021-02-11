@@ -1,0 +1,30 @@
+.swipe-list {
+  @media (max-width: $screen-xl - 1) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none
+    }
+  }
+}
+
+
+.swipe-list .tag-link {
+  white-space: nowrap;
+}
+
+.swipe-list.sub-filters {
+  @media (max-width: $screen-xl - 1) {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.swipe-list .sub-filters__item {
+  flex-shrink: 0;
+}

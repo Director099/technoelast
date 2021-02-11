@@ -1,0 +1,22 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header()
+block content
+  main
+    section.main-block
+      header.main-block__header
+        h1.title-text.main-block__title Резинотехнические изделия
+      .swiper-container.js-main-slider
+        .swiper-wrapper
+          .swiper-slide Slide 1
+          .swiper-slide Slide 2
+          .swiper-slide Slide 3
+          .swiper-slide Slide 4
+
+      .swiper-pagination
+
+block footer
+  +page-footer()

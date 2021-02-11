@@ -1,0 +1,11 @@
+.page-header {
+  padding: 12px 0;
+  margin-bottom: 12px;
+  background-color: $color-light;
+}
+
+.page-header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
