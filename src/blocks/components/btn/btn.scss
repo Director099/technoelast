@@ -7,10 +7,8 @@ $gray-lightest:               hsl(0, 0%, 90%) !default;
 $text-color:                  hsl(0, 0%, 10%) !default;
 $line-height:                 1.5 !default;
 
-$field-padding-vertical:      0.3em !default;
-$field-padding-horizontal:    0.7em !default;
-
-$border-radius:               rem(3px) !default;
+$field-padding-vertical:      13.5px !default;
+$field-padding-horizontal:    14px !default;
 
 .btn {
 
@@ -24,9 +22,9 @@ $border-radius:               rem(3px) !default;
   white-space: nowrap;
   user-select: none;
   text-align: center;
-  font-size: 1em;
+  font-size: 17px;
+  line-height: 21px;
   font-family: inherit;
-  line-height: $line-height;
   text-decoration: none;
   text-transform: none;
   color: $text-color;
@@ -44,14 +42,14 @@ $border-radius:               rem(3px) !default;
     border-color: darken($gray-lighter, 12%);
   }
 
-  &:visited {
-    color: $text-color;
-  }
+  //&:visited {
+  //  color: $text-color;
+  //}
 
-  &:active,
-  &:focus {
-    @include field-focus;
-  }
+  //&:active,
+  //&:focus {
+  //  @include field-focus;
+  //}
 
   &--disabled,
   &:disabled {
@@ -66,6 +64,14 @@ $border-radius:               rem(3px) !default;
     }
   }
 
+
+//   &--disabled,
+//   &:disabled {
+//     color: #fff;
+//     background-color: $color-main;
+//     border-color: $color-main;
+//   }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;
@@ -73,23 +79,16 @@ $border-radius:               rem(3px) !default;
 
 
 
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
+   &--main {
+     color: $white;
+     background-color: $color-main;
+     border: 1px solid $color-main;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
+     &:hover,
+     &:focus {
+       color: $white;
+       background-color: darken($color-main, 10%);
+       border-color: darken($color-main, 12%);
+     }
+   }
 }
