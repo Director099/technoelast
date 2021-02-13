@@ -3,6 +3,7 @@
 // import './config/jqueryLoad';
 // import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 // import '../blocks/components/dropdown/dropdown.js';
+import '../blocks/components/to-top/to-top.js';
 
 var swiper = new Swiper('.js-main-slider', {
   pagination: {

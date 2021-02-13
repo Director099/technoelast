@@ -1,2 +1,9 @@
 mixin page-footer()
-  .page-footer footer
+  footer.page-footer
+    .container
+      .page-footer__service
+        p.page-footer__text © 2021 «ТехноЭласт»
+        +to-top()
+      .page-footer__develop
+        .develop
+          p.develop__text Вэб-сервис разработан в #[a(href="http://pplans.ru/" target="_blank") People Plans]

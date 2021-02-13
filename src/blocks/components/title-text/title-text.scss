@@ -1,10 +1,16 @@
-.title-text {
+.title-small {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.title-normal {
   font-size: 20px;
   line-height: 24px;
+}
 
-  &--big {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-  }
+.title-big {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
 }

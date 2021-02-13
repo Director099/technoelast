@@ -16,3 +16,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@mixin text-small() {
+  font-size: 13px;
+  line-height: 17px;
+}

@@ -1,0 +1,24 @@
+.page-footer {
+  position: relative;
+  background-color: $color-light;
+  text-align: center;
+  @include text-small;
+  color: $color-dark-light;
+}
+
+.page-footer__service {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.page-footer__develop {
+  border-top: 1px solid $color-line-border;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.page-footer__text {
+  margin: 0;
+}

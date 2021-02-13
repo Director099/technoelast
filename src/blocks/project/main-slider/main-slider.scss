@@ -1,6 +1,6 @@
 
 .main-slider__header {
-  padding: 16px 10px;
+  padding: 16px 16px;
 }
 
 .main-slider__title {
@@ -41,6 +41,14 @@
 
 .main-slider__btn {
   width: 100%;
+}
+
+.main-slider__slide img {
+  width: 100%;
+}
+
+.main-slider__footer-title {
+  margin-bottom: 8px;
 }
 
 .main-slider__pagination .swiper-pagination-bullet {
