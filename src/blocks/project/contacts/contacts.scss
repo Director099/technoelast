@@ -1,0 +1,19 @@
+.contacts__wrap {
+  padding: 16px 16px 24px;
+}
+
+.contacts__content {
+  @include text-big;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

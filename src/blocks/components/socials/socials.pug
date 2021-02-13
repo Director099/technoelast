@@ -1,0 +1,8 @@
+mixin socials()
+  - const list = ['tg', 'wp', 'inst ', 'vk', 'fb', 'yt'];
+  ul.socials
+    each item in list
+      li.socials__item
+        a.socials__link
+          svg(width="29" height="29")
+            use(href=`img/symbols.svg#icon-${item}`)
