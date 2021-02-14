@@ -1,0 +1,59 @@
+mixin block-form()
+  .block-form
+    +form()
+      +title-wrap('Оставить заявку 👇')
+      .block-form__content
+        p.form__text Для решения вашей задачи достаточно рассказать о своем проекте, указать контакты, и мы перезвоним в течение 5 минут и все обсудим.
+        .block-form__group
+          .form__group
+            +field-text({
+              title: 'Название компании *',
+              mods: '',
+              val: '',
+              attrs: {
+                name: 'company',
+              }
+            })
+          .form__group
+            +field-text({
+              title: 'О задаче и сроках *',
+              mods: '',
+              val: '',
+              attrs: {
+                name: 'desc',
+              }
+            })
+          .form__group
+            +field-text({
+              title: 'Электронная почта *',
+              mods: '',
+              val: '',
+              attrs: {
+                name: 'mail',
+                type: 'email'
+              }
+            })
+          .form__group
+            +field-text({
+              title: 'Телефон *',
+              mods: '',
+              val: '',
+              attrs: {
+                name: 'phone',
+                type: 'tel'
+              }
+            })
+        .block-form__group
+          +field-file({
+            mods: '',
+            attrs: {
+              name: 'commentFile',
+              multiple: true,
+            },
+            text: {
+              selectText: 'Выберите файл(ы)',
+              nothingText: 'Прикрепить файл',
+              flesSelectedText: 'Выбрано файлов:',
+            },
+          })
+        button.btn.btn--main.block-form__btn Отправить

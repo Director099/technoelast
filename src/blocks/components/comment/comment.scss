@@ -3,13 +3,12 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 $screen-md:                   768px !default;
+$bg-write:                    rgba(239, 239, 244, 0.6);
 
 .comment {
 
   $block-name:                &; // #{$block-name}__element
-
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  @include text-normal;
 
   @media (min-width: $screen-md) {
 
@@ -28,12 +27,14 @@ $screen-md:                   768px !default;
 
   &__avatar-wrap {
     flex-shrink: 0;
-    margin-right: 1rem;
+    align-self: flex-end;
+    margin-right: 13px;
+    margin-bottom: 38px;
 
     img {
       display: block;
-      width: 60px;
-      height: 60px;
+      width: 47px;
+      height: 47px;
       object-fit: cover;
     }
   }
@@ -45,8 +46,59 @@ $screen-md:                   768px !default;
       margin-top: 0;
     }
   }
+}
 
-  &__header {}
+.comment__wrap {
+  position: relative;
+  padding: 10px;
+  border-radius: 8px 8px 8px 0px;
+  background-color: $bg-write;
 
-  &__footer {}
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+
+    width: 13px;
+    height: 13px;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.723 12.7539C7.44271 11.9368 11.9368 7.4427 12.7539 1.723L13 0V13H0L1.723 12.7539Z' fill='%23EFEFF4'/%3E%3C/svg%3E%0A");
+    //background-color: red;
+  }
+}
+
+.comment__author {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.comment__body {
+  p {
+    margin: 0;
+  }
+}
+
+.comment__footer {
+  margin-top: 13px;
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.comment__date {
+  @include text-thin;
+  color: $text-color-light;
+}
+
+.comment__btn {
+  @include text-small;
+  font-weight: 600;
+  width: 100%;
+  background-color: $bg-write;
+  padding: 5.5px 10px;
+  margin-top: 8px;
+  color: $color-main;
+  border: 1px solid $color-line-border;
 }

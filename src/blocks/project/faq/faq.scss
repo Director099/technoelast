@@ -1,0 +1,11 @@
+.faq__content {
+  padding: 16px 16px 24px;
+}
+
+.faq__content-item {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

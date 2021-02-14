@@ -1,0 +1,6 @@
+mixin collapse({title, desc})
+  .collapse&attributes(attributes)
+    h3.collapse__title.js-collapse-click= title
+    .collapse__wrap
+      .collapse__content
+        p= desc

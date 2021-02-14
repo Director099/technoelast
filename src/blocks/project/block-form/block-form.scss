@@ -1,0 +1,12 @@
+.block-form__content {
+  @include text-big;
+  padding: 16px 16px 66px;
+}
+
+.block-form__group {
+  margin-bottom: 25px;
+}
+
+.block-form__btn {
+  width: 100%;
+}

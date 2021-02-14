@@ -17,9 +17,19 @@
   -webkit-text-fill-color: transparent;
 }
 
+@mixin text-thin() {
+  font-size: 11px;
+  line-height: 15px;
+}
+
 @mixin text-small() {
   font-size: 13px;
   line-height: 17px;
+}
+
+@mixin text-normal() {
+  font-size: 15px;
+  line-height: 20px;
 }
 
 @mixin text-big() {

@@ -19,29 +19,36 @@ $border-radius:               rem(3px) !default;
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
 
   &__name {
-    @include field-name;
+    //@include field-name;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    padding: 0px 16px;
+
+    opacity: 0.6;
   }
 
   &__input-wrap {
+    position: relative;
     display: block;
   }
 
   &__input {
+    @include text-normal();
     display: inline-block;
     vertical-align: middle;
     width: 100%;
     // height: 2.125em;
-    padding: $field-padding-vertical  $field-padding-horizontal;
+    padding: 14px 16px 10px;
     margin: 0;
     line-height: $line-height;
     font-size: 1em;
     font-family: inherit;
-    background-color: #fff;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
+    border: 0;
+    border-bottom: 1px solid $color-line-border;
     appearance: textfield;
 
     &:focus {
@@ -84,6 +91,6 @@ $border-radius:               rem(3px) !default;
   }
 
   &__help-text {
-    @include field-help-text;
+    //@include field-help-text;
   }
 }

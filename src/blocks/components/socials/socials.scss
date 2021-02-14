@@ -1,0 +1,19 @@
+.socials {
+  display: flex;
+  padding: 0;
+  margin: 0 -5px;
+  list-style: none;
+}
+
+.socials__item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.socials__link {
+  display: block;
+
+  svg {
+    display: block;
+  }
+}

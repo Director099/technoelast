@@ -16,11 +16,11 @@ $border-radius:               rem(3px) !default;
 
   $block-name:                &; // #{$block-name}__element
 
-  display: block;
-  margin-bottom: 1rem;
+  display: inline-block;
+  //margin-bottom: 1rem;
 
   &__name {
-    @include field-name;
+    //@include field-name;
   }
 
   &__input-wrap {
@@ -41,29 +41,25 @@ $border-radius:               rem(3px) !default;
   }
 
   &__name-text {
+    @include text-small();
     position: relative;
     display: flex;
     align-items: baseline;
     width: 100%;
-    background-color: #fff;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
+    color: $text-color;
+    //background-color: #fff;
+    //border: 1px solid $border-color;
+    //border-radius: $border-radius;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+    padding-left: 25px;
 
-    &:before {
-      content: attr(data-button-text);
-      display: block;
-      background-color: $gray-lightest;
-      border-right: 1px solid $border-color;
-      margin-right: $field-padding-horizontal;
-      line-height: $line-height;
-      padding: $field-padding-vertical  $field-padding-horizontal;
-      border-top-left-radius: $border-radius;
-      border-bottom-left-radius: $border-radius;
-    }
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.64778 14.549L13.1718 8.02498L12.4825 7.31285L11.7561 6.60915L5.23199 13.1332C4.59866 13.7666 3.56188 13.7641 2.92686 13.1291C2.29185 12.4941 2.28936 11.4573 2.92269 10.8239L10.1514 3.59526C11.2639 2.48275 13.0849 2.48903 14.1995 3.60364C15.3141 4.71826 15.3204 6.53922 14.2079 7.65176L7.22725 14.6324L7.96392 15.3592L8.64286 16.0483L15.6236 9.06751C17.5189 7.1722 17.5091 4.08174 15.6152 2.18789C13.7214 0.294069 10.631 0.284225 8.73564 2.17954L1.50697 9.40821C0.0912633 10.8239 0.0964236 13.1301 1.51113 14.5448C2.92585 15.9596 5.23208 15.9647 6.64778 14.549Z' fill='%23212A40'/%3E%3C/svg%3E%0A");
+
 
     &:hover,
     &:focus {
@@ -75,6 +71,6 @@ $border-radius:               rem(3px) !default;
   }
 
   &__help-text {
-    @include field-help-text;
+    //@include field-help-text;
   }
 }

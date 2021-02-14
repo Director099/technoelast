@@ -1,0 +1,13 @@
+mixin nav-list()
+  -
+    const navList = [
+      {link: '#', text: 'Продукция'},
+      {link: '#', text: 'Компания'},
+      {link: '#', text: 'Новости'},
+      {link: '#', text: 'Контакты'},
+    ]
+  ul.nav-list
+    each item in navList
+      - const { link, text } = item
+      li.nav-list__item
+        a.nav-list__link(href= link)= text

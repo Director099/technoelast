@@ -20,13 +20,35 @@
 @import "../blocks/components/tag-link/tag-link";
 @import "../blocks/components/tags-list/tags-list";
 @import "../blocks/components/burger/burger";
+@import "../blocks/components/socials/socials";
 @import "../blocks/components/title-wrap/title-wrap";
 @import "../blocks/components/title-text/title-text";
 @import "../blocks/components/navigation/navigation";
 @import "../blocks/components/swipe-list/swipe-list";
+@import "../blocks/components/field-file/field-file";
+@import "../blocks/components/field-text/field-text";
+@import "../blocks/components/form/form";
+@import "../blocks/components/comment/comment";
+@import "../blocks/components/collapse/collapse";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/main-slider/main-slider";
 @import "../blocks/project/contacts/contacts";
 @import "../blocks/project/order-page/order-page";
+@import "../blocks/project/nav-list/nav-list";
+@import "../blocks/project/block-form/block-form";
+@import "../blocks/project/write/write";
+@import "../blocks/project/faq/faq";
+@import "../blocks/project/advantages/advantages";
+
+.line {
+  display: block;
+  height: 8px;
+  margin: 0;
+  background-color: $color-light;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $color-line-border;
+  border-top: 1px solid $color-line-border;
+}
