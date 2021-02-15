@@ -1,0 +1,26 @@
+mixin production()
+  .section-content
+    +title-wrap('Продукция')
+      a.icon-btn.icon-btn--blue()
+        svg(width="17" height="13")
+          use(href="img/symbols.svg#icon-right")
+    .section-content__wrap.default-slider
+      ul.tab-filter
+        li.tab-filter__item
+          a.tab-filter__btn.active(data-btn-filter="all") Все
+        li.tab-filter__item
+          a.tab-filter__btn(data-btn-filter="gost") ГОСТ
+        li.tab-filter__item
+          a.tab-filter__btn(data-btn-filter="rti") Нестандартные РТИ
+      .swiper-container.js-auto-slider
+        .swiper-wrapper
+          .swiper-slide.default-slider__width(data-filter="gost")
+            +product()
+          .swiper-slide.default-slider__width(data-filter="gost")
+            +product()
+          .swiper-slide.default-slider__width(data-filter="gost")
+            +product()
+          .swiper-slide.default-slider__width(data-filter="rti")
+            +product()
+          .swiper-slide.default-slider__width(data-filter="rti")
+            +product()

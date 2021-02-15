@@ -1,0 +1,24 @@
+.tab-filter {
+  @include ul-none;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.tab-filter__item {
+  margin-right: 24px;
+}
+
+.tab-filter__btn {
+  display: block;
+  @include text-normal;
+  font-weight: 500;
+  color: $text-color;
+  opacity: 0.5;
+  transition: $time;
+  border-bottom: 2px solid transparent;
+
+  &.active {
+    opacity: 1;
+    border-color: $color-main;
+  }
+}

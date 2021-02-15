@@ -30,6 +30,11 @@
 @import "../blocks/components/form/form";
 @import "../blocks/components/comment/comment";
 @import "../blocks/components/collapse/collapse";
+@import "../blocks/components/section-content/section-content";
+@import "../blocks/components/rev-img/rev-img";
+@import "../blocks/components/brand/brand";
+@import "../blocks/components/default-slider/default-slider";
+@import "../blocks/components/tab-filter/tab-filter";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -41,6 +46,7 @@
 @import "../blocks/project/write/write";
 @import "../blocks/project/faq/faq";
 @import "../blocks/project/advantages/advantages";
+@import "../blocks/project/product/product";
 
 .line {
   display: block;
