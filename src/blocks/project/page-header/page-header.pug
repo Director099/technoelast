@@ -10,28 +10,4 @@ mixin page-header()
         a.icon-btn(href="#")
           svg(width="17" height="16")
             use(href="img/symbols.svg#icon-mail")
-  nav.navigation
-    .container
-      .navigation__row.swipe-list
-        +burger('Меню').burger--square.navigation__burger
-        +tags-list({
-          list: [
-            {
-              text: 'Продукция', className: '',
-              attrs: {href: '#', }
-            },
-            {
-              text: 'Компания', className: '',
-              attrs: {href: '#', }
-            },
-            {
-              text: 'Новости', className: '',
-              attrs: {href: '#', }
-            },
-            {
-              text: 'Контакты', className: '',
-              attrs: {href: '#', }
-            }
-          ],
-          tagLinkTag: 'a'
-        })
+

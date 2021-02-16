@@ -1,3 +1,13 @@
 .section-content__wrap {
   padding: 32px 16px 48px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-content__item:not(:last-child) {
+  margin: 0 -16px 24px;
+  padding: 0 16px 24px;
+  border-bottom: 1px solid $color-line-border;
 }

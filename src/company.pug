@@ -6,8 +6,25 @@ block header
   +page-header()
 block content
   main
+    +navigation(
+      [
+        {
+          text: 'Главная ›', className: '',
+          attrs: {href: '#',}
+        },
+        {
+          text: 'Компания', className: '',
+          attrs: {},
+        }
+      ]
+    )
+    +main-content()
+    hr.line
+    +personals()
     hr.line
     +partner()
+    hr.line
+    +description()
     hr.line
     +reviews()
     hr.line

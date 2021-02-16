@@ -6,6 +6,26 @@ block header
   +page-header()
 block content
   main
+    +navigation(
+      [
+        {
+          text: 'Продукция', className: '',
+          attrs: {href: '#',}
+        },
+        {
+          text: 'Компания', className: '',
+          attrs: {href: '#',}
+        },
+        {
+          text: 'Новости', className: '',
+          attrs: {href: '#',}
+        },
+        {
+          text: 'Контакты', className: '',
+          attrs: {href: '#',}
+        }
+      ]
+    )
     +main-slider()
     hr.line
     +production()

@@ -9,6 +9,13 @@
   margin: 0;
 }
 
+@mixin line-clamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @mixin text-gradient($gradient-color, $color) {
   display: inline-block;
   color: $color;

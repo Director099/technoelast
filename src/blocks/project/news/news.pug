@@ -5,9 +5,9 @@ mixin news()
         svg(width="17" height="13")
           use(href="img/symbols.svg#icon-right")
     .section-content__wrap
-      a.preview.preview--mob(href="#")
-        article.preview__wrap
-          .preview__img
-            img(src="img/content/news-1.jpg" alt="Повседневная практика показывает важность событий")
-          h3.preview__title Повседневная практика показывает важность событий
-          span.preview__data 26 Апреля 2020
+      .section-content__item
+        +preview()
+      .section-content__item
+        +preview()
+      .section-content__item
+        +preview()

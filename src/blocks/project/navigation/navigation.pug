@@ -1,0 +1,9 @@
+mixin navigation(list)
+  nav.navigation
+    .container
+      .navigation__row.swipe-list
+        +burger('Меню').burger--square.navigation__burger
+        +tags-list({
+          list: list,
+          tagLinkTag: 'a'
+        })
