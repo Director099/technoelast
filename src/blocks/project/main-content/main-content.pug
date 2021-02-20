@@ -1,12 +1,26 @@
-mixin main-content()
-  //Все как в main-slider - переделать
+mixin main-content({title, slider})
   article.main-content
     header.main-content__header
-      h1.title-big Компания «Техноэласт»
-    .main-content__container
-      a.main-content__picture
-        //img()
+      h1.title-big.main-content__title= title
+    if(slider === true)
+      .main-content__container
+        .swiper-container.js-main-slider
+          .swiper-wrapper
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+        .swiper-pagination.main-content__pagination
     footer.main-content__footer
-      .main-slider__desc
-        p Акционеры крупнейших компаний набирают популярность среди определенных слоев населения, а значит, должны быть объективно рассмотрены соответствующими инстанциями.
-        p Но понимание сути ресурсосберегающих технологий выявляет срочную потребность дальнейших направлений развития.
+      block

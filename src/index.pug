@@ -26,7 +26,17 @@ block content
         }
       ]
     )
-    +main-slider()
+    +main-content({
+      title: 'Резинотехнические изделия',
+      slider: true
+    })
+      h2.title-small.main-content__footer-title Произведем формовые резинотехнические изделия под заказ по вашим чертежам
+      .main-content__desc
+        ul
+          li – Перво тезисное преимущество
+          li – Второе тезисное преимущество
+          li – И вишенка на торте
+      a.btn.btn--main.main-content__btn(href="#" data-fancybox="") Обсудить проект
     hr.line
     +production()
     hr.line
