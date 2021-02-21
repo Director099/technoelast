@@ -9,9 +9,13 @@
 
 .main-content__container {
   position: relative;
-  background-color: $color-light;
-  border-top: 1px solid $color-line-border;
-  border-bottom: 1px solid $color-line-border;
+
+
+  &--main {
+    background-color: $color-light;
+    border-top: 1px solid $color-line-border;
+    border-bottom: 1px solid $color-line-border;
+  }
 }
 
 .main-content__pagination {
@@ -27,7 +31,22 @@
 
 .main-content__desc {
   color: $text-color;
-  margin-bottom: 24px;
+}
+
+.main-content__desc h4,
+.main-content__desc h3{
+  @include text-big;
+  margin-bottom: 6px;
+}
+
+.main-content__desc img {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.main-content__desc p:last-child {
+  margin-bottom: 0;
 }
 
 .main-content__desc ul {
@@ -42,6 +61,15 @@
 
 .main-content__btn {
   width: 100%;
+  margin-top: 24px;
+}
+
+.main-content__slide {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .main-content__slide img {
@@ -50,6 +78,13 @@
 
 .main-content__footer-title {
   margin-bottom: 8px;
+}
+
+.main-content__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-content__pagination .swiper-pagination-bullet {

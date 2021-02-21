@@ -8,6 +8,7 @@ import '../blocks/components/field-file/field-file.js';
 import '../blocks/components/collapse/collapse.js';
 
 var mainSlider = new Swiper('.js-main-slider', {
+  // spaceBetween: 16,
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true,

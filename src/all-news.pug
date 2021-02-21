@@ -1,0 +1,27 @@
+extends pug/layout.pug
+
+block meta
+  title Компания
+block header
+  +page-header()
+block content
+  main
+    +navigation(
+      [
+        {
+          text: 'Главная ›', className: '',
+          attrs: {href: '#',}
+        },
+        {
+          text: 'Новости', className: '',
+        }
+      ]
+    )
+    +preview()
+    +preview()
+    +preview()
+    +preview()
+    +preview()
+    +preview()
+block footer
+  +page-footer()

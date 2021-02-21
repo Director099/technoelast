@@ -4,6 +4,17 @@
   p:last-child {
     margin-bottom: 0;
   }
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    @include text-big;
+    margin-bottom: 20px;
+  }
 }
 
 .section-content__item:not(:last-child) {

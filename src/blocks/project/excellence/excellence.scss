@@ -1,0 +1,10 @@
+.excellence__title {
+  @include text-semi-big();
+  display: block;
+}
+
+.excellence__text {
+  @include text-small();
+  margin-bottom: 0;
+  color: rgba($black, $opacity);
+}

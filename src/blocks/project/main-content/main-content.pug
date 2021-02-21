@@ -1,9 +1,9 @@
-mixin main-content({title, slider})
+mixin main-content({title, mainSlider, contentSlider})
   article.main-content
     header.main-content__header
       h1.title-big.main-content__title= title
-    if(slider === true)
-      .main-content__container
+    if(mainSlider === true)
+      .main-content__container.main-content__container--main
         .swiper-container.js-main-slider
           .swiper-wrapper
             .swiper-slide
@@ -21,6 +21,27 @@ mixin main-content({title, slider})
             .swiper-slide
               .main-content__slide
                 img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+        .swiper-pagination.main-content__pagination
+    if(contentSlider === true)
+      .main-content__container
+        .swiper-container.js-main-slider
+          .swiper-wrapper
+            .swiper-slide
+              a.main-content__slide(href="#" data-fancybox="")
+                img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
+                +icon-play().main-content__play
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
+            .swiper-slide
+              .main-content__slide
+                img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
         .swiper-pagination.main-content__pagination
     footer.main-content__footer
       block

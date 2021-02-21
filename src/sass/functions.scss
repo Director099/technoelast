@@ -43,3 +43,8 @@
   font-size: 17px;
   line-height: 22px;
 }
+
+@mixin text-semi-big() {
+  font-size: 21px;
+  line-height: 25px;
+}

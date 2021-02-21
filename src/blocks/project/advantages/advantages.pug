@@ -1,6 +1,6 @@
-mixin advantages()
+mixin advantages(title)
   .advantages
-    +title-wrap('Преимущества 🔥')
+    +title-wrap(title)
     .advantages__content
       ul.advantages__list
         - for (let i = 0; 3 > i; i++)
