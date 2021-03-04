@@ -54,7 +54,9 @@ $border-radius:               rem(3px) !default;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+    margin-left: 36px;
     padding-left: 25px;
+    opacity: 0.5;
 
     background-position: left center;
     background-repeat: no-repeat;

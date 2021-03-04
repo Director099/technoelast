@@ -1,7 +1,7 @@
 .tab-filter {
   @include ul-none;
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .tab-filter__item {
@@ -11,14 +11,15 @@
 .tab-filter__btn {
   display: block;
   @include text-normal;
-  font-weight: 500;
+  font-weight: 400;
   color: $text-color;
   opacity: 0.5;
   transition: $time;
   border-bottom: 2px solid transparent;
 
   &.active {
+    font-weight: 500;
     opacity: 1;
-    border-color: $color-main;
+    border-color: $color-primary;
   }
 }

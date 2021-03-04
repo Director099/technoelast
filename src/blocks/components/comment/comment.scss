@@ -50,7 +50,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
 .comment__wrap {
   position: relative;
-  padding: 10px;
+  padding: 10px 10px 7px;
   border-radius: 8px 8px 8px 0px;
   background-color: $bg-write;
 
@@ -80,7 +80,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 }
 
 .comment__footer {
-  margin-top: 13px;
+  margin-top: 9px;
 
   &--right {
     text-align: right;
@@ -90,6 +90,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 .comment__date {
   @include text-thin;
   color: $text-color-light;
+  font-weight: 500;
 }
 
 .comment__btn {
@@ -99,6 +100,6 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   background-color: $bg-write;
   padding: 5.5px 10px;
   margin-top: 8px;
-  color: $color-main;
+  color: $color-primary;
   border: 1px solid $color-line-border;
 }

@@ -14,8 +14,9 @@
 
 @import "../blocks/components/btn/btn";
 @import "../blocks/components/icon-btn/icon-btn";
+@import "../blocks/components/logo/logo";
 @import "../blocks/components/container/container";
-@import "../blocks/components/grid-row/grid-row";
+// @import "../blocks/components/grid-row/grid-row";
 @import "../blocks/components/develop/develop";
 @import "../blocks/components/to-top/to-top";
 @import "../blocks/components/tag-link/tag-link";
@@ -52,14 +53,16 @@
 @import "../blocks/project/faq/faq";
 @import "../blocks/project/advantages/advantages";
 @import "../blocks/project/product/product";
+@import "../blocks/project/partner/partner";
 
 .line {
   display: block;
   height: 8px;
   margin: 0;
   background-color: $color-light;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid $color-line-border;
-  border-top: 1px solid $color-line-border;
+  border: none;
+  // border-left: none;
+  // border-right: none;
+  // border-bottom: 1px solid $color-line-border;
+  // border-top: 1px solid $color-line-border;
 }

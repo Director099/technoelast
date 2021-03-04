@@ -4,7 +4,6 @@
   color: inherit;
   text-decoration: none;
   border-radius: $border-radius;
-  border: 1px solid $color-line-border;
 }
 
 .product__img {
@@ -19,10 +18,13 @@
 
 .product__title {
   @include text-small;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   padding: 8px 4px 17px;
   background-color: $color-light;
+  border: 1px solid $color-line-border;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
