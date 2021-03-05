@@ -1,11 +1,11 @@
-mixin nav-list()
+mixin nav-list(navList)
   -
-    const navList = [
-      {link: '#', text: 'Продукция'},
-      {link: '#', text: 'Компания'},
-      {link: '#', text: 'Новости'},
-      {link: '#', text: 'Контакты'},
-    ]
+    //- const navList = [
+    //-   {link: '#', text: 'Продукция'},
+    //-   {link: '#', text: 'Компания'},
+    //-   {link: '#', text: 'Новости'},
+    //-   {link: '#', text: 'Контакты'},
+    //- ]
   ul.nav-list
     each item in navList
       - const { link, text } = item
