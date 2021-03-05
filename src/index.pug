@@ -10,7 +10,7 @@ block content
       [
         {
           text: 'Продукция', className: '',
-          attrs: {href: '#',}
+          attrs: {href: 'products.html',}
         },
         {
           text: 'Компания', className: '',
@@ -28,7 +28,8 @@ block content
     )
     +main-content({
       title: 'Резинотехнические изделия',
-      mainSlider: true
+      mainSlider: true,
+      contentFooter: true,
     })
       h2.title-small.main-content__footer-title Произведем формовые резинотехнические изделия под заказ по вашим чертежам
       .main-content__desc
@@ -52,7 +53,22 @@ block content
     hr.line
     +contacts()
     hr.line
-    +nav-list()
+    +nav-list(
+      [
+        {
+          link: 'products.html', text: 'Продукция'
+        },
+        {
+          link: 'company.html', text: 'Компания'
+        },
+        {
+          link: '#', text: 'Новости'
+        },
+        {
+          link: '#', text: 'Контакты'
+        },
+      ]
+    )
     hr.line
     +block-form()
 block footer

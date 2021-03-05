@@ -10,21 +10,33 @@ block content
       [
         {
           text: 'Главная ›', className: '',
-          attrs: {href: '#',}
+          attrs: {href: 'index.html',}
         },
         {
-          text: 'Компания', className: '',
-          attrs: {},
+          text: 'Продукция', className: '',
+          attrs: {href: ''},
         }
       ]
     )
     +main-content({
-      title: 'Компания «Техноэласт»',
-      contentSlider: true
+      title: 'Продукция',
+      contentSlider: false,
+      contentFooter: false,
     })
       .main-content__desc
         p Акционеры крупнейших компаний набирают популярность среди определенных слоев населения, а значит, должны быть объективно рассмотрены соответствующими инстанциями.
         p Но понимание сути ресурсосберегающих технологий выявляет срочную потребность дальнейших направлений развития.
+    hr.line
+    +nav-list(
+      [
+        {
+          link: '#', text: 'ГОСТ'
+        },
+        {
+          link: '#', text: 'Нестандартные РТИ'
+        },
+      ]
+    )
     hr.line
     +personals()
     hr.line
