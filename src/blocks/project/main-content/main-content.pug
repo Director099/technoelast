@@ -1,4 +1,4 @@
-mixin main-content({title, mainSlider, contentSlider, className=''})
+mixin main-content({title, mainSlider, contentSlider, contentFooter, className=''})
   article.main-content
     header.main-content__header(class= className)
       h1.title-big.main-content__title= title
@@ -43,5 +43,6 @@ mixin main-content({title, mainSlider, contentSlider, className=''})
               .main-content__slide
                 img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
         .swiper-pagination.main-content__pagination
-    footer.main-content__footer
-      block
+    if(contentFooter === true)
+      footer.main-content__footer
+        block
