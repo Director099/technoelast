@@ -23,14 +23,15 @@
 
 .preview__title {
   @include text-normal;
+  font-weight: 500;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .preview__desc {
   @include text-small;
   @include line-clamp(4);
-  margin-bottom: 6px;
+  margin-bottom: 11px;
 
   p {
     margin-bottom: 0;
@@ -43,5 +44,10 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.preview__info {
+  &:first-child {
+    margin-right: 18px;
+  }
 }

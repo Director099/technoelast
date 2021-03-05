@@ -1,6 +1,6 @@
-mixin main-content({title, mainSlider, contentSlider})
+mixin main-content({title, mainSlider, contentSlider, className=''})
   article.main-content
-    header.main-content__header
+    header.main-content__header(class= className)
       h1.title-big.main-content__title= title
     if(mainSlider === true)
       .main-content__container.main-content__container--main

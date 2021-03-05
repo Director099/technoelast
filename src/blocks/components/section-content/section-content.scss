@@ -16,8 +16,28 @@
   }
 }
 
+.section-content__wrap--excellence {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.section-content__wrap--personals {
+  padding-top: 25px;
+  padding-bottom: 28px;
+}
+
+.section-content__wrap--description {
+  padding-top: 15px;
+  padding-bottom: 32px;
+}
+
+.section-content__wrap--news {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 .section-content__item:not(:last-child) {
-  margin: 0 -16px 24px;
+  margin: 0 -16px 23px;
   padding: 0 16px 24px;
   border-bottom: 1px solid $color-line-border;
 }

@@ -3,6 +3,10 @@
   padding: 16px 16px;
 }
 
+.main-content__header--company {
+  padding-bottom: 21px;
+}
+
 .main-content__title {
   margin-bottom: 0;
   font-weight: 600;
@@ -11,7 +15,9 @@
 
 .main-content__container {
   position: relative;
-
+  margin-bottom: 4px;
+  margin-left: 17px;
+  margin-right: 17px;
 
   &--main {
     background-color: $color-light;
@@ -34,7 +40,7 @@
 }
 
 .main-content__desc {
-  display: none; // todo display: block;
+  display: block;
   color: $text-color;
 }
 
@@ -61,7 +67,7 @@
 }
 
 .main-content__footer {
-  padding: 16px 18px 32px 16px;
+  padding: 16px 18px 24px 16px;
 }
 
 .main-content__btn {
@@ -79,6 +85,7 @@
 
 .main-content__slide img {
   width: 100%;
+  height: 221px; // todo height под вопросом, пока для ПП
 }
 
 .main-content__footer-title {
