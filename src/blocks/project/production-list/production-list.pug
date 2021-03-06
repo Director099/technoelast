@@ -1,0 +1,15 @@
+mixin production-list()
+  .section-content
+    .section-content__wrap.section-content__wrap--production-list
+      ul.production-list
+        li.production-list__item
+          +product-item()
+        li.production-list__item
+          +product-item()
+        li.production-list__item
+          +product-item()
+        li.production-list__item
+          +product-item()
+        li.production-list__item
+          +product-item()
+      +is-loading('Loading...')

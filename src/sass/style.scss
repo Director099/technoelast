@@ -40,6 +40,7 @@
 @import "../blocks/components/author/author";
 @import "../blocks/components/preview/preview";
 @import "../blocks/components/icon-play/icon-play";
+@import "../blocks/components/is-loading/is-loading";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -54,15 +55,17 @@
 @import "../blocks/project/advantages/advantages";
 @import "../blocks/project/product/product";
 @import "../blocks/project/partner/partner";
+@import "../blocks/project/production-list/production-list";
+@import "../blocks/project/product-item/product-item";
 
 .line {
   display: block;
-  height: 8px;
+  height: 6px;
   margin: 0;
   background-color: $color-light;
   border: none;
   // border-left: none;
   // border-right: none;
-  // border-bottom: 1px solid $color-line-border;
-  // border-top: 1px solid $color-line-border;
+  border-bottom: 1px solid $color-line-border;
+  border-top: 1px solid $color-line-border;
 }

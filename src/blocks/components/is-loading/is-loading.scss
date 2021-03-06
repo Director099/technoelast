@@ -1,0 +1,7 @@
+.is-loading {
+  @include text-small();
+  display: block;
+  opacity: 0.5;
+  text-align: center;
+  padding: 17px 0;
+}

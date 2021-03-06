@@ -22,6 +22,7 @@ block content
       title: 'Продукция',
       contentSlider: false,
       contentFooter: false,
+      className: 'main-content__header--products',
     })
       .main-content__desc
         p Акционеры крупнейших компаний набирают популярность среди определенных слоев населения, а значит, должны быть объективно рассмотрены соответствующими инстанциями.
@@ -38,16 +39,10 @@ block content
       ]
     )
     hr.line
-    +personals()
-    hr.line
-    +partner()
-    hr.line
-    +description()
-    hr.line
-    +reviews()
-    hr.line
-    +news()
-    hr.line
-    +contacts()
+    +production-list()
 block footer
-  +page-footer()
+  +page-footer(
+    {
+      pageFooter: false,
+    }
+  )
