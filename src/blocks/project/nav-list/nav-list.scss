@@ -29,4 +29,34 @@
     border-right: 2px solid $color-line-border;
     transform: rotate(-45deg) translateY(-50%);
   }
+
+  &--color {
+    color: $color-main;
+  }
+
+  &--no-arrow {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.nav-list__subitem-wrap {
+  padding-left: 25px;
+}
+
+.nav-list__subitem {
+  @include text-normal;
+  display: block;
+  color: #202020;
+  opacity: .6;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+
+.nav-list__link svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 16px;
 }

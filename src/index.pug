@@ -3,7 +3,7 @@ extends pug/layout.pug
 block meta
   title Главная
 block header
-  +page-header()
+  +page-header({})
 block content
   main
     +navigation(
@@ -22,7 +22,7 @@ block content
         },
         {
           text: 'Контакты', className: '',
-          attrs: {href: '#',}
+          attrs: {href: '#modal-contact', 'data-fancybox': ''}
         }
       ]
     )
@@ -37,21 +37,28 @@ block content
           li – Перво тезисное преимущество
           li – Второе тезисное преимущество
           li – И вишенка на торте
-      a.btn.btn--main.main-content__btn(href="#" data-fancybox="") Обсудить проект
+      a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
     hr.line
-    +production()
+    +production({
+        title: 'Продукция',
+        filter: true,
+        categoryTag: 'a'
+    })
     hr.line
     +advantages('Преимущества 🔥')
     hr.line
     +partner()
     hr.line
-    +reviews()
+    +reviews({
+        title: 'Отзывы',
+        filter: true
+    })
     hr.line
     +faq()
     hr.line
     +write()
     hr.line
-    +contacts()
+    +contacts({})
     hr.line
     +nav-list(
       [

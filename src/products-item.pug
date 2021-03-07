@@ -1,0 +1,33 @@
+extends pug/layout.pug
+
+block meta
+  title Продукция ГОСТ
+block header
+  +page-header({})
+block content
+  main
+    +navigation(
+        [
+            {
+                text: 'Главная ›', className: '',
+                attrs: {href: 'index.html',}
+            },
+            {
+                text: 'Продукция ›', className: '',
+                attrs: {href: 'products.html'},
+            },
+            {
+                text: 'ГОСТ', className: '',
+                attrs: {href: ''},
+            }
+        ]
+    )
+    +main-content({
+        title: 'Резинотехнические изделия по ГОСТу',
+        contentSlider: false,
+        contentFooter: false,
+        className: 'main-content__header--products',
+    })
+    +production-list()
+block footer
+  +page-footer()

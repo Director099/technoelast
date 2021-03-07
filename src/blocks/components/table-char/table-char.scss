@@ -1,0 +1,45 @@
+.table-char {
+  position: relative;
+  overflow: hidden;
+  transition: $time;
+  border-collapse: collapse;
+}
+
+.table-char__list {
+  @include ul-none;
+}
+
+.table-char::after,
+.table-char__item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0
+}
+
+.table-char span {
+  background: #fff;
+  z-index: 1
+}
+
+.table-char span:first-child {
+  padding-right: 7px
+}
+
+.table-char span:last-child {
+  padding-left: 7px
+}
+
+.table-char__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px
+}
+
+.table-char__item::after {
+  bottom: 6px;
+  z-index: 0;
+  border-bottom: 1px dashed $color-line-border;
+}

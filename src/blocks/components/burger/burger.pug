@@ -15,7 +15,7 @@ mixin burger(label, targetId, switchableClass)
     if (typeof(targetId) !== 'undefined' && targetId !== '') attributes['data-target-id'] = targetId
     if (typeof(switchableClass) !== 'undefined' && switchableClass !== '') attributes['data-target-class-toggle'] = switchableClass
 
-  button.burger(aria-label=label)&attributes(attributes)
+  a.burger(href="#modal-menu" data-fancybox="" aria-label=label)&attributes(attributes)
     svg(width="20" height="13")
       use(href="img/symbols.svg#icon-burger")
     //- span= label

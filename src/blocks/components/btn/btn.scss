@@ -91,4 +91,18 @@ $field-padding-horizontal:    14px !default;
        border-color: darken($color-primary, 12%);
      }
    }
+
+  &--main-b {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  &--s-middle {
+    padding: 5.5px 17.5px;
+  }
+
+  &--ios {
+    color: $color-main;
+    background-color: $white;
+  }
 }

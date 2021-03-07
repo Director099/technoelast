@@ -1,9 +1,4 @@
 .collapse {
-  @include text-normal;
-  padding: 13px 16px 13px 16px;
-  border-radius: $border-radius;
-  border: 1px solid $color-line-border;
-  background-color: $color-light;
   transition: $time;
 
   &.active {
@@ -13,6 +8,14 @@
       transform: rotate(-0deg);
     }
   }
+}
+
+.collapse--faq {
+  @include text-normal;
+  padding: 13px 16px 13px 16px;
+  border-radius: $border-radius;
+  border: 1px solid $color-line-border;
+  background-color: $color-light;
 }
 
 .collapse__title {

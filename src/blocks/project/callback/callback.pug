@@ -1,0 +1,38 @@
+mixin callback()
+  .section-content
+    +title-wrap('Позвоните нам')
+    .section-content__header
+      span.section-content__header-text Отдел продаж
+      span.section-content__header-text пн-пт с 08:00 до 18:00
+    +nav-list(
+        [
+            {
+                link: 'tel:+7917567-67-67',
+                text: '+7 (917) 567-67-67',
+                attrs: {
+                    class: 'nav-list__link--color nav-list__link--no-arrow'
+                }
+            },
+            {
+                link: 'tel:+7917567-67-67',
+                text: '+7 (917) 567-67-67',
+                attrs: {
+                    class: 'nav-list__link--color nav-list__link--no-arrow'
+                }
+            },
+        ]
+    )
+    .section-content__header
+      span.section-content__header-text Горячая линия
+      span.section-content__header-text круглосуточно
+    +nav-list(
+        [
+            {
+                link: 'tel:+7917567-67-67',
+                text: '+7 (917) 567-67-67',
+                attrs: {
+                    class: 'nav-list__link--info'
+                }
+            }
+        ]
+    )

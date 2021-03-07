@@ -1,26 +1,42 @@
-mixin production()
+mixin production({title, filter, category, categoryTag})
   .section-content
-    +title-wrap('Продукция')
+    +title-wrap(title)
       a.icon-btn.icon-btn--blue()
         svg(width="17" height="14")
           use(href="img/symbols.svg#icon-right")
     .section-content__wrap.default-slider
-      ul.tab-filter
-        li.tab-filter__item
-          a.tab-filter__btn.active(data-btn-filter="all") Все
-        li.tab-filter__item
-          a.tab-filter__btn(data-btn-filter="gost") ГОСТ
-        li.tab-filter__item
-          a.tab-filter__btn(data-btn-filter="rti") Нестандартные РТИ
+      if(filter === true)
+        ul.tab-filter
+          li.tab-filter__item
+            a.tab-filter__btn.active(data-btn-filter="all") Все
+          li.tab-filter__item
+            a.tab-filter__btn(data-btn-filter="gost") ГОСТ
+          li.tab-filter__item
+            a.tab-filter__btn(data-btn-filter="rti") Нестандартные РТИ
       .swiper-container.js-auto-slider
         .swiper-wrapper
           .swiper-slide.default-slider__width(data-filter="gost")
-            +product()
+            +product({
+                category: category,
+                categoryTag: tag
+            })
           .swiper-slide.default-slider__width(data-filter="gost")
-            +product()
+            +product({
+                category: category,
+                categoryTag: tag
+            })
           .swiper-slide.default-slider__width(data-filter="gost")
-            +product()
+            +product({
+                category: category,
+                categoryTag: tag
+            })
           .swiper-slide.default-slider__width(data-filter="rti")
-            +product()
+            +product({
+                category: category,
+                categoryTag: tag
+            })
           .swiper-slide.default-slider__width(data-filter="rti")
-            +product()
+            +product({
+                category: category,
+                categoryTag: tag
+            })

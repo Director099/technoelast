@@ -1,0 +1,77 @@
+extends pug/layout.pug
+
+block meta
+  title Фторкаучуковые кольца
+block header
+  +page-header({})
+block content
+  main
+    +navigation(
+        [
+            {
+                text: 'Главная ›', className: '',
+                attrs: {href: 'index.html',}
+            },
+            {
+                text: 'Продукция ›', className: '',
+                attrs: {href: 'products.html'},
+            },
+            {
+                text: 'ГОСТ ›', className: '',
+                attrs: {href: 'products-item.html'},
+            },
+            {
+                  text: 'Фторкаучуковые кольца', className: '',
+                attrs: {href: ''},
+            }
+        ]
+    )
+    +main-content({
+        title: 'Фторкаучуковые кольца',
+        mainSlider: true,
+        contentFooter: true,
+    })
+      .main-content__desc
+        p Производим фторкаучуковые кольца под заказ  по вашим чертежам
+        +price({
+            iconSale: true
+        })
+      a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
+    hr.line
+    +production({
+        title: 'Разновидности',
+        category: true
+    })
+    hr.line
+    +description(true)
+    hr.line
+    +characteristics('Характеристики', true)
+    hr.line
+    +reviews({
+      title: 'Сертификаты соответствия'
+    })
+    hr.line
+    +write()
+    hr.line
+    +contacts({})
+    hr.line
+    +nav-list(
+        [
+            {
+                link: 'products.html', text: 'Продукция'
+            },
+            {
+                link: 'company.html', text: 'Компания'
+            },
+            {
+                link: '#', text: 'Новости'
+            },
+            {
+                link: '#', text: 'Контакты'
+            },
+        ]
+    )
+    hr.line
+    +block-form()
+block footer
+  +page-footer()

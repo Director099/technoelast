@@ -1,0 +1,18 @@
+mixin characteristics(title, more)
+  .section-content
+    +title-wrap(title)
+    .section-content__wrap.section-content__wrap--description
+      .table-char
+        ul.table-char__list
+          li.table-char__item
+            span Марка силикона
+            span Всит 401/60
+          li.table-char__item
+            span Марка епдм
+            span 1481
+          - for(var i = 0; 7 > i; i++)
+              li.table-char__item
+                span Твердость
+                span А - 50-60
+        if(more)
+          +link('Подробнее ›').section-content__link-more

@@ -52,6 +52,14 @@ html(lang='ru')
     block footer
       p «подвал»
     block page-bottom
+      +modal-callback()
+      +modal-message()
+      +modal-message-order()
+      +modal-menu()
+      +modal-contact()
+      +modal-subitem()
+      +modal-ios()
+      +modal-more()
       script(src='libs/jquery/dist/jquery.min.js')
       script(src='libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js')
       script(src='libs/swiper/swiper-bundle.js')

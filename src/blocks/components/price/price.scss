@@ -1,0 +1,52 @@
+.price {
+  @include text-normal;
+  display: inline-block;
+  padding: 12px;
+  border: 1px solid $color-line-border;
+  border-radius: $border-radius;
+
+  &--b-none {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.price__sub {
+  @include text-normal;
+  bottom: 0;
+  margin-right: 4px;
+}
+
+.price__current {
+  display: flex;
+  align-items: flex-end;
+}
+
+.price__value {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+
+  span {
+    @include text-big;
+  }
+}
+
+.price__sale {
+  padding-left: 18px;
+}
+
+.price__sale-del {
+  background-image: url("data:image/svg+xml,%3Csvg width='62' height='7' viewBox='0 0 62 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M1.06739 5.37442C8.4209 4.4222 15.8445 3.80489 23.2808 3.3075C35.5561 2.48646 47.9041 1.64932 60.1107 1.8218' stroke='%23FF0000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  span {
+    @include text-small;
+  }
+}
+
+.price__icon-sale {
+  margin-left: 8px;
+}

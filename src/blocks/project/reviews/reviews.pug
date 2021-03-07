@@ -1,12 +1,13 @@
-mixin reviews()
+mixin reviews({filter, title})
   .section-content.reviews
-    +title-wrap('Отзывы')
+    +title-wrap(title)
     .section-content__wrap.default-slider
-      ul.tab-filter
-        li.tab-filter__item
-          a.tab-filter__btn.active(data-btn-filter="letter") Письма
-        li.tab-filter__item
-          a.tab-filter__btn(data-btn-filter="video") Видео
+      if(filter)
+        ul.tab-filter
+          li.tab-filter__item
+            a.tab-filter__btn.active(data-btn-filter="letter") Письма
+          li.tab-filter__item
+            a.tab-filter__btn(data-btn-filter="video") Видео
       .swiper-container.js-auto-slider
         .swiper-wrapper
           .swiper-slide.default-slider__width(data-filter="letter")

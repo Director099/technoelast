@@ -1,0 +1,24 @@
+.menu-ios__list {
+  @include ul-none;
+  background-color: $white;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.menu-ios__list:last-child {
+  margin-bottom: 0;
+}
+
+.menu-ios__item:not(:last-child) {
+  border-bottom: 1px solid rgba(188, 188, 188, 0.33);
+}
+
+.menu-ios__link {
+  @include text-semi-big;
+  border-radius: 0;
+  display: block;
+  border: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}

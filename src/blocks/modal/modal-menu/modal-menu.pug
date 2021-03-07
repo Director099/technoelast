@@ -1,0 +1,31 @@
+mixin modal-menu()
+  +modal('modal-menu')
+    .modal__body
+      .section-content
+        +title-wrap('Меню')
+        hr.line
+        +nav-list(
+            [
+                {
+                    text: 'Продукция',
+                    link: '#modal-subitem',
+                    attrs: {
+                        'data-fancybox': ''
+                    }
+                },
+                {
+                    text: 'Компания',
+                    link: 'company.html',
+                },
+                {
+                    text: 'Новости',
+                    link: 'news.html',
+                },
+                {
+                    text: 'Контакты',
+                    link: '#modal-contact',
+                }
+            ]
+        )
+      hr.line
+      +contacts({header: true})

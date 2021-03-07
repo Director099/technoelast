@@ -16,6 +16,20 @@
   }
 }
 
+.section-content__header {
+  @include text-small;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 6.5px 16px;
+  background-color: $color-light;
+  border-bottom: 1px solid $color-line-border;
+}
+
+.section-content__link-more {
+  margin-top: 20px;
+}
+
 .section-content__wrap--excellence {
   padding-top: 40px;
   padding-bottom: 40px;

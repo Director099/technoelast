@@ -1,6 +1,7 @@
-mixin contacts()
+mixin contacts({header})
   .contacts
-    +title-wrap('Контакты 📍')
+    if(header !== true)
+      +title-wrap('Контакты 📍')
     .contacts__wrap
       .contacts__content
         .contacts__item

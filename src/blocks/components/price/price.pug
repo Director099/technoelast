@@ -1,0 +1,9 @@
+mixin price({iconSale})
+  .price&attributes(attributes)
+    .price__sale
+      span.price__sale-del 25 500 #[span ₽]
+    .price__current
+      sub.price__sub от
+      strong.price__value 19 890 #[span ₽]
+      if(iconSale)
+        +sale('-22%').price__icon-sale

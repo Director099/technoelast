@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (modal)
 
-mixin modal(id, title, mods)
+mixin modal(id, header)
 
   //- Принимает:
   //-   id      {string} - идентификатор
@@ -26,7 +26,7 @@ mixin modal(id, title, mods)
   .modal(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)
     .modal__dialog(role='document')
         .modal__content
-          .modal__header
-            span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]
-            h4.modal__title!= title
+          if(!header)
+            .modal__header
+              +page-header({modalHeader: true})
           block

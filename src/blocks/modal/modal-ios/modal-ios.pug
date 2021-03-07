@@ -1,0 +1,14 @@
+mixin modal-ios()
+  +modal('modal-ios', true).modal-ios
+    .modal__body.modal__body--bottom.modal__body--ios
+      .menu-ios
+        ul.menu-ios__list
+          li.menu-ios__item
+            a.btn.btn--ios.menu-ios__link(href="#") Написать на почту
+          li.menu-ios__item
+            a.btn.btn--ios.menu-ios__link(href="#") Написать в WhatsApp
+          li.menu-ios__item
+            a.btn.btn--ios.menu-ios__link(href="#") Написать в Telegram
+        ul.menu-ios__list
+          li.menu-ios__item
+            a.btn.btn--ios.menu-ios__link(data-fancybox-close="") Закрыть

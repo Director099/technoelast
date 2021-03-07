@@ -13,6 +13,7 @@
 @import "global";
 
 @import "../blocks/components/btn/btn";
+@import "../blocks/components/link/link";
 @import "../blocks/components/icon-btn/icon-btn";
 @import "../blocks/components/logo/logo";
 @import "../blocks/components/container/container";
@@ -39,8 +40,13 @@
 @import "../blocks/components/tab-filter/tab-filter";
 @import "../blocks/components/author/author";
 @import "../blocks/components/preview/preview";
+@import "../blocks/components/modal/modal";
 @import "../blocks/components/icon-play/icon-play";
 @import "../blocks/components/is-loading/is-loading";
+@import "../blocks/components/menu-ios/menu-ios";
+@import "../blocks/components/price/price";
+@import "../blocks/components/sale/sale";
+@import "../blocks/components/table-char/table-char";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -57,6 +63,11 @@
 @import "../blocks/project/partner/partner";
 @import "../blocks/project/production-list/production-list";
 @import "../blocks/project/product-item/product-item";
+@import "../blocks/project/characteristics/characteristics";
+
+
+@import "../blocks/modal/modal-ios/modal-ios";
+
 
 .line {
   display: block;

@@ -1,0 +1,24 @@
+mixin modal-subitem()
+  +modal('modal-subitem')
+    .modal__body
+      .section-content
+        +title-wrap('Продукция')
+          a(href="#") Все
+        hr.line
+        ul.nav-list
+          li.nav-list__item.collapse
+            a.nav-list__link.js-collapse-click ГОСТ
+            .collapse__wrap.nav-list__subitem-wrap
+              a.nav-list__subitem(href="#") Фторкаучуковые кольца
+              a.nav-list__subitem(href="#") Силиконовые кольца
+              a.nav-list__subitem(href="#") Фторсиликоновые кольца
+              a.nav-list__subitem(href="#") Кольца HNBR
+              a.nav-list__subitem(href="#") Кольца большого диаметра
+          li.nav-list__item.collapse
+            a.nav-list__link.js-collapse-click Нестандартные РТИ
+            .collapse__wrap.nav-list__subitem-wrap
+              a.nav-list__subitem(href="#") Фторкаучуковые кольца
+              a.nav-list__subitem(href="#") Силиконовые кольца
+              a.nav-list__subitem(href="#") Фторсиликоновые кольца
+              a.nav-list__subitem(href="#") Кольца HNBR
+              a.nav-list__subitem(href="#") Кольца большого диаметра

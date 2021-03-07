@@ -4,13 +4,11 @@
   padding: 25px 16px 15px;
 }
 
-.product-item__column-1 {
-  flex-shrink: 0;
-  margin-right: 12px;
-}
-
 .product-item__img {
   height: 122px;
+  width: 122px;
+  flex-shrink: 0;
+  margin-right: 12px;
 
   img {
     width: 100%;
@@ -31,6 +29,10 @@
   color: $text-color;
   opacity: 0.5;
   margin-bottom: 10px;
+}
+
+.product-item__desc p {
+  margin-bottom: 0;
 }
 
 .product-item__value {
@@ -56,8 +58,8 @@
 .product-item__discount {
   display: inline-block;
   vertical-align: middle;
-  color: white;
-  background-color: red;
+  color: $white;
+  background-color: $color-danger;
   padding: 2px 3px;
   border-radius: 4px;
 }
