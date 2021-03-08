@@ -49,7 +49,9 @@ $z-index-modal:               100 !default;
 
     @media (min-width: $screen-lg) {
       width: 600px;
-      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      //height: auto;
 
       #{$block-name}--open & {
         animation: modal-content-show $transition-time 1 both;

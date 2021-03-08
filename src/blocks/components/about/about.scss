@@ -1,0 +1,30 @@
+.about {
+  padding: 16px;
+  background-color: rgba($white, 0.5);
+  border-radius: $border-radius-xl;
+}
+
+.about__row {
+  display: flex;
+}
+
+.about__img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.about__title {
+  @include xl-text-small;
+  margin-bottom: 0px;
+}
+
+.about__desc {
+  color: #808080;
+  @include xl-text-thin;
+
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,7 @@
 .faq__content {
-  padding: 16px 16px 26px;
+  @media (max-width: $screen-xl) {
+    padding: 16px 16px 26px;
+  }
 }
 
 .faq__content-item {

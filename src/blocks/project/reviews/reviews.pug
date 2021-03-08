@@ -5,7 +5,9 @@ mixin reviews({filter, title})
       if(filter)
         ul.tab-filter
           li.tab-filter__item
-            a.tab-filter__btn.active(data-btn-filter="letter") Письма
+            a.tab-filter__btn.active(data-btn-filter="all") Все
+          li.tab-filter__item
+            a.tab-filter__btn(data-btn-filter="letter") Письма
           li.tab-filter__item
             a.tab-filter__btn(data-btn-filter="video") Видео
       .swiper-container.js-auto-slider

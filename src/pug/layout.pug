@@ -47,10 +47,36 @@ html(lang='ru')
   body
     block header
       p «шапка»
-    block content
-      p содержимое страницы
-    block footer
-      p «подвал»
+    .container.container--xs-p-none
+      .grid-row
+        .grid-row__col.grid-row__col--xl-4.d-none.d-xl-block
+          aside.sidebar
+            +nav-list(
+                [
+                    {
+                        link: 'index.html', text: 'Главная', attrs: {class: 'nav-list__link--no-arrow'}
+                    },
+                    {
+                        link: 'products.html', text: 'Продукция', attrs: {class: 'nav-list__link--no-arrow'}
+                    },
+                    {
+                        link: 'company.html', text: 'Компания', attrs: {class: 'nav-list__link--no-arrow'}
+                    },
+                    {
+                        link: 'news.html', text: 'Новости', attrs: {class: 'nav-list__link--no-arrow'}
+                    },
+                    {
+                        link: 'contacts.html', text: 'Контакты', attrs: {class: 'nav-list__link--no-arrow'}
+                    },
+                ]
+            ).sidebar__mb
+            +about().sidebar__mb
+            +contacts-info().sidebar__mb
+        .grid-row__col.grid-row__col--xl-8
+          block content
+            p содержимое страницы
+          block footer
+            p «подвал»
     block page-bottom
       +modal-callback()
       +modal-message()

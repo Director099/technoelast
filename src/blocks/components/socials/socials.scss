@@ -15,5 +15,10 @@
 
   svg {
     display: block;
+
+    @media (min-width: $screen-xl) {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

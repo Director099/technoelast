@@ -1,8 +1,13 @@
 .nav-list {
   @include text-big;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @include ul-none;
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-small;
+    border-radius: $border-radius-xl;
+    overflow: hidden;
+    //background-color: $white;
+  }
 }
 
 .nav-list__item:last-child .nav-list__link {
@@ -38,6 +43,12 @@
     &::after {
       display: none;
     }
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    background-color: rgba($white, 0.5);
   }
 }
 

@@ -6,6 +6,11 @@
   margin-bottom: 12px;
   min-height: 48px;
   background-color: $color-light;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 16px;
+    background-color: $white;
+  }
 }
 
 .page-header__row {

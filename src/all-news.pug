@@ -1,7 +1,7 @@
 extends pug/layout.pug
 
 block meta
-  title Компания
+  title Все новости
 block header
   +page-header({})
 block content
@@ -17,11 +17,24 @@ block content
         }
       ]
     )
-    +preview()
-    +preview()
-    +preview()
-    +preview()
-    +preview()
-    +preview()
+    +main-content({
+        title: 'Резинотехнические изделия по ГОСТу',
+        contentSlider: false,
+        contentFooter: false,
+        className: 'main-content__header--products',
+    })
+    .section-content
+      .section-content__wrap.section-content__wrap--news
+        ul.tab-filter
+          li.tab-filter__item
+            a.tab-filter__btn.active Все
+          li.tab-filter__item
+            a.tab-filter__btn Производство
+          li.tab-filter__item
+            a.tab-filter__btn Вакансии
+        -for(var i = 0; 6 > i; i++)
+          .section-content__item
+            +preview()
+      +is-loading('Loading...')
 block footer
   +page-footer()

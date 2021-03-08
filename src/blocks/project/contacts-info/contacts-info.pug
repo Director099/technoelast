@@ -1,0 +1,22 @@
+mixin contacts-info()
+  .contacts-info&attributes(attributes)
+    header.contacts-info__header
+      a.contacts-info__header-link(href="mailto:info@pplans.ru")
+        <svg width="24" height="24" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 5C0 2.23858 2.23858 0 5 0H24C26.7614 0 29 2.23858 29 5V24C29 26.7614 26.7614 29 24 29H5C2.23858 29 0 26.7614 0 24V5Z" fill="url(#paint0_linear)"></path>
+          <path d="M23.8326 8.92889L18.0706 14.5002L23.8326 20.0714C23.9368 19.8595 24 19.6253 24 19.3752V9.62509C24 9.37494 23.9368 9.14076 23.8326 8.92889Z" fill="white"></path>
+          <path d="M22.3295 8H6.66993C6.41288 8 6.17223 8.0615 5.95452 8.16286L13.3191 15.2936C13.9702 15.9273 15.0292 15.9273 15.6803 15.2936L23.0449 8.16286C22.8272 8.0615 22.5865 8 22.3295 8Z" fill="white"></path>
+          <path d="M5.16736 8.92889C5.06319 9.14076 5 9.37494 5 9.62509V19.3752C5 19.6254 5.06319 19.8596 5.16736 20.0714L10.9294 14.5002L5.16736 8.92889Z" fill="white"></path>
+          <path d="M17.2828 15.2659L16.4674 16.0594C15.3824 17.1152 13.6169 17.1152 12.5319 16.0594L11.7166 15.2659L5.95452 20.8371C6.17223 20.9385 6.41288 21 6.66993 21H22.3295C22.5865 21 22.8272 20.9385 23.0449 20.8371L17.2828 15.2659Z" fill="white"></path>
+          <defs>
+            <linearGradient id="paint0_linear" x1="14.703" y1="28.8836" x2="14.7313" y2="0.350098" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#5CC3F6"></stop>
+              <stop offset="1" stop-color="#376DE9"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+        | info@pplans.ru
+    .contacts-info__desc
+      p Россия, Республика Башкортостан,   г. Уфа, 450027 ул. Трамвайная, д. 2 #[a(href="#" target="_blank")  смотреть на карте]
+    .contacts-info__social
+      +socials()

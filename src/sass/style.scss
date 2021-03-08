@@ -16,6 +16,7 @@
 @import "../blocks/components/link/link";
 @import "../blocks/components/icon-btn/icon-btn";
 @import "../blocks/components/logo/logo";
+@import "../blocks/components/display/display";
 @import "../blocks/components/container/container";
 @import "../blocks/components/grid-row/grid-row";
 @import "../blocks/components/develop/develop";
@@ -47,11 +48,13 @@
 @import "../blocks/components/price/price";
 @import "../blocks/components/sale/sale";
 @import "../blocks/components/table-char/table-char";
+@import "../blocks/components/about/about";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/main-content/main-content";
 @import "../blocks/project/contacts/contacts";
+@import "../blocks/project/contacts-info/contacts-info";
 @import "../blocks/project/order-page/order-page";
 @import "../blocks/project/excellence/excellence";
 @import "../blocks/project/nav-list/nav-list";
@@ -68,6 +71,18 @@
 
 @import "../blocks/modal/modal-ios/modal-ios";
 
+.sidebar {
+  position: sticky;
+  top: 16px;
+}
+
+.sidebar__mb {
+  margin-bottom: 16px;
+}
+
+.border-radius-xl {
+  border-radius: $border-radius-xl;
+}
 
 .line {
   display: block;
@@ -79,4 +94,27 @@
   // border-right: none;
   border-bottom: 1px solid $color-line-border;
   border-top: 1px solid $color-line-border;
+
+  &--doubble {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $white;
+    height: 32px;
+    border: 0;
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      height: 6px;
+      border-bottom: 1px solid $color-line-border;
+      border-top: 1px solid $color-line-border;
+      background-color: $color-light;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    height: 16px;
+    border: 0;
+  }
 }

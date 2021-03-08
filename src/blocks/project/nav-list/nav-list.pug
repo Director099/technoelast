@@ -1,5 +1,5 @@
 mixin nav-list(navList)
-  ul.nav-list
+  ul.nav-list&attributes(attributes)
     each item in navList
       - const { link, text, attrs} = item
       li.nav-list__item

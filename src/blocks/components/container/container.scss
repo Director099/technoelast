@@ -2,6 +2,19 @@
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $screen-xl - 1) {
+    &--xs-p-none {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 1202px;
+  }
 }
 
 .container--navigation {

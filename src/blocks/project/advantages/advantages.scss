@@ -32,6 +32,10 @@
     height: 21px;
     background-color: $color-light;
   }
+
+  @media (min-width: $screen-xl) {
+    max-width: 696px;
+  }
 }
 
 .advantages__title {
@@ -40,8 +44,13 @@
   margin-bottom: 6px;
 }
 
+.advantages__desc {
+  @media (max-width: $screen-xl - 1) {
+    max-width: 220px;
+  }
+}
+
 .advantages__desc p {
-  max-width: 220px;
   margin: 0;
   opacity: $opacity;
 }

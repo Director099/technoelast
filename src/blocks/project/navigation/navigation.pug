@@ -1,9 +1,8 @@
 mixin navigation(list)
-  nav.navigation
-    .container.container--navigation
-      .navigation__row.swipe-list
-        +burger('Меню').burger--square.navigation__burger
-        +tags-list({
-          list: list,
-          tagLinkTag: 'a'
-        })
+  nav.navigation&attributes(attributes).d-xl-none
+    .navigation__row.swipe-list
+      +burger('Меню').burger--square.navigation__burger
+      +tags-list({
+        list: list,
+        tagLinkTag: 'a'
+      })

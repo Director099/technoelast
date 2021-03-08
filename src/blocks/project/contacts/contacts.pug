@@ -1,5 +1,5 @@
 mixin contacts({header})
-  .contacts
+  .contacts&attributes(attributes).d-xl-none
     if(header !== true)
       +title-wrap('Контакты 📍')
     .contacts__wrap
