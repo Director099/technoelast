@@ -9,3 +9,21 @@
 .default-slider__width {
   max-width: 136px;
 }
+
+.default-slider__column {
+  display: block;
+}
+
+.default-slider__item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid $color-line-border;
+  // margin-left: -16px;
+  // margin-right: -16px;
+  // padding-left: 16px;
+  // padding-right: 16px;
+  
+  &:last-child {
+    border-bottom: 1px solid $color-line-border;
+  }
+}

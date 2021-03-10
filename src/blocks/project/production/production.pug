@@ -1,9 +1,7 @@
 mixin production({title, filter, category, categoryTag})
   .section-content
     +title-wrap(title)
-      a.icon-btn.icon-btn--blue()
-        svg(width="17" height="14")
-          use(href="img/symbols.svg#icon-right")
+      a.icon-btn.icon-btn--blue(href="products.html") Все
     .section-content__wrap.default-slider
       if(filter === true)
         ul.tab-filter

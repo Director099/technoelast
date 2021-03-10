@@ -89,13 +89,12 @@
   height: 6px;
   margin: 0;
   background-color: $color-light;
-  border: none;
-  // border-left: none;
-  // border-right: none;
+  border-left: none;
+  border-right: none;
   border-bottom: 1px solid $color-line-border;
   border-top: 1px solid $color-line-border;
 
-  &--doubble {
+  &--double {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -116,5 +115,17 @@
   @media (min-width: $screen-xl) {
     height: 16px;
     border: 0;
+  }
+}
+
+.link-all {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

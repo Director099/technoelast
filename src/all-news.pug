@@ -10,7 +10,7 @@ block content
       [
         {
           text: 'Главная ›', className: '',
-          attrs: {href: '#',}
+          attrs: {href: 'index.html',}
         },
         {
           text: 'Новости', className: '',
@@ -18,23 +18,34 @@ block content
       ]
     )
     +main-content({
-        title: 'Резинотехнические изделия по ГОСТу',
+        title: 'Новости',
         contentSlider: false,
         contentFooter: false,
-        className: 'main-content__header--products',
+        className: '',
     })
     .section-content
-      .section-content__wrap.section-content__wrap--news
+      .section-content__wrap.section-content__wrap--news.default-slider
         ul.tab-filter
           li.tab-filter__item
-            a.tab-filter__btn.active Все
+            a.tab-filter__btn.active(data-btn-filter="all") Все
           li.tab-filter__item
-            a.tab-filter__btn Производство
+            a.tab-filter__btn(data-btn-filter="production") Производство
           li.tab-filter__item
-            a.tab-filter__btn Вакансии
-        -for(var i = 0; 6 > i; i++)
-          .section-content__item
-            +preview()
+            a.tab-filter__btn(data-btn-filter="vacancy") Вакансии
+        .swiper-container.js-auto-slider
+          .swiper-wrapper.default-slider__column
+            .swiper-slide.default-slider__item(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item(data-filter="vacancy")
+              +preview()
+            .swiper-slide.default-slider__item(data-filter="vacancy")
+              +preview()
       +is-loading('Loading...')
 block footer
   +page-footer()

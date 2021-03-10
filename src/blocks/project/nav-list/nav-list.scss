@@ -10,6 +10,14 @@
   }
 }
 
+.nav-list__item {
+  border-bottom: 1px solid $color-line-border;
+
+  &.active {
+    padding-bottom: 20px;
+  }
+}
+
 .nav-list__item:last-child .nav-list__link {
   border-bottom: 0;
 }
@@ -21,7 +29,6 @@
   padding: 13px 16px;
   text-decoration: none;
   color: $text-color;
-  border-bottom: 1px solid $color-line-border;
 
   &::after {
     content: '';
@@ -53,7 +60,7 @@
 }
 
 .nav-list__subitem-wrap {
-  padding-left: 25px;
+  padding-left: 40px;
 }
 
 .nav-list__subitem {

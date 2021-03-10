@@ -16,6 +16,16 @@
   border: 1px solid $color-line-border;
   background-color: $color-light;
 
+  &.active {
+    .collapse__title {
+      margin-bottom: 14px;
+    } 
+
+    .collapse__wrap {
+      border-top-color: $color-line-border;
+    }
+  }
+
   @media (max-width: $screen-xl - 1) {
     @include text-normal();
   }
@@ -57,13 +67,17 @@
 .collapse__wrap {
   height: 0px;
   overflow: hidden;
-
+  border-top: 1px solid transparent;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
   transition: $time;
 }
 
 .collapse__content {
   opacity: 0.6;
-  margin-top: 8px;
+  margin-top: 14px;
   transition: $time;
 }
 
