@@ -20,6 +20,7 @@ $color-success:               hsl(120, 39%, 54%);
 $color-danger:                #FF0000;
 $color-warning:               hsl(35, 84%, 62%);
 $color-light:                 #EFEFF4;
+$color-lighten:               #F5F5F7;
 $color-dark-light:            #8A8A8E;
 $text-color:                  #212A40;
 $text-color-light:            #99AFBF;
@@ -46,7 +47,7 @@ $screen-sm:                   480px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1200px;
-$screen-xxl:                  1500px;
+$screen-xxl:                  none;
 
 $grid-columns:                12;
 $grid-gutter-width:           30px;

@@ -1,0 +1,27 @@
+mixin phone(mod)
+  .phone&attributes(attributes)
+    a.phone__wrap.phone__wrap--arrow(href="tel:+7(347)258–91–89" class= mod)
+      svg.phone__icon(width="18" height="18")
+        use(href="img/symbols.svg#icon-phone")
+      span.phone__link.phone__link--dark.phone__link--pd +7 (347) 258–91–89
+    .phone__drop
+      ul.phone__list
+        li.phone__list-item
+          .phone__header
+            span Отдел продаж
+            span пн-пт 09:00 – 18:00
+          a.phone__link(href="tel:+7(347)246–22–58") +7 (347) 246–22–58
+        li.phone__list-item
+          .phone__header
+            span Отдел кадров
+          a.phone__link(href="tel:+7(347)246–22–58") +7 (347) 246–22–58
+        li.phone__list-item
+          .phone__header
+            span Электронная почта
+          a.phone__link(href="mailto:tehnoelast@bk.ru") tehnoelast@bk.ru
+        li.phone__list-item
+          .phone__header
+            span Мессенджеры
+          a.phone__link(href="#") Telegram
+          a.phone__link(href="#") WhatsApp
+

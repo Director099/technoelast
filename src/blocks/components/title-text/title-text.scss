@@ -7,6 +7,11 @@
 .title-normal {
   font-size: 20px;
   line-height: 24px;
+
+  @media (min-width: $screen-xl) {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .title-big {

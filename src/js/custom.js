@@ -6,6 +6,13 @@
 import '../blocks/components/to-top/to-top.js';
 import '../blocks/components/field-file/field-file.js';
 import '../blocks/components/collapse/collapse.js';
+import '../blocks/components/field-text/field-text.js';
+import '../blocks/components/form/form.js';
+
+new Inputmask({
+  mask: "+7 (999) 999 99 99",
+  showMaskOnHover: false
+}).mask(document.querySelectorAll("[type='tel']"));
 
 var mainSlider = new Swiper('.js-main-slider', {
   // spaceBetween: 16,
@@ -39,3 +46,9 @@ btnFilter.on("click", function () {
     }
   });
 });
+
+
+
+
+
+

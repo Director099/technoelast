@@ -1,19 +1,35 @@
 mixin page-header({modalHeader})
-  header.page-header
+  header.page-header&attributes(attributes)
     .container
-      .page-header__row
+      .page-header__xs-row
         if(modalHeader !== true)
-          a.icon-btn.icon-btn--header-phone(href='#modal-callback' data-fancybox="")
+          a.icon-btn.icon-btn--header-phone.d-xl-none(href='#modal-callback' data-fancybox="")
             svg(width='20' height='17')
               use(href='img/symbols.svg#icon-phone')
         else
           a.icon-btn(href='#' data-fancybox-close="")
             svg(width='17' height='14')
               use(href='img/symbols.svg#icon-back')
-        +logo('index.html')
-          img(src='img/icon/logo.svg', alt='Логотип', width='116', height='13')
+        .grid-row.grid-row--xl-center
+          .grid-row__col.grid-row__col--xl-2_9
+            +logo('index.html')
+              picture
+                source(srcset="img/icon/logo-desc.svg" media="(min-width: 1200px)")
+                img(src='img/icon/logo.svg', alt='Логотип')
+          .grid-row__col.grid-row__col--xl-9_1
+            .page-header__row.d-none.d-xl-flex
+              +form.page-header__search
+                +field-text({
+                  mods: '',
+                  val: '',
+                  attrs: {
+                    name: 'search',
+                    placeholder: 'Поиск'
+                  }
+                }).field-text--search
+              +phone
         if(modalHeader !== true)
-          a.icon-btn.icon-btn--header-mail(href='#modal-message' data-fancybox="")
+          a.icon-btn.icon-btn--header-mail.d-xl-none(href='#modal-message' data-fancybox="")
             svg(width='21' height='16')
               use(href='img/symbols.svg#icon-mail')
         else

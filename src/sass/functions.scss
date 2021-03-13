@@ -63,3 +63,8 @@
   font-size: 16px;
   line-height: 22px;
 }
+
+@mixin xl-text-big() {
+  font-size: 18px;
+  line-height: 25px;
+}

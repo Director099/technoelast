@@ -46,10 +46,10 @@ html(lang='ru')
 
   body
     block header
-      p «шапка»
+      p «шапка».to-top
     .container.container--xs-p-none
       .grid-row
-        .grid-row__col.grid-row__col--xl-4.d-none.d-xl-block
+        .grid-row__col.grid-row__col--xl-2_9.d-none.d-xl-block
           aside.sidebar
             +nav-list(
                 [
@@ -72,7 +72,7 @@ html(lang='ru')
             ).sidebar__mb
             +about().sidebar__mb
             +contacts-info().sidebar__mb
-        .grid-row__col.grid-row__col--xl-8
+        .grid-row__col.grid-row__col--xl-9_1
           block content
             p содержимое страницы
           block footer
@@ -89,4 +89,5 @@ html(lang='ru')
       script(src='libs/jquery/dist/jquery.min.js')
       script(src='libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js')
       script(src='libs/swiper/swiper-bundle.js')
+      script(src='libs/Inputmask-5.x/dist/inputmask.min.js')
       script(src='js/custom.js')

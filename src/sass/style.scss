@@ -49,6 +49,8 @@
 @import "../blocks/components/sale/sale";
 @import "../blocks/components/table-char/table-char";
 @import "../blocks/components/about/about";
+@import "../blocks/components/phone/phone";
+@import "../blocks/components/error/error";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -73,7 +75,7 @@
 
 .sidebar {
   position: sticky;
-  top: 16px;
+  top: 72px;
 }
 
 .sidebar__mb {
