@@ -1,0 +1,35 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header({})
+block content
+  main
+    +navigation(
+      [
+        {
+          text: 'Продукция', className: '',
+          attrs: {href: 'products.html',}
+        },
+        {
+          text: 'Компания', className: '',
+          attrs: {href: 'company.html',}
+        },
+        {
+          text: 'Новости', className: '',
+          attrs: {href: 'all-news.html',}
+        },
+        {
+          text: 'Контакты', className: '',
+          attrs: {href: '#modal-contact', 'data-fancybox': ''}
+        }
+      ]
+    )
+    +client-errors({
+      imgSrc: 'img/content/error-smile.png',
+      title: 'Ошибка 405',
+      text: 'Метод не разрешен',
+    })
+block footer
+  +page-footer()
