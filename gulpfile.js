@@ -59,11 +59,11 @@ const style = (done) => {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          'last 1 versions'
-        ]
-      }),
+      // autoprefixer({
+      //   browsers: [
+      //     'last 1 versions'
+      //   ]
+      // }),
       mqpacker({
         sort: true
       }),
