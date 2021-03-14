@@ -1,0 +1,7 @@
+mixin news-category({activeClass, categoryValue, categoryName, srcImage})
+  a.news-category(data-btn-filter= categoryValue class= activeClass)
+    .news-category__wrap
+      .news-category__image
+        img(src=srcImage, alt=categoryName)
+      span.news-category__btn= categoryName
+      
