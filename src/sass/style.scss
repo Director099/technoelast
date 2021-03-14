@@ -52,6 +52,8 @@
 @import "../blocks/components/phone/phone";
 @import "../blocks/components/error/error";
 @import "../blocks/components/tovar/tovar";
+@import "../blocks/components/news-category/news-category";
+@import "../blocks/components/category-filter/category-filter";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -76,7 +78,7 @@
 
 .sidebar {
   position: sticky;
-  top: 72px;
+  top: 16px;
 }
 
 .sidebar__mb {
@@ -119,6 +121,17 @@
   @media (min-width: $screen-xl) {
     height: 16px;
     border: 0;
-    display: none;
+  }
+}
+
+.link-all {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

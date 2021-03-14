@@ -19,6 +19,21 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media (min-width: $screen-xl) {
+    width: 227px;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.preview__wrap {
+  @media (min-width: $screen-xl) {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
 }
 
 .preview__title {
@@ -26,6 +41,10 @@
   font-weight: 500;
   display: block;
   margin-bottom: 6px;
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-normal();
+  }
 }
 
 .preview__desc {
@@ -35,6 +54,11 @@
 
   p {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-small;
+    color: #333333;
   }
 }
 

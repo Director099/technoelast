@@ -28,14 +28,16 @@ block content
     +nav-list(
       [
         {
-          link: 'products-item.html', text: 'ГОСТ'
+          link: 'products-item-1.html', text: 'ГОСТ'
         },
         {
-          link: 'products-item.html', text: 'Нестандартные РТИ'
+          link: 'products-item-2.html', text: 'Нестандартные РТИ'
         },
       ]
     )
     hr.line
-    +production-list()
+    +production-list({
+      className: 'production-list__item--no-border-top',
+    })
 block footer
   +page-footer()

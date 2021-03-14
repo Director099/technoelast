@@ -10,7 +10,7 @@ block content
       [
         {
           text: 'Главная ›', className: '',
-          attrs: {href: '#',}
+          attrs: {href: 'index.html',}
         },
         {
           text: 'Новости', className: '',
@@ -18,23 +18,58 @@ block content
       ]
     )
     +main-content({
-        title: 'Резинотехнические изделия по ГОСТу',
+        title: 'Новости',
         contentSlider: false,
         contentFooter: false,
-        className: 'main-content__header--products',
+        className: '',
     })
-    .section-content
-      .section-content__wrap.section-content__wrap--news
-        ul.tab-filter
+    .section-content.section-content--news
+      .section-content__wrap.section-content__wrap--news.default-slider
+        ul.tab-filter.tab-filter--news.d-xl-none 
           li.tab-filter__item
-            a.tab-filter__btn.active Все
+            a.tab-filter__btn.active(data-btn-filter="all") Все
           li.tab-filter__item
-            a.tab-filter__btn Производство
+            a.tab-filter__btn(data-btn-filter="production") Производство
           li.tab-filter__item
-            a.tab-filter__btn Вакансии
-        -for(var i = 0; 6 > i; i++)
-          .section-content__item
-            +preview()
+            a.tab-filter__btn(data-btn-filter="vacancy") Вакансии
+        .category-filter.d-none.d-xl-block 
+          +title-wrap('Новости')
+          ul.category-filter__list
+            li.category-filter__item
+              +news-category({
+                activeClass: 'active',
+                categoryValue: 'all',
+                categoryName: 'Все',
+                srcImage: 'img/content/news-category-item-1.png',
+              })
+            li.category-filter__item
+              +news-category({
+                activeClass: '',
+                categoryValue: 'production',
+                categoryName: 'Производство',
+                srcImage: 'img/content/news-category-item-2.png',
+              })
+            li.category-filter__item
+              +news-category({
+                activeClass: '',
+                categoryValue: 'vacancy',
+                categoryName: 'Вакансии',
+                srcImage: 'img/content/news-category-item-1.png',
+              })
+        .swiper-container.js-auto-slider
+          .swiper-wrapper.default-slider__column
+            .swiper-slide.default-slider__item.default-slider__item--news(data-filter="production1")
+              +preview()
+            .swiper-slide.default-slider__item.default-slider__item--news(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item.default-slider__item--news(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item.default-slider__item--news(data-filter="production")
+              +preview()
+            .swiper-slide.default-slider__item.default-slider__item--news(data-filter="vacancy")
+              +preview()
+            .swiper-slide.default-slider__item.default-slider__item--news(data-filter="vacancy")
+              +preview()
       +is-loading('Loading...')
 block footer
   +page-footer()

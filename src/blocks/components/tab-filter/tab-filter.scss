@@ -5,21 +5,26 @@
 }
 
 .tab-filter__item {
-  margin-right: 24px;
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .tab-filter__btn {
   display: block;
-  @include text-normal;
-  font-weight: 400;
-  color: $text-color;
-  opacity: 0.5;
+  @include xl-text-thin();
+  font-weight: 500;
+  padding: 4px 12px;
+  border: 0.33px solid #B0B6D2;
+  border-radius: 100px;
+  letter-spacing: 0.2px;
+  color: #808080;
   transition: $time;
-  border-bottom: 2px solid transparent;
 
   &.active {
-    font-weight: 500;
-    opacity: 1;
     border-color: $color-primary;
+    color: $color-primary;
   }
 }

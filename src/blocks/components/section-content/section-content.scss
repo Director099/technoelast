@@ -6,6 +6,13 @@
 
     margin-bottom: 16px;
   }
+
+  &--news {
+    @media (min-width: $screen-xl) {
+      background-color: transparent;
+      padding: 0
+    }
+  }
 }
 
 .section-content__wrap {
@@ -28,6 +35,12 @@
 
   @media (max-width: $screen-xl - 1) {
     padding: 32px 16px 48px;
+  }
+
+  &--news {
+    @media (min-width: $screen-xl) {
+      padding: 0;
+    }
   }
 }
 
@@ -78,10 +91,6 @@
     padding-top: 24px;
     padding-bottom: 24px;
   }
-}
-
-.section-content__wrap--production-list {
-  padding: 0;
 }
 
 .section-content__item:not(:last-child) {

@@ -12,7 +12,12 @@
   height: 16px;
 }
 
-.icon-btn--blue svg {
-  width: 17px;
-  height: 14px;
+.icon-btn--blue {
+  text-decoration: none;
+  color: $color-primary;
+
+  svg {
+    width: 17px;
+    height: 14px;
+  }
 }

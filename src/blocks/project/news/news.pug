@@ -1,9 +1,7 @@
 mixin news()
   .section-content
     +title-wrap('Новости')
-      a.icon-btn.icon-btn--blue()
-        svg(width="17" height="13")
-          use(href="img/symbols.svg#icon-right")
+      a.icon-btn.icon-btn--blue(href="all-news.html") Все
     .section-content__wrap.section-content__wrap--news
       .section-content__item
         +preview()

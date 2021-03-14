@@ -5,5 +5,19 @@
 }
 
 .production-list__item {
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-bottom: 1px solid $color-line-border;
+
+  &:first-child {
+    border-top: 1px solid $color-line-border;
+  }
+}
+
+.production-list__item--no-border-top {
+  &:first-child {
+    border-top: none;
+  }
 }
