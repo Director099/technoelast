@@ -3,12 +3,12 @@
     padding: 24px;
     background-color: $white;
     border-radius: $border-radius-xl;
+
+    margin-bottom: 16px;
   }
 }
 
 .section-content__wrap {
-
-
   p:last-child {
     margin-bottom: 0;
   }
@@ -29,6 +29,10 @@
   @media (max-width: $screen-xl - 1) {
     padding: 32px 16px 48px;
   }
+}
+
+.section-content__btn {
+  width: 100%;
 }
 
 .section-content__desc img {
@@ -56,18 +60,24 @@
 }
 
 .section-content__wrap--personals {
-  padding-top: 25px;
-  padding-bottom: 28px;
+  @media (max-width: $screen-xl - 1) {
+    padding-top: 25px;
+    padding-bottom: 28px;
+  }
 }
 
 .section-content__wrap--description {
-  padding-top: 15px;
-  padding-bottom: 32px;
+  @media (max-width: $screen-xl - 1) {
+    padding-top: 15px;
+    padding-bottom: 32px;
+  }
 }
 
 .section-content__wrap--news {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  @media (max-width: $screen-xl - 1) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .section-content__wrap--production-list {
@@ -78,4 +88,12 @@
   margin: 0 -16px 23px;
   padding: 0 16px 24px;
   border-bottom: 1px solid $color-line-border;
+}
+
+.section-content__item-block {
+  margin-bottom: 8px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 16px;
+  }
 }

@@ -18,7 +18,7 @@ block content
         },
         {
           text: 'Новости', className: '',
-          attrs: {href: '#',}
+          attrs: {href: 'all-news.html',}
         },
         {
           text: 'Контакты', className: '',
@@ -30,19 +30,25 @@ block content
       title: 'Резинотехнические изделия',
       mainSlider: true,
       contentFooter: true,
+      className: 'd-xl-none'
     })
-      h2.title-small.main-content__footer-title Произведем формовые резинотехнические изделия под заказ по вашим чертежам
-      .main-content__desc
-        ul
-          li – Перво тезисное преимущество
-          li – Второе тезисное преимущество
-          li – И вишенка на торте
-      a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
+      .main-content__content-wrap.main-content__content-wrap--xl-row
+        .main-content__content
+          h2.title-big.main-content__title Резинотехнические изделия
+          .main-content__desc
+            p Произведем формовые резинотехнические изделия под заказ по вашим чертежам
+          a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
+        .main-content__price.d-none.d-xl-block
+          +price({iconSale: '22%'})
     hr.line
     +production({
         title: 'Продукция',
         filter: true,
         categoryTag: 'a'
+    })
+    hr.line
+    +list-production({
+        title: 'Продукция'
     })
     hr.line
     +advantages('Преимущества 🔥')

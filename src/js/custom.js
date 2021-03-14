@@ -9,22 +9,64 @@ import '../blocks/components/collapse/collapse.js';
 import '../blocks/components/field-text/field-text.js';
 import '../blocks/components/form/form.js';
 
+$('[data-fancybox]').fancybox({
+  touch: false
+});
+
 new Inputmask({
   mask: "+7 (999) 999 99 99",
   showMaskOnHover: false
 }).mask(document.querySelectorAll("[type='tel']"));
 
-var mainSlider = new Swiper('.js-main-slider', {
-  // spaceBetween: 16,
+var productSlider = new Swiper('.js-product-slider', {
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true,
   }
 });
 
+var mainSlider = new Swiper('.js-main-slider', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 1,
+    }
+  }
+});
+
+var companySlider = new Swiper('.js-company-slider', {
+  loop: true,
+  spaceBetween: 8,
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+});
+
 var autoSlider = new Swiper('.js-auto-slider', {
   slidesPerView: 'auto',
-  spaceBetween: 8
+  spaceBetween: 8,
+  breakpoints: {
+    1200: {
+      spaceBetween: 12,
+    }
+  }
+});
+
+var personalSlider = new Swiper('.js-personal-slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 8,
+  breakpoints: {
+    1200: {
+      spaceBetween: 38,
+    }
+  }
 });
 
 const btnFilter = $('[data-btn-filter]');

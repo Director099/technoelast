@@ -45,6 +45,12 @@
     }
   }
 
+  &.active {
+    @media (min-width: $screen-xl) {
+      background-color: $white;
+    }
+  }
+
   @media (min-width: $screen-xl) {
     padding-top: 9.5px;
     padding-bottom: 9.5px;

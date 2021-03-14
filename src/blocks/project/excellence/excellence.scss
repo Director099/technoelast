@@ -1,10 +1,27 @@
+.section-content--excellence {
+  @media (min-width: $screen-xl) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 .excellence__title {
   @include text-semi-big();
   display: block;
+
+  @media (min-width: $screen-xl) {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 35px;
+  }
 }
 
 .excellence__text {
   @include text-small();
   margin-bottom: 0;
   color: rgba($black, $opacity);
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-small;
+  }
 }

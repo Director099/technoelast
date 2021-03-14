@@ -18,6 +18,11 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media (min-width: $screen-xl) {
+    width: 122px;
+    height: 122px;
+  }
 }
 
 .author__fullname {
@@ -25,9 +30,17 @@
   font-weight: 500;
   display: block;
   margin-bottom: 5px;
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-small;
+  }
 }
 
 .author__desc {
   @include text-small;
   opacity: $opacity;
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-small;
+  }
 }

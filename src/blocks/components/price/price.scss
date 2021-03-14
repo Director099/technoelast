@@ -8,6 +8,17 @@
   &--b-none {
     border: 0;
     padding: 0;
+    background-color: transparent;
+  }
+
+  @media (min-width: $screen-xl) {
+    background-color: $color-lighten;
+    border-color: #EAECEE;
+
+    &--b-none {
+      background-color: transparent;
+      border: 0;
+    }
   }
 }
 

@@ -1,4 +1,6 @@
-
+:focus {
+  outline: none;
+}
 
 // Сделаем viewport великим снова! (привет, IE10) http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 @at-root {

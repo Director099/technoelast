@@ -36,10 +36,10 @@ $field-padding-horizontal:    14px !default;
 
   &:hover,
   &:focus {
-    text-decoration: none;
-    color: $text-color;
-    background-color: darken($gray-lightest, 10%);
-    border-color: darken($gray-lighter, 12%);
+    //text-decoration: none;
+    //color: $text-color;
+    //background-color: darken($gray-lightest, 10%);
+    //border-color: darken($gray-lighter, 12%);
   }
 
   //&:visited {
@@ -97,6 +97,12 @@ $field-padding-horizontal:    14px !default;
     border-color: $color-primary;
   }
 
+  &--lighten {
+    background-color: $color-lighten;
+    border-color: $color-lighten;
+    color: #808080;
+  }
+
   &--s-middle {
     padding: 5.5px 17.5px;
   }
@@ -107,6 +113,8 @@ $field-padding-horizontal:    14px !default;
   }
 
   @media (min-width: $screen-xl) {
+    font-size: 14px;
+    line-height: 20px;
     padding-top: 8.5px;
     padding-bottom: 8.5px;
   }

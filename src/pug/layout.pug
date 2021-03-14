@@ -48,7 +48,7 @@ html(lang='ru')
     block header
       p «шапка».to-top
     .container.container--xs-p-none
-      .grid-row
+      .grid-row.grid-row--xs-ident-none
         .grid-row__col.grid-row__col--xl-2_9.d-none.d-xl-block
           aside.sidebar
             +nav-list(
@@ -57,13 +57,13 @@ html(lang='ru')
                         link: 'index.html', text: 'Главная', attrs: {class: 'nav-list__link--no-arrow'}
                     },
                     {
-                        link: 'products.html', text: 'Продукция', attrs: {class: 'nav-list__link--no-arrow'}
+                        link: 'products.html', text: 'Продукция', attrs: {class: 'nav-list__link--no-arrow active'}
                     },
                     {
                         link: 'company.html', text: 'Компания', attrs: {class: 'nav-list__link--no-arrow'}
                     },
                     {
-                        link: 'news.html', text: 'Новости', attrs: {class: 'nav-list__link--no-arrow'}
+                        link: 'all-news.html', text: 'Новости', attrs: {class: 'nav-list__link--no-arrow'}
                     },
                     {
                         link: 'contacts.html', text: 'Контакты', attrs: {class: 'nav-list__link--no-arrow'}
