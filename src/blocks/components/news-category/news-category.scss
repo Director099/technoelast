@@ -1,6 +1,7 @@
 .news-category {
   @media (min-width: $screen-xl) {
     color: $text-color;
+    display: block;
 
     &:hover,
     &:focus {

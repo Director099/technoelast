@@ -55,6 +55,7 @@
 @import "../blocks/components/news-category/news-category";
 @import "../blocks/components/category-filter/category-filter";
 
+
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/main-content/main-content";
@@ -72,13 +73,14 @@
 @import "../blocks/project/production-list/production-list";
 @import "../blocks/project/product-item/product-item";
 @import "../blocks/project/characteristics/characteristics";
+@import "../blocks/project/client-errors/client-errors";
 
 
 @import "../blocks/modal/modal-ios/modal-ios";
 
 .sidebar {
   position: sticky;
-  top: 16px;
+  top: 72px;
 }
 
 .sidebar__mb {
