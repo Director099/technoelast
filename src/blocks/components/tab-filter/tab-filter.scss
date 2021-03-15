@@ -2,6 +2,10 @@
   @include ul-none;
   display: flex;
   margin-bottom: 14px;
+
+  &--news {
+    margin-bottom: 0;
+  }
 }
 
 .tab-filter__item {
@@ -22,6 +26,7 @@
   letter-spacing: 0.2px;
   color: #808080;
   transition: $time;
+  text-decoration: none;
 
   &.active {
     border-color: $color-primary;

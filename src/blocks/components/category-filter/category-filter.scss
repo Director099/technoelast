@@ -2,7 +2,7 @@
   @media (min-width: $screen-xl) {
     background-color: white;
     border-radius: 6px;
-    padding: 24px;
+    //padding: 24px;
   }
 }
 
@@ -17,10 +17,6 @@
 
 .category-filter__item {
   @media (min-width: $screen-xl) {
-    margin-right: 20px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    max-width: 200px;
   }
 }

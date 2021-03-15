@@ -21,9 +21,27 @@ block content
     +main-content({
       title: 'Продукция',
       contentSlider: false,
-      contentFooter: false,
+      contentFooter: true,
       className: 'main-content__header--products',
     })
+      .category-filter.default-slider.d-none.d-xl-block
+        .swiper-container.js-auto-slider
+          .swiper-wrapper
+            .swiper-slide.category-filter__item
+              +news-category({
+                activeClass: '',
+                categoryValue: 'all',
+                categoryName: 'ГОСТ',
+                srcImage: 'img/content/news-category-item-1.png',
+              })(href="products-item-1.html")
+            .swiper-slide.category-filter__item
+              +news-category({
+                activeClass: '',
+                categoryValue: 'production',
+                categoryName: 'Нестандартные РТИ',
+                srcImage: 'img/content/news-category-item-2.png',
+              })(href="products-item-1.html")
+
     hr.line
     +nav-list(
       [
@@ -34,10 +52,8 @@ block content
           link: 'products-item-2.html', text: 'Нестандартные РТИ'
         },
       ]
-    )
+    ).d-xl-none
     hr.line
-    +production-list({
-      className: 'production-list__item--no-border-top',
-    })
+    +production-list({}).production-all
 block footer
   +page-footer()

@@ -20,56 +20,50 @@ block content
     +main-content({
         title: 'Новости',
         contentSlider: false,
-        contentFooter: false,
+        contentFooter: true,
         className: '',
     })
-    .section-content.section-content--news
-      .section-content__wrap.section-content__wrap--news.default-slider
-        ul.tab-filter.tab-filter--news.d-xl-none
-          li.tab-filter__item
-            a.tab-filter__btn.active(href="#") Все
-          li.tab-filter__item
-            a.tab-filter__btn(href="#") Производство
-          li.tab-filter__item
-            a.tab-filter__btn(href="#") Вакансии
-        .category-filter.d-none.d-xl-block
-          +title-wrap('Новости')
-          ul.category-filter__list
-            li.category-filter__item
+      ul.tab-filter.tab-filter--news.d-xl-none
+        li.tab-filter__item
+          a.tab-filter__btn.active(href="#") Все
+        li.tab-filter__item
+          a.tab-filter__btn(href="#") Производство
+        li.tab-filter__item
+          a.tab-filter__btn(href="#") Вакансии
+      .category-filter.default-slider.d-none.d-xl-block
+        .swiper-container.js-auto-slider
+          .swiper-wrapper
+            .swiper-slide.category-filter__item
               +news-category({
-                activeClass: 'active',
+                activeClass: '',
                 categoryValue: 'all',
                 categoryName: 'Все',
                 srcImage: 'img/content/news-category-item-1.png',
               })
-            li.category-filter__item
+            .swiper-slide.category-filter__item
               +news-category({
                 activeClass: '',
                 categoryValue: 'production',
                 categoryName: 'Производство',
                 srcImage: 'img/content/news-category-item-2.png',
               })
-            li.category-filter__item
+            .swiper-slide.category-filter__item
               +news-category({
                 activeClass: '',
                 categoryValue: 'vacancy',
                 categoryName: 'Вакансии',
                 srcImage: 'img/content/news-category-item-1.png',
               })
-        .swiper-container.js-auto-slider
-          .swiper-wrapper.default-slider__column
-            .section-content__item
-              +preview()
-            .section-content__item
-              +preview()
-            .section-content__item
-              +preview()
-            .section-content__item
-              +preview()
-            .section-content__item
-              +preview()
-            .section-content__item
-              +preview()
-      +is-loading('Loading...')
+    .section-content.section-content--news
+      .section-content__wrap.section-content__wrap--news
+        -for(var i = 0; i < 6; i++)
+          .section-content__item
+            +preview({
+              title: 'Фторкаучуковые кольца',
+              picture: 1,
+              tag: 'a'
+            })
+
+  +is-loading('Loading...')
 block footer
   +page-footer()

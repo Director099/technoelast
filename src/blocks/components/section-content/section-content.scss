@@ -88,18 +88,20 @@
 
 .section-content__wrap--news {
   @media (max-width: $screen-xl - 1) {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
-.section-content__item:not(:last-child) {
-  margin: 0 -16px 23px;
-  padding: 0 16px 24px;
+.section-content__item {
+  margin: 0 -16px -1px;
+  padding: 23px 16px 24px;
+  border-top: 1px solid $color-line-border;
   border-bottom: 1px solid $color-line-border;
 
   @media (min-width: $screen-xl) {
-    border-bottom: 0;
+    border: 0;
+    padding-top: 0;
     padding-bottom: 0;
     margin-bottom: 16px;
   }
