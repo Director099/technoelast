@@ -25,10 +25,15 @@ $border-radius:               rem(3px) !default;
     //@include field-name;
     position: absolute;
     left: 0;
-    bottom: 10px;
+    top: 16px;
     padding: 0px 16px;
 
     opacity: 0.6;
+    transition: $time;
+
+    @media (min-width: $screen-xl) {
+      padding: 0;
+    }
   }
 
   &__input-wrap {
@@ -50,6 +55,7 @@ $border-radius:               rem(3px) !default;
     border: 0;
     border-bottom: 1px solid $color-line-border;
     appearance: textfield;
+    background-color: transparent;
 
     &:focus {
       @include field-focus;
@@ -88,9 +94,43 @@ $border-radius:               rem(3px) !default;
       min-height: calc(#{$textarea-height} + 2px);
       resize: vertical;
     }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__help-text {
+    display: none;
+    margin-top: 4px;
+    padding-top: 3px;
+    padding-left: 20px;
+    font-size: 11px;
+    line-height: 12px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99301 13.9923C3.31198 13.9886 0.330557 11.0023 0.333009 7.32122C0.335464 3.64019 3.32087 0.657772 7.0019 0.658997C10.6829 0.660223 13.6663 3.64463 13.6663 7.32566C13.6641 11.0092 10.6766 13.9938 6.99301 13.9923ZM1.66634 7.44033C1.69789 10.3745 4.09375 12.732 7.02804 12.7163C9.96232 12.7005 12.3327 10.3173 12.3327 7.38299C12.3327 4.44866 9.96232 2.06551 7.02804 2.04966C4.09375 2.03397 1.69789 4.3915 1.66634 7.32566V7.44033ZM7.66634 10.659H6.33301V9.32566H7.66634V10.659ZM7.66634 7.99233H6.33301V3.99233H7.66634V7.99233Z' fill='%23202020'/%3E%3C/svg%3E%0A");
     //@include field-help-text;
+  }
+}
+
+.field-text__input:focus ~ .field-text__name,
+.field-text.focus .field-text__name {
+  top: 0;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.field-text--search {
+  .field-text__input {
+    @include xl-text-thin;
+    border: 0;
+    padding: 6px 6px 6px 30px;
+    background-color: $color-lighten;
+    border-radius: $border-radius-xl;
+    background-position: center left 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1437 11.7057L7.35747 8.91872C5.45072 10.2743 2.8233 9.94273 1.31313 8.15592C-0.197047 6.36911 -0.0861591 3.72316 1.56822 2.06897C3.22217 0.414057 5.86837 0.30269 7.65551 1.81278C9.44266 3.32288 9.77443 5.95056 8.41872 7.85747L11.205 10.6445L10.1445 11.705L10.1437 11.7057ZM4.74972 2.25046C3.3275 2.25014 2.10049 3.24848 1.81158 4.64105C1.52266 6.03362 2.25125 7.43768 3.55623 8.00315C4.8612 8.56863 6.3839 8.1401 7.2024 6.97701C8.02091 5.81393 7.91027 4.23596 6.93747 3.19847L7.39122 3.64847L6.87972 3.13847L6.87072 3.12947C6.30956 2.56485 5.54577 2.24832 4.74972 2.25046Z' fill='%23808080'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
   }
 }

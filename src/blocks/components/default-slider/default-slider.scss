@@ -8,6 +8,10 @@
 
 .default-slider__width {
   max-width: 136px;
+
+  @media (min-width: $screen-xl) {
+    max-width: 157px;
+  }
 }
 
 .default-slider__column {

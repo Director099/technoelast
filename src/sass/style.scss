@@ -51,6 +51,9 @@
 @import "../blocks/components/about/about";
 @import "../blocks/components/news-category/news-category";
 @import "../blocks/components/category-filter/category-filter";
+@import "../blocks/components/phone/phone";
+@import "../blocks/components/error/error";
+@import "../blocks/components/tovar/tovar";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -76,7 +79,7 @@
 
 .sidebar {
   position: sticky;
-  top: 16px;
+  top: 72px;
 }
 
 .sidebar__mb {
@@ -118,6 +121,7 @@
   @media (min-width: $screen-xl) {
     height: 16px;
     border: 0;
+    display: none;
   }
 }
 

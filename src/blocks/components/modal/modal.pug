@@ -28,5 +28,5 @@ mixin modal(id, header)
         .modal__content
           if(!header)
             .modal__header
-              +page-header({modalHeader: true})
+              +page-header({modalHeader: true}).d-xl-none
           block

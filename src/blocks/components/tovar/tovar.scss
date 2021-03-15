@@ -1,0 +1,38 @@
+.tovar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none;
+  border-radius: $border-radius-xl;
+  color: inherit;
+  padding: 16px 20px 16px 16px;
+  background: rgba(239, 239, 244, 0.6);
+}
+
+.tovar__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+}
+
+.tovar__title {
+  @include text-normal;
+  min-height: 52px;
+  margin-bottom: 0;
+}
+
+.tovar__category {
+  @include text-small;
+  display: block;
+  color: #A5A5A5;
+  margin-bottom: 8px;
+}
+
+.tovar__commet {
+  @include text-small;
+  display: block;
+  color: #A5A5A5;
+}

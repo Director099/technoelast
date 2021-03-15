@@ -30,13 +30,17 @@ block content
         title: 'Фторкаучуковые кольца',
         mainSlider: true,
         contentFooter: true,
-    })
-      .main-content__desc
-        p Производим фторкаучуковые кольца под заказ  по вашим чертежам
-        +price({
-            iconSale: true
-        })
-      a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
+        productSlider: true,
+        className: 'd-xl-none'
+    }).main-content--p-current
+      .main-content__content
+        h2.title-big.main-content__title Фторкаучуковые кольца
+        .main-content__desc
+          p Производим фторкаучуковые кольца под заказ  по вашим чертежам
+          +price({
+              iconSale: true
+          })
+        a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
     hr.line
     +production({
         title: 'Разновидности',
@@ -70,7 +74,7 @@ block content
                 attrs: {href: '#modal-contact', 'data-fancybox': ''}, text: 'Контакты'
             },
         ]
-    )
+    ).d-xl-none
     hr.line
     +block-form()
 block footer
