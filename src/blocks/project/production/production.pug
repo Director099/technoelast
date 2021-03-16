@@ -1,7 +1,7 @@
 mixin production({title, filter, category, categoryTag})
   .section-content
     +title-wrap(title)
-      a.icon-btn.icon-btn--blue(href="products.html") Все
+      a.icon-btn.icon-btn--blue.icon-btn--production(href="products.html") Посмотреть все
     .section-content__wrap.default-slider
       if(filter === true)
         ul.tab-filter

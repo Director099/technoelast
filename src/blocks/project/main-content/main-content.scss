@@ -4,6 +4,14 @@
     border-radius: $border-radius-xl;
     margin-bottom: 16px;
   }
+
+  &--product-slide {
+    @media (min-width: $screen-xl) {
+      border-radius: 0px;
+      border-bottom-left-radius: $border-radius-xl;
+      border-bottom-right-radius: $border-radius-xl;
+    }
+  }
 }
 
 .main-content--p-current {
@@ -89,6 +97,10 @@
   }
 
   @media (min-width: $screen-xl) {
+    &--main {
+      padding: 1px;
+    }
+
     &--company {
       padding-left: 24px;
       padding-right: 24px;
@@ -108,6 +120,14 @@
 
   @media (min-width: $screen-xl) {
     bottom: 8px;
+  }
+
+  &--slide-product {
+    @media (min-width: $screen-xl) {
+      width: 40px !important;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -177,7 +197,6 @@
   // padding-right: 16px;
 
   @media (min-width: $screen-xl) {
-    border-radius: $border-radius-xl;
     overflow: hidden;
   }
 }
@@ -204,16 +223,27 @@
 .main-content__pagination .swiper-pagination-bullet {
   transition: $time;
   background-color: $color-bullet;
-  width: 7px;
-  height: 7px;
+  width: 4px;
+  height: 4px;
   margin-left: 1px;
   margin-right: 1px;
   //opacity: 1;
   //border: 1px solid rgba($white, 0.5);
+  border: 0.3px solid white;
 }
+
 
 .main-content__pagination .swiper-pagination-bullet-active {
   //background: $color-active-bullet;
+  background-color: rgba(32, 32, 32, 0.5);
+  width: 7px;
+  height: 7px;
+}
+
+.main-content__pagination .swiper-pagination-bullet-active-next,
+.main-content__pagination .swiper-pagination-bullet-active-next-next {
+  width: 6px;
+  height: 6px;
 }
 
 .main-content__breadcrumbs {

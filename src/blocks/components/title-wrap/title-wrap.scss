@@ -18,3 +18,9 @@
   letter-spacing: 0.1px;
   margin-bottom: 0;
 }
+
+.title-wrap--personals {
+  @media (min-width: $screen-xl) {
+    margin-bottom: 41px;
+  }
+}
