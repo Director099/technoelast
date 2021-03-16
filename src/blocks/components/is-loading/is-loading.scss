@@ -1,7 +1,15 @@
 .is-loading {
   @include text-small();
   display: block;
+  width: 100%;
   opacity: 0.5;
   text-align: center;
   padding: 17px 0;
+  border: 0;
+
+  @media (min-width: $screen-xl) {
+    @include xl-text-small();
+    background-color: #f5f5f7;
+    border-radius: 6px;
+  }
 }

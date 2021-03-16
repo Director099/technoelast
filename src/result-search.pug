@@ -1,0 +1,38 @@
+extends pug/layout.pug
+
+block meta
+  title Все новости
+block header
+  +page-header({})
+block content
+  main
+    +navigation(
+      [
+        {
+          text: 'Главная ', className: '',
+          attrs: {href: 'index.html',}
+        },
+        {
+          text: 'Новости', className: '',
+        }
+      ]
+    )
+    +main-content({
+      title: 'Результаты поиска',
+      contentSlider: false,
+      contentFooter: false,
+      className: '',
+    })
+    .section-content.section-content--news
+      .section-content__wrap.section-content__wrap--news
+        -for (var i = 0; i < 6; i++)
+          .section-content__item
+            +preview({
+              title: 'Фторкаучуковые кольца',
+              picture: 2,
+              search: true,
+              tag: 'div'
+            })
+  +is-loading('Loading...')
+block footer
+  +page-footer()

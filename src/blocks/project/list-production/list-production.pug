@@ -1,9 +1,7 @@
 mixin list-production({title})
   .section-content
     +title-wrap(title)
-      a.icon-btn.icon-btn--blue()
-        svg(width="17" height="14")
-          use(href="img/symbols.svg#icon-right")
+      a.icon-btn.icon-btn--blue() Все
     .section-content__wrap
       .grid-row
         -for(var i = 0; i < 8; i++)

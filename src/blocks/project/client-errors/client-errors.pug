@@ -1,0 +1,8 @@
+mixin client-errors({imgSrc, title, text})
+  .section-content.client-errors
+    .section-content__wrap
+      .client-errors__img
+        img(src= imgSrc alt= text)
+      h1.title.order-page__title= title
+      p.order-page__text= text
+      a.btn.btn--main.order-page__btn(href='/') На главную

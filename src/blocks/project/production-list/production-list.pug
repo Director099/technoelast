@@ -1,8 +1,8 @@
-mixin production-list()
-  .section-content
-    .section-content__wrap.section-content__wrap--production-list
+mixin production-list({className})
+  .section-content&attributes(attributes)
+    .section-content__wrap.section-content__wrap--news
       ul.production-list
-        li.production-list__item
+        li.production-list__item(class= className)
           +product-item()
         li.production-list__item
           +product-item()

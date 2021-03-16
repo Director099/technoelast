@@ -1,0 +1,22 @@
+.category-filter {
+  @media (min-width: $screen-xl) {
+    background-color: white;
+    border-radius: 6px;
+    //padding: 24px;
+  }
+}
+
+.category-filter__list {
+  @media (min-width: $screen-xl) {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.category-filter__item {
+  @media (min-width: $screen-xl) {
+    max-width: 200px;
+  }
+}

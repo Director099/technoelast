@@ -52,6 +52,9 @@
 @import "../blocks/components/phone/phone";
 @import "../blocks/components/error/error";
 @import "../blocks/components/tovar/tovar";
+@import "../blocks/components/news-category/news-category";
+@import "../blocks/components/category-filter/category-filter";
+
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
@@ -70,6 +73,8 @@
 @import "../blocks/project/production-list/production-list";
 @import "../blocks/project/product-item/product-item";
 @import "../blocks/project/characteristics/characteristics";
+@import "../blocks/project/client-errors/client-errors";
+@import "../blocks/project/production-all/production-all";
 
 
 @import "../blocks/modal/modal-ios/modal-ios";
@@ -117,8 +122,20 @@
   }
 
   @media (min-width: $screen-xl) {
+    display: none;
     height: 16px;
     border: 0;
-    display: none;
+  }
+}
+
+.link-all {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

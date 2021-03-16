@@ -40,6 +40,10 @@
   flex-basis: auto;
   padding-left: 4px;
   padding-right: 4px;
+
+  @media (min-width: $screen-xl) {
+    margin-right: 20px;
+  }
 }
 
 .tags-list__label {
@@ -63,4 +67,24 @@
 
 .tags-list__link {
   display: block;
+
+  @media (min-width: $screen-xl) {
+    position: relative;
+    @include xl-text-thin;
+    padding: 2.5px 4px 2.5px 12px;
+    background-color: $color-lighten;
+    border-color: $color-lighten;
+    color: #808080;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 0;
+      width: 13px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 23.9803C1.71585 24.1156 3.48019 23.5532 4.79293 22.2929L11.2218 16.1212C13.5927 13.8451 13.5927 10.1549 11.2218 7.87878L4.79293 1.70706C3.48019 0.446835 1.71585 -0.115627 0 0.019678V23.9803Z' fill='%23F5F5F7'/%3E%3C/svg%3E%0A");
+    }
+  }
 }

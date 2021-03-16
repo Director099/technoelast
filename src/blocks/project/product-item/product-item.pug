@@ -1,12 +1,13 @@
 mixin product-item()
-  a.product-item(href="#")
+  a.product-item(href="products-current.html")
     .product-item__img
       img(src="img/content/product-item-1.png" alt="Фторкаучуковые кольца")
     .product-item__content
+      span.product-item__category Название категории
       h3.product-item__title Фторкаучуковые кольца
-      .product-item__desc
+      .product-item__desc.d-xl-none
         p Фторкаучуковые кольца имеют отличное сопротивление к истиранию и они устойчивы к агрессивной среде и перепа...
-      .product-item__row
+      .product-item__row.d-xl-none
         span.product-item__value.product-item__from от
         span.product-item__value.product-item__new-price 19 890 ₽
         span.product-item__value.product-item__old-price 25 500 ₽

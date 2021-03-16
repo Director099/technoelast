@@ -9,11 +9,11 @@ block content
     +navigation(
         [
             {
-                text: 'Главная ›', className: '',
+                text: 'Главная', className: '',
                 attrs: {href: 'index.html',}
             },
             {
-                text: 'Продукция ›', className: '',
+                text: 'Продукция', className: '',
                 attrs: {href: 'products.html'},
             },
             {
@@ -26,8 +26,9 @@ block content
         title: 'Резинотехнические изделия по ГОСТу',
         contentSlider: false,
         contentFooter: false,
+        breadcrumbs: true,
         className: 'main-content__header--products',
     })
-    +production-list()
+    +production-list({})
 block footer
   +page-footer()
