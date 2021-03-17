@@ -53,6 +53,21 @@
       margin-left: 3px;
     }
   }
+
+
+  &--info-block {
+    @media (min-width: $screen-xl) {
+      display: flex;
+    }
+
+    .section-content__item {
+      @media (min-width: $screen-xl) {
+        margin-left: 0;
+        margin-right: 12px;
+        padding: 0;
+      }
+    }
+  }
 }
 
 .section-content__btn {

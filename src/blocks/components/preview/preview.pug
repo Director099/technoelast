@@ -1,9 +1,9 @@
 mixin preview-tag(tag)
   if(tag === 'a')
-    a.preview(href="news.html")
+    a.preview(href="news.html").preview--info-block
       block
   if(tag === 'div')
-    .preview
+    .preview.preview--info-block
       block
 mixin preview({search, picture, title, tag})
   +preview-tag(tag)
