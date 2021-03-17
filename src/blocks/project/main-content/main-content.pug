@@ -1,5 +1,20 @@
-mixin main-content({title, mainSlider, contentSlider, contentFooter, className, productSlider})
+mixin main-content({title, mainSlider, contentSlider, contentFooter, className, productSlider, breadcrumbs})
   article.main-content&attributes(attributes)
+    if(breadcrumbs === true)
+      .main-content__breadcrumbs.d-none.d-xl-block
+        +tags-list({
+          list: [
+            {
+              text: 'Главная ', className: '',
+              attrs: {href: 'index.html',}
+            },
+            {
+              text: 'Продукция', className: '',
+              attrs: {href: ''},
+            }
+          ],
+          tagLinkTag: 'a'
+        })
     section.main-content__wrap
       header.main-content__header(class= className)
         h1.title-big.main-content__title= title
@@ -7,7 +22,7 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
         .main-content__container.main-content__container--main
           .swiper-container(class=`${productSlider === true ? 'js-product-slider' : 'js-main-slider'}`)
             .swiper-wrapper
-              .swiper-slide
+              .d-none.d-xl-block
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
               .swiper-slide

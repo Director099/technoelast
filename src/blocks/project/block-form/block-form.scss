@@ -46,3 +46,9 @@
 .block-form__mt {
   margin-top: 30px;
 }
+
+.block-form__field-file {
+  @media (max-width: $screen-xl - 1) {
+    margin-bottom: 25px;
+  }
+}
