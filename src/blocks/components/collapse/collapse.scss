@@ -19,7 +19,7 @@
   &.active {
     .collapse__title {
       margin-bottom: 14px;
-    } 
+    }
 
     .collapse__wrap {
       border-top-color: $color-line-border;
@@ -28,6 +28,10 @@
 
   @media (max-width: $screen-xl - 1) {
     @include text-normal();
+  }
+
+  @media (min-width: $screen-xl) {
+    background-color: $color-lighten;
   }
 }
 
@@ -79,6 +83,11 @@
   opacity: 0.6;
   margin-top: 14px;
   transition: $time;
+
+  @media (min-width: $screen-xl) {
+    max-width: 686px;
+    opacity:  1;
+  }
 }
 
 .collapse__content p {

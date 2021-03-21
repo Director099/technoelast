@@ -138,4 +138,23 @@
   &:focus {
     text-decoration: underline;
   }
+
+  @media (min-width: $screen-xl) {
+    font-size: 0;
+    line-height: initial;
+    &::after {
+      @include xl-text-thin;
+      font-weight: 500;
+      content: attr(data-text);
+      color: #A5A5A5;
+      transition: $time;
+      display: inline-block;
+    }
+
+    &:hover {
+      &::after {
+        color: $color-primary;
+      }
+    }
+  }
 }
