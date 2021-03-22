@@ -215,13 +215,21 @@
   height: 7px;
   margin-left: 1px;
   margin-right: 1px;
-  //opacity: 1;
-  //border: 1px solid rgba($white, 0.5);
+  opacity: 1;
+  border: 1px solid $white;
+  transform: scale(0.5);
 }
 
 .main-content__pagination .swiper-pagination-bullet-active {
-  //background: $color-active-bullet;
+  transform: scale(1);
+  background-color: $color-active-bullet;
 }
+
+.main-content__pagination .swiper-pagination-bullet-active-next,
+.main-content__pagination .swiper-pagination-bullet-active-next-next {
+  transform: scale(0.75);
+}
+
 
 .main-content__breadcrumbs {
   padding: 16px 24px;

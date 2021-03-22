@@ -160,7 +160,7 @@
   });
 
   $('.js-form').each(function () {
-    new ValidateForm($(this));
+    var validForm = new ValidateForm($(this));
   });
 
   function ValidateForm(elem) {
@@ -278,14 +278,14 @@
     mask: "+7 (999) 999 99 99",
     showMaskOnHover: false
   }).mask(document.querySelectorAll("[type='tel']"));
-  new Swiper('.js-product-slider', {
+  var productSlider = new Swiper('.js-product-slider', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true
     }
   });
-  new Swiper('.js-main-slider', {
+  var mainSlider = new Swiper('.js-main-slider', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -298,7 +298,7 @@
       }
     }
   });
-  new Swiper('.js-company-slider', {
+  var companySlider = new Swiper('.js-company-slider', {
     loop: true,
     spaceBetween: 8,
     pagination: {
@@ -315,7 +315,7 @@
       }
     }
   });
-  new Swiper('.js-personal-slider', {
+  var personalSlider = new Swiper('.js-personal-slider', {
     slidesPerView: 'auto',
     spaceBetween: 8,
     breakpoints: {
