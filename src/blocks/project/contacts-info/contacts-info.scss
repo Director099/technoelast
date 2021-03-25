@@ -1,11 +1,12 @@
 .contacts-info {
   background-color: rgba($white, 0.5);
   border-radius: $border-radius-xl;
+  border: 1px solid $color-line-border-xl;
 }
 
 .contacts-info__header {
   padding: 12px 16px;
-  border-bottom: 1px solid #EAECEE;
+  border-bottom: 1px solid $color-line-border-xl;
 }
 
 .contacts-info__header-link {
@@ -37,5 +38,5 @@
 .contacts-info__social {
   padding: 16px;
 
-  border-top: 1px solid #EAECEE;
+  border-top: 1px solid $color-line-border-xl;
 }

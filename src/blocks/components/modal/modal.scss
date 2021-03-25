@@ -58,6 +58,7 @@ $z-index-modal:               100 !default;
       }
 
       .block-form {
+        border: 0;
         padding-left: 0;
         padding-right: 0;
       }
@@ -151,6 +152,10 @@ $z-index-modal:               100 !default;
   100% {
     opacity: 1;
   }
+}
+
+.modal .fancybox-close-small  {
+  display: none;
 }
 
 @keyframes modal-content-show {

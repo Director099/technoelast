@@ -160,7 +160,7 @@
   });
 
   $('.js-form').each(function () {
-    var validForm = new ValidateForm($(this));
+    new ValidateForm($(this));
   });
 
   function ValidateForm(elem) {
@@ -174,6 +174,11 @@
     };
     elem.on('change', '[data-required=1]', function () {
       $(this).removeClass('error');
+    });
+    elem.on('input', '[data-required=1]', function () {
+      if (!_this.addInvalid()) {
+        elem.find('.form__warning').removeClass('d-none');
+      }
     });
 
     this.addInvalid = function (elem) {
@@ -278,15 +283,17 @@
     mask: "+7 (999) 999 99 99",
     showMaskOnHover: false
   }).mask(document.querySelectorAll("[type='tel']"));
-  var productSlider = new Swiper('.js-product-slider', {
+  new Swiper('.js-product-slider', {
     loop: true,
+    mousewheel: true,
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true
     }
   });
-  var mainSlider = new Swiper('.js-main-slider', {
+  new Swiper('.js-main-slider', {
     loop: true,
+    mousewheel: true,
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true
@@ -298,8 +305,9 @@
       }
     }
   });
-  var companySlider = new Swiper('.js-company-slider', {
+  new Swiper('.js-company-slider', {
     loop: true,
+    mousewheel: true,
     spaceBetween: 8,
     pagination: {
       el: '.swiper-pagination',
@@ -308,6 +316,7 @@
   });
   var autoSlider = new Swiper('.js-auto-slider', {
     slidesPerView: 'auto',
+    mousewheel: true,
     spaceBetween: 8,
     breakpoints: {
       1200: {
@@ -315,8 +324,9 @@
       }
     }
   });
-  var personalSlider = new Swiper('.js-personal-slider', {
+  new Swiper('.js-personal-slider', {
     slidesPerView: 'auto',
+    mousewheel: true,
     spaceBetween: 8,
     breakpoints: {
       1200: {

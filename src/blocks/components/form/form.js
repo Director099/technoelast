@@ -16,6 +16,12 @@ function ValidateForm(elem) {
     $(this).removeClass('error');
   });
 
+  elem.on('input', '[data-required=1]', function () {
+    if (!_this.addInvalid()) {
+      elem.find('.form__warning').removeClass('d-none');
+    }
+  });
+
   this.addInvalid = function (elem) {
     var parentElem = $(elem).closest('.field-text');
     parentElem.removeClass('valid');

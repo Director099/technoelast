@@ -6,7 +6,7 @@
     @include xl-text-small;
     border-radius: $border-radius-xl;
     overflow: hidden;
-    //background-color: $white;
+    border: 1px solid $color-line-border-xl;
   }
 }
 
