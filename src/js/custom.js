@@ -97,7 +97,8 @@ btnFilter.on("click", function () {
 const btnToggleText = document.querySelectorAll('.js-desc-toggle');
 
 btnToggleText.forEach(function (item) {
-  item.addEventListener('click', function () {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
     const prevElemnt = item.previousElementSibling;
     prevElemnt.classList.toggle('active');
     if (prevElemnt.classList.contains('active')) {
