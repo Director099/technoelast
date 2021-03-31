@@ -1044,6 +1044,7 @@ textarea.field-text__input {
 }
 
 .comment__avatar-wrap {
+    position: relative;
     flex-shrink: 0;
     align-self: flex-end;
     margin-right: 13px;
@@ -1351,12 +1352,26 @@ textarea.field-text__input {
 }
 
 .author__img {
+    position: relative;
     display: inline-block;
     width: 108px;
     height: 108px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 4px;
+}
+
+.author__img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23fff'/%3E%3C/svg%3E%0A");
 }
 
 .author__img img {
@@ -1757,10 +1772,30 @@ textarea.field-text__input {
 }
 
 .about__img {
+    position: relative;
     width: 48px;
     height: 48px;
     flex-shrink: 0;
     margin-right: 12px;
+}
+
+.about__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23f2f4f5'/%3E%3C/svg%3E%0A");
 }
 
 .about__title {
@@ -2853,6 +2888,23 @@ textarea.field-text__input {
         margin-bottom: 12px;
     }
 
+    .comment__avatar-wrap img {
+        width: 47px;
+    }
+
+    .comment__avatar-wrap::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+
     .collapse--faq {
         background-color: #f5f5f7;
     }
@@ -3325,6 +3377,11 @@ textarea.field-text__input {
         padding-top: 9.5px;
         padding-bottom: 9.5px;
         background-color: rgba(255, 255, 255, 0.5);
+        transition: 0.3s;
+    }
+
+    .nav-list__link:hover {
+        background-color: white;
     }
 
     .block-form {

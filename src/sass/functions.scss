@@ -1,3 +1,16 @@
+@mixin mask-photo($mask) {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: $mask;
+}
+
 @mixin field-focus {
   outline: 0;
   // box-shadow: 0 0 0 2px rgba($color-main, $opacity);

@@ -26,6 +26,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   }
 
   &__avatar-wrap {
+    position: relative;
     flex-shrink: 0;
     align-self: flex-end;
     margin-right: 13px;
@@ -36,6 +37,16 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
       width: 47px;
       height: 47px;
       object-fit: cover;
+    }
+
+    @media (min-width: $screen-xl) {
+      img {
+        width: 47px;
+      }
+
+      &::after {
+        @include mask-photo(url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23fff'/%3E%3C/svg%3E%0A"));
+      }
     }
   }
 
