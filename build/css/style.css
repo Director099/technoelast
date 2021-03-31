@@ -935,7 +935,7 @@ textarea.field-text__input {
     font-size: 13px;
     line-height: 18px;
     border: 0;
-    padding: 6px 6px 6px 122px;
+    padding: 6px 25px 6px 122px;
     background-color: #f5f5f7;
     border-radius: 6px;
     background-position: center left calc(50% - 26px);
@@ -949,9 +949,37 @@ textarea.field-text__input {
     background-position: center left 10px;
 }
 
+.field-text--search .field-text__input:focus + .field-text__reset {
+    opacity: 1;
+    z-index: 1;
+}
+
 .field-text--search.focus .field-text__input {
     padding-left: 30px;
     background-position: center left 10px;
+}
+
+.field-text--search.focus .field-text__reset {
+    opacity: 1;
+    z-index: 1;
+}
+
+.field-text__reset {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7134 11.7136C9.10826 14.313 4.89051 14.313 2.28534 11.7136L2.19106 11.6193C-0.347705 8.97687 -0.277899 4.78079 2.34736 2.22429C4.97261 -0.332212 9.16907 -0.290663 11.7432 2.31732C14.3173 4.9253 14.304 9.12194 11.7134 11.7136ZM4.17096 8.88514L5.11377 9.82795L6.99939 7.94233L8.88501 9.82795L9.82781 8.88514L7.9422 6.99952L9.82781 5.1139L8.88501 4.17109L6.99939 6.05671L5.11377 4.17109L4.17096 5.1139L6.05658 6.99952L4.17096 8.88514Z' fill='%23808080'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: -1;
 }
 
 .form__fieldset {
@@ -2860,6 +2888,10 @@ textarea.field-text__input {
 
     .section-content__item-block {
         margin-bottom: 16px;
+    }
+
+    .rev-img {
+        height: 221px;
     }
 
     .default-slider__width {

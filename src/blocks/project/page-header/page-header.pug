@@ -27,6 +27,7 @@ mixin page-header({modalHeader})
                     placeholder: 'Поиск'
                   }
                 }).field-text--search.js-field
+                  button.field-text__reset(type="reset" aria-label="Сброс")
               +phone
         if(modalHeader !== true)
           a.icon-btn.icon-btn--header-mail.d-xl-none(href='#modal-message' data-fancybox="")
