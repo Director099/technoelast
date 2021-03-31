@@ -142,6 +142,9 @@
   @media (min-width: $screen-xl) {
     font-size: 0;
     line-height: initial;
+    opacity: 0;
+    transition: $time;
+    z-index: -1;
     &::after {
       @include xl-text-thin;
       font-weight: 500;

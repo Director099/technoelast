@@ -13,6 +13,11 @@
       padding: 0
     }
   }
+
+  &:hover .link-all {
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 .section-content__wrap {
