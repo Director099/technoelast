@@ -2879,6 +2879,16 @@ textarea.field-text__input {
         padding: 0;
     }
 
+    .section-content__wrap--info-block {
+        display: flex;
+    }
+
+    .section-content__wrap--info-block .section-content__item {
+        margin-left: 0;
+        margin-right: 12px;
+        padding: 0;
+    }
+
     .section-content__item {
         border: 0;
         padding-top: 0;
@@ -2923,6 +2933,47 @@ textarea.field-text__input {
     .author__desc {
         font-size: 14px;
         line-height: 20px;
+    }
+
+    .preview--info-block {
+        max-width: 160px;
+    }
+
+    .preview--info-block .preview__row {
+        display: block;
+    }
+
+    .preview--info-block .preview__img {
+        width: auto;
+        height: 118px;
+        margin-right: 0;
+        border: 1px solid #eaecee;
+        border-radius: 0;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    .preview--info-block .preview__wrap {
+        padding: 12px 11px 15px 11px;
+        background-color: #f5f5f7;
+        border: 1px solid #eaecee;
+        border-top: none;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .preview--info-block .preview__title {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: normal;
+        color: #808080;
+    }
+
+    .preview--info-block .preview__desc {
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 500;
+        color: #333333;
     }
 
     .preview__img {
@@ -3006,6 +3057,12 @@ textarea.field-text__input {
         align-items: center;
         padding: 20px 24px;
         height: 178px;
+        transition: 0.3s;
+    }
+
+    .tovar:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05), 0px 3px 1px rgba(0, 0, 0, 0.03);
+        transform: scale(1.01);
     }
 
     .tovar__img {
