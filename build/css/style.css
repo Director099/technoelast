@@ -1836,6 +1836,7 @@ textarea.field-text__input {
     text-decoration: none;
     border-radius: 6px;
     color: inherit;
+    height: 132px;
     padding: 16px 20px 16px 16px;
     background: rgba(239, 239, 244, 0.6);
 }
@@ -1847,12 +1848,17 @@ textarea.field-text__input {
     width: 92px;
     height: 92px;
     object-fit: contain;
+    flex-shrink: 0;
+    margin-left: 15px;
 }
 
 .tovar__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 15px;
     line-height: 20px;
-    min-height: 52px;
     margin-bottom: 0;
 }
 
@@ -1865,10 +1871,28 @@ textarea.field-text__input {
 }
 
 .tovar__commet {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 13px;
     line-height: 17px;
     display: block;
     color: #a5a5a5;
+}
+
+.tovar__wrap-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tovar__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
 }
 
 .news-category {
@@ -2933,6 +2957,32 @@ textarea.field-text__input {
         opacity: 0;
         z-index: -1;
         min-width: 270px;
+    }
+
+    .tovar {
+        align-items: center;
+        padding: 20px 24px;
+        height: 178px;
+    }
+
+    .tovar__img {
+        width: 106px;
+        height: 106px;
+    }
+
+    .tovar__title {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.1px;
+        font-weight: 500;
+    }
+
+    .tovar__category {
+        margin-bottom: 14px;
+    }
+
+    .tovar__content {
+        align-self: flex-start;
     }
 
     .news-category {
