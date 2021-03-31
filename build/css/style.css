@@ -2042,6 +2042,7 @@ textarea.field-text__input {
     line-height: initial;
     margin-left: auto;
     margin-right: auto;
+    width: auto !important;
 }
 
 .main-content__desc {
@@ -2112,18 +2113,25 @@ textarea.field-text__input {
     height: 7px;
     margin-left: 1px;
     margin-right: 1px;
-    opacity: 1;
     border: 1px solid white;
     transform: scale(0.5);
+    opacity: 0;
 }
 
 .main-content__pagination .swiper-pagination-bullet-active {
     transform: scale(1);
     background-color: #808080;
+    opacity: 1;
 }
 
 .main-content__pagination .swiper-pagination-bullet-active-next, .main-content__pagination .swiper-pagination-bullet-active-next-next {
     transform: scale(0.75);
+    opacity: 1;
+}
+
+.main-content__pagination .swiper-pagination-bullet-active-next-next + span {
+    transform: scale(0.5);
+    opacity: 1;
 }
 
 .main-content__breadcrumbs {
