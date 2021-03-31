@@ -1852,6 +1852,12 @@ textarea.field-text__input {
     margin-left: 15px;
 }
 
+.tovar__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .tovar__title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
