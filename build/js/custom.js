@@ -351,5 +351,18 @@
       }
     });
   });
+  const btnToggleText = document.querySelectorAll('.js-desc-toggle');
+  btnToggleText.forEach(function (item) {
+    item.addEventListener('click', function () {
+      const prevElemnt = item.previousElementSibling;
+      prevElemnt.classList.toggle('active');
+
+      if (prevElemnt.classList.contains('active')) {
+        item.textContent = 'Свернуть';
+      } else {
+        item.textContent = 'Подробнее ›';
+      }
+    });
+  });
 
 })));

@@ -1724,6 +1724,12 @@ textarea.field-text__input {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    max-height: 186px;
+    overflow: hidden;
+}
+
+.table-char__list.active {
+    max-height: initial;
 }
 
 .table-char::after, .table-char__item::after {
@@ -2635,6 +2641,17 @@ textarea.field-text__input {
     background-color: transparent;
 }
 
+.line-clump {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clump.active {
+    -webkit-line-clamp: inherit;
+}
+
 .sidebar {
     position: sticky;
     top: 72px;
@@ -3082,6 +3099,10 @@ textarea.field-text__input {
     .price--b-none {
         background-color: transparent;
         border: 0;
+    }
+
+    .table-char__list {
+        max-height: 92px;
     }
 
     .phone__wrap {

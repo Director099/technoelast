@@ -79,6 +79,14 @@
 
 @import "../blocks/modal/modal-ios/modal-ios";
 
+.line-clump {
+  @include line-clamp(4);
+
+  &.active {
+    -webkit-line-clamp: inherit;
+  }
+}
+
 .sidebar {
   position: sticky;
   top: 72px;
