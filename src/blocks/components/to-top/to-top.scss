@@ -15,7 +15,7 @@ $transition-time:             0.3s !default;
   color: $color-primary;
   font-weight: 500;
   text-decoration: none;
-  text-align: right;
+  text-align: center;
   transition: opacity $transition-time;
 
   &::before {

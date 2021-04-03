@@ -1,7 +1,7 @@
 include mixins.pug
 
 doctype html
-html(lang='ru')
+html.page(lang='ru')
 
   head
     meta(charset='utf-8')
@@ -44,39 +44,40 @@ html(lang='ru')
     block meta
       title Home
 
-  body
-    block header
-      p «шапка».to-top
-    .container.container--xs-p-none
-      .grid-row.grid-row--xs-ident-none
-        .grid-row__col.grid-row__col--xl-2_9.d-none.d-xl-block
-          aside.sidebar
-            +nav-list(
-                [
-                    {
-                        link: 'index.html', text: 'Главная', attrs: {class: 'nav-list__link--no-arrow'}
-                    },
-                    {
-                        link: 'products.html', text: 'Продукция', attrs: {class: 'nav-list__link--no-arrow active'}
-                    },
-                    {
-                        link: 'company.html', text: 'Компания', attrs: {class: 'nav-list__link--no-arrow'}
-                    },
-                    {
-                        link: 'all-news.html', text: 'Новости', attrs: {class: 'nav-list__link--no-arrow'}
-                    },
-                    {
-                        link: 'contacts.html', text: 'Контакты', attrs: {class: 'nav-list__link--no-arrow'}
-                    },
-                ]
-            ).sidebar__mb
-            +about().sidebar__mb
-            +contacts-info().sidebar__mb
-        .grid-row__col.grid-row__col--xl-9_1
-          block content
-            p содержимое страницы
-          block footer
-            p «подвал»
+  body.page__body
+    .page__inner
+      block header
+        p «шапка»
+      .container.container--xs-p-none.page__content
+        .grid-row.grid-row--xs-ident-none
+          .grid-row__col.grid-row__col--xl-2_9.d-none.d-xl-block
+            aside.sidebar
+              +nav-list(
+                  [
+                      {
+                          link: 'index.html', text: 'Главная', attrs: {class: 'nav-list__link--no-arrow'}
+                      },
+                      {
+                          link: 'products.html', text: 'Продукция', attrs: {class: 'nav-list__link--no-arrow active'}
+                      },
+                      {
+                          link: 'company.html', text: 'Компания', attrs: {class: 'nav-list__link--no-arrow'}
+                      },
+                      {
+                          link: 'all-news.html', text: 'Новости', attrs: {class: 'nav-list__link--no-arrow'}
+                      },
+                      {
+                          link: 'contacts.html', text: 'Контакты', attrs: {class: 'nav-list__link--no-arrow'}
+                      },
+                  ]
+              ).sidebar__mb
+              +about().sidebar__mb
+              +contacts-info().sidebar__mb
+          .grid-row__col.grid-row__col--xl-9_1
+            block content
+              p содержимое страницы
+      block footer
+        +page-footer().page__footer
     block page-bottom
       +modal-callback()
       +modal-message()

@@ -12,6 +12,7 @@
 @import "fonts";
 @import "global";
 
+@import "../blocks/components/page/page";
 @import "../blocks/components/btn/btn";
 @import "../blocks/components/link/link";
 @import "../blocks/components/icon-btn/icon-btn";
@@ -167,5 +168,15 @@
         color: $color-primary;
       }
     }
+  }
+}
+
+.fancybox-active {
+  @media (max-width: $screen-xl - 1) {
+    //overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }

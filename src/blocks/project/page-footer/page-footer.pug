@@ -1,8 +1,11 @@
 mixin page-footer(pageFooter)
-  footer.page-footer
-    .page-footer__service
-      p.page-footer__text © 2021 «ТехноЭласт»
-      +to-top().d-xl-none
-    .page-footer__develop
-      .develop
-        p.develop__text Вэб-сервис разработан в #[a(href="http://pplans.ru/" target="_blank") People Plans]
+  footer.page-footer&attributes(attributes)
+    .container
+      .grid-row.grid-row--xs-ident-none
+        .grid-row__col.grid-row__col--xl-9_1.grid-row__xl-ml-a
+          .page-footer__service
+            p.page-footer__text © 2021 «ТехноЭласт»
+            +to-top().d-xl-none
+          .page-footer__develop
+            .develop
+              p.develop__text Вэб-сервис разработан в #[a(href="http://pplans.ru/" target="_blank") People Plans]

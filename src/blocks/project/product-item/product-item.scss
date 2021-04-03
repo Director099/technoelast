@@ -5,7 +5,8 @@
 
   @media (min-width: $screen-xl) {
     flex-direction: row-reverse;
-    background-color: $color-lighten;
+    //background-color: $color-lighten;
+    background-color: $white;
     border-radius: $border-radius-xl;
     padding: 16px;
   }
@@ -53,9 +54,11 @@
 
 .product-item__desc {
   @include text-small();
+  @include line-clamp(3);
   color: $text-color;
   opacity: 0.5;
   margin-bottom: 10px;
+  min-height: 51px;
 }
 
 .product-item__desc p {
@@ -66,6 +69,10 @@
   @include text-small();
   color: $text-color;
   margin-right: 6px;
+
+  &:first-child {
+    margin-right: 4px;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -84,9 +91,12 @@
 
 .product-item__discount {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   color: $white;
   background-color: $color-danger;
   padding: 2px 3px;
-  border-radius: 4px;
+  margin-left: 2px;
+  border-radius: 3px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }

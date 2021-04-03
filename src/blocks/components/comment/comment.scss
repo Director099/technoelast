@@ -30,7 +30,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
     flex-shrink: 0;
     align-self: flex-end;
     margin-right: 13px;
-    margin-bottom: 47px;
+    margin-bottom: 38px;
 
     img {
       display: block;
@@ -40,6 +40,8 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
     }
 
     @media (min-width: $screen-xl) {
+      margin-bottom: 47px;
+
       img {
         width: 47px;
       }
@@ -73,6 +75,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
     width: 13px;
     height: 13px;
+    opacity: 0.6;
     background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.723 12.7539C7.44271 11.9368 11.9368 7.4427 12.7539 1.723L13 0V13H0L1.723 12.7539Z' fill='%23EFEFF4'/%3E%3C/svg%3E%0A");
     //background-color: red;
   }

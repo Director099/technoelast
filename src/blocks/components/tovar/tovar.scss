@@ -1,16 +1,16 @@
 .tovar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   text-decoration: none;
   border-radius: $border-radius-xl;
   color: inherit;
-  height: 132px;
+  height: 170px;
   padding: 16px 20px 16px 16px;
   background: rgba(239, 239, 244, 0.6);
 
   @media (min-width: $screen-xl) {
-    align-items: center;
+
     padding: 20px 24px;
     height: 178px;
     transition: $time;
@@ -62,7 +62,7 @@
   @include text-small;
   display: block;
   color: #A5A5A5;
-  margin-bottom: 8px;
+  margin-bottom: 22px;
 
   @media (min-width: $screen-xl) {
     margin-bottom: 14px;
