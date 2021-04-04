@@ -20,7 +20,9 @@ new Inputmask({
 
 var productSlider = new Swiper('.js-product-slider', {
   loop: true,
-  mousewheel: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true,
@@ -51,7 +53,10 @@ if (mainSlider) {
 
   new Swiper(mainSlider, {
     loop: true,
-    mousewheel: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
+
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
@@ -67,14 +72,11 @@ if (mainSlider) {
 }
 
 
-
-
-
-
-
 var companySlider = new Swiper('.js-company-slider', {
   loop: true,
-  mousewheel: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
   spaceBetween: 8,
   pagination: {
     el: '.swiper-pagination',
@@ -84,7 +86,9 @@ var companySlider = new Swiper('.js-company-slider', {
 
 var autoSlider = new Swiper('.js-auto-slider', {
   slidesPerView: 'auto',
-  mousewheel: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
   spaceBetween: 8,
   breakpoints: {
     1200: {
@@ -95,7 +99,9 @@ var autoSlider = new Swiper('.js-auto-slider', {
 
 var personalSlider = new Swiper('.js-personal-slider', {
   slidesPerView: 'auto',
-  mousewheel: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
   spaceBetween: 8,
   breakpoints: {
     1200: {

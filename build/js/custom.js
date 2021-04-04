@@ -285,7 +285,9 @@
   }).mask(document.querySelectorAll("[type='tel']"));
   new Swiper('.js-product-slider', {
     loop: true,
-    mousewheel: true,
+    mousewheel: {
+      forceToAxis: true
+    },
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true
@@ -314,7 +316,9 @@
 
     new Swiper(mainSlider, {
       loop: true,
-      mousewheel: true,
+      mousewheel: {
+        forceToAxis: true
+      },
       pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true
@@ -331,7 +335,9 @@
 
   new Swiper('.js-company-slider', {
     loop: true,
-    mousewheel: true,
+    mousewheel: {
+      forceToAxis: true
+    },
     spaceBetween: 8,
     pagination: {
       el: '.swiper-pagination',
@@ -340,7 +346,9 @@
   });
   var autoSlider = new Swiper('.js-auto-slider', {
     slidesPerView: 'auto',
-    mousewheel: true,
+    mousewheel: {
+      forceToAxis: true
+    },
     spaceBetween: 8,
     breakpoints: {
       1200: {
@@ -350,7 +358,9 @@
   });
   new Swiper('.js-personal-slider', {
     slidesPerView: 'auto',
-    mousewheel: true,
+    mousewheel: {
+      forceToAxis: true
+    },
     spaceBetween: 8,
     breakpoints: {
       1200: {
