@@ -1,5 +1,5 @@
 mixin page-header({modalHeader})
-  header.page-header&attributes(attributes)
+  header.page-header&attributes(attributes).page__header
     .container
       .page-header__xs-row
         if(modalHeader !== true)
@@ -26,7 +26,8 @@ mixin page-header({modalHeader})
                     name: 'search',
                     placeholder: 'Поиск'
                   }
-                }).field-text--search
+                }).field-text--search.js-field
+                  button.field-text__reset(type="reset" aria-label="Сброс")
               +phone
         if(modalHeader !== true)
           a.icon-btn.icon-btn--header-mail.d-xl-none(href='#modal-message' data-fancybox="")

@@ -39,7 +39,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   //height: 59px;
-  height: 34px;
+  min-height: 34px;
 
   @media (min-width: $screen-xl) {
     -webkit-line-clamp: 3;
@@ -67,12 +67,26 @@
   background-color: transparent;
   width: 100%;
 
+
+
   @media (min-width: $screen-xl) {
     background: #FAFBFC;
     border: 1px solid #EAECEE;
     box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
     padding-top: 3px;
     padding-bottom: 3px;
+
+    &:hover {
+      background: #F4F4F8;
+      border: 1px solid #EAECEE;
+      box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+    }
+
+    &:focus {
+      background: #FAFBFC;
+      border: 1px solid #3D81C6;
+      box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+    }
   }
 }
 

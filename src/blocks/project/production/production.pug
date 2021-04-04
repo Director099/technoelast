@@ -1,7 +1,7 @@
 mixin production({title, filter, category, categoryTag})
   .section-content
     +title-wrap(title)
-      a.icon-btn.icon-btn--blue(href="products.html") Все
+      a.link-all(href="products.html", data-text="Посмотреть все") Все
     .section-content__wrap.default-slider
       if(filter === true)
         ul.tab-filter
@@ -24,6 +24,16 @@ mixin production({title, filter, category, categoryTag})
                 categoryTag: tag
             })
           .swiper-slide.default-slider__width(data-filter="gost")
+            +product({
+                category: category,
+                categoryTag: tag
+            })
+          .swiper-slide.default-slider__width(data-filter="rti")
+            +product({
+                category: category,
+                categoryTag: tag
+            })
+          .swiper-slide.default-slider__width(data-filter="rti")
             +product({
                 category: category,
                 categoryTag: tag

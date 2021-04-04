@@ -1,7 +1,7 @@
 mixin list-production({title})
   .section-content
     +title-wrap(title)
-      a.icon-btn.icon-btn--blue() Все
+      a.link-all(href="#", data-text="Посмотреть все") Все
     .section-content__wrap
       .grid-row
         -for(var i = 0; i < 8; i++)

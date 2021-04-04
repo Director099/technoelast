@@ -1,12 +1,25 @@
 .tovar {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   text-decoration: none;
   border-radius: $border-radius-xl;
   color: inherit;
+  height: 170px;
   padding: 16px 20px 16px 16px;
   background: rgba(239, 239, 244, 0.6);
+
+  @media (min-width: $screen-xl) {
+
+    padding: 20px 24px;
+    height: 178px;
+    transition: $time;
+
+    &:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05), 0px 3px 1px rgba(0, 0, 0, 0.03);
+      transform: scale(1.01);
+    }
+  }
 }
 
 .tovar__img {
@@ -16,23 +29,67 @@
   width: 92px;
   height: 92px;
   object-fit: contain;
+  flex-shrink: 0;
+  margin-left: 15px;
+
+  @media (min-width: $screen-xl) {
+    width: 106px;
+    height: 106px;
+  }
+}
+
+.tovar__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .tovar__title {
+  @include line-clamp(2);
   @include text-normal;
-  min-height: 52px;
+  //min-height: 52px;
   margin-bottom: 0;
+
+  @media (min-width: $screen-xl) {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
 }
 
 .tovar__category {
   @include text-small;
   display: block;
   color: #A5A5A5;
-  margin-bottom: 8px;
+  margin-bottom: 22px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 14px;
+  }
 }
 
 .tovar__commet {
+  @include line-clamp(2);
   @include text-small;
   display: block;
   color: #A5A5A5;
+}
+
+.tovar__wrap-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tovar__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+
+  @media (min-width: $screen-xl) {
+    align-self: flex-start;
+  }
 }

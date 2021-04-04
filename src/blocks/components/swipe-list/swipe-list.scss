@@ -8,6 +8,13 @@
       display: none;
       -webkit-appearance: none
     }
+
+    &.navigation {
+      &::after {
+        content: '';
+        padding-right: 16px;
+      }
+    }
   }
 }
 

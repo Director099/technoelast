@@ -47,9 +47,9 @@ block content
         category: true
     })
     hr.line
-    +description(true)
+    +description(true, 'js-line-clamp')
     hr.line
-    +characteristics('Характеристики', true)
+    +characteristics('Характеристики', true, 'js-line-clamp')
     hr.line
     +reviews({
       title: 'Сертификаты соответствия'
@@ -77,5 +77,4 @@ block content
     ).d-xl-none
     hr.line
     +block-form()
-block footer
-  +page-footer()
+

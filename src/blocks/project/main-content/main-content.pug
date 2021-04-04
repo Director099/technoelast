@@ -22,7 +22,19 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
         .main-content__container.main-content__container--main
           .swiper-container(class=`${productSlider === true ? 'js-product-slider' : 'js-main-slider'}`)
             .swiper-wrapper
-              .d-none.d-xl-block
+              .swiper-slide
+                .main-content__slide
+                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              .swiper-slide
+                .main-content__slide
+                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              .swiper-slide
+                .main-content__slide
+                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              .swiper-slide
+                .main-content__slide
+                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              .swiper-slide
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
               .swiper-slide

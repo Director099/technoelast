@@ -7,6 +7,16 @@
 
 .table-char__list {
   @include ul-none;
+  max-height: 186px;
+  overflow: hidden;
+
+  @media (min-width: $screen-xl) {
+    max-height: 80px;
+  }
+
+  &.active {
+    max-height: initial;
+  }
 }
 
 .table-char::after,

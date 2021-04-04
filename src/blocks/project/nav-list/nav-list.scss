@@ -6,16 +6,36 @@
     @include xl-text-small;
     border-radius: $border-radius-xl;
     overflow: hidden;
-    //background-color: $white;
+    border: 1px solid $color-line-border-xl;
   }
 }
 
 .nav-list__item {
+  position: relative;
   border-bottom: 1px solid $color-line-border;
+
 
   &.active {
     padding-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 0;
+      > .nav-list__sub-item {
+        display: block;
+        height: auto;
+      }
+
+      > .nav-list__arrow {
+        transform: rotate(90deg);
+      }
+    }
   }
+
+  //@media (min-width: $screen-xl) {
+    &:last-child {
+      border-bottom: 0;
+    }
+  //}
 }
 
 .nav-list__item:last-child .nav-list__link {
@@ -62,6 +82,11 @@
     padding-top: 9.5px;
     padding-bottom: 9.5px;
     background-color: rgba($white, 0.5);
+    transition: $time;
+
+    &:hover {
+      background-color: $white;
+    }
   }
 }
 
@@ -79,8 +104,60 @@
   text-decoration: none;
 }
 
-.nav-list__link svg {
+.nav-list__link svg,
+.nav-list__link img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 16px;
+  width: 29px;
+  height: 29px;
+}
+
+.nav-list__sub-item {
+  @include ul-none;
+  display: none;
+  border-top: 8px solid $white;
+  border-bottom: 8px solid $white;
+  margin-bottom: -1px;
+
+  .nav-list__sub-item {
+    border: 0;
+  }
+
+  &--b0 {
+    border: 0;
+  }
+}
+
+.nav-list__arrow {
+  display: block;
+  position: absolute;
+  left: 16px;
+  top: 15px;
+
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 4.99995L9.63877e-08 9.0414L0 0.958496L7 4.99995Z' fill='%233D81C6'/%3E%3C/svg%3E%0A");
+  z-index: 1;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: $time;
+}
+
+.nav-list__arrow + .nav-list__link  {
+  padding-left: 31px;
+}
+
+.nav-list__sub-item .nav-list__link {
+  padding-left: 39px;
+}
+
+.nav-list__sub-item .nav-list__arrow {
+  left: 24px;
 }

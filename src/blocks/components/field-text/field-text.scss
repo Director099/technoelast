@@ -126,11 +126,52 @@ $border-radius:               rem(3px) !default;
   .field-text__input {
     @include xl-text-thin;
     border: 0;
-    padding: 6px 6px 6px 30px;
+    padding: 6px 25px 6px 122px;
     background-color: $color-lighten;
     border-radius: $border-radius-xl;
-    background-position: center left 10px;
+    background-position: center left calc(50% - 26px);
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1437 11.7057L7.35747 8.91872C5.45072 10.2743 2.8233 9.94273 1.31313 8.15592C-0.197047 6.36911 -0.0861591 3.72316 1.56822 2.06897C3.22217 0.414057 5.86837 0.30269 7.65551 1.81278C9.44266 3.32288 9.77443 5.95056 8.41872 7.85747L11.205 10.6445L10.1445 11.705L10.1437 11.7057ZM4.74972 2.25046C3.3275 2.25014 2.10049 3.24848 1.81158 4.64105C1.52266 6.03362 2.25125 7.43768 3.55623 8.00315C4.8612 8.56863 6.3839 8.1401 7.2024 6.97701C8.02091 5.81393 7.91027 4.23596 6.93747 3.19847L7.39122 3.64847L6.87972 3.13847L6.87072 3.12947C6.30956 2.56485 5.54577 2.24832 4.74972 2.25046Z' fill='%23808080'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
+    transition: $time;
+
+    &:focus {
+      padding-left: 30px;
+      background-position: center left 10px;
+
+      + .field-text__reset {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
   }
+
+  &.focus {
+    .field-text__input {
+      padding-left: 30px;
+      background-position: center left 10px;
+    }
+
+    .field-text__reset {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+
+.field-text__reset {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7134 11.7136C9.10826 14.313 4.89051 14.313 2.28534 11.7136L2.19106 11.6193C-0.347705 8.97687 -0.277899 4.78079 2.34736 2.22429C4.97261 -0.332212 9.16907 -0.290663 11.7432 2.31732C14.3173 4.9253 14.304 9.12194 11.7134 11.7136ZM4.17096 8.88514L5.11377 9.82795L6.99939 7.94233L8.88501 9.82795L9.82781 8.88514L7.9422 6.99952L9.82781 5.1139L8.88501 4.17109L6.99939 6.05671L5.11377 4.17109L4.17096 5.1139L6.05658 6.99952L4.17096 8.88514Z' fill='%23808080'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: $time;
+  opacity: 0;
+  z-index: -1;
 }

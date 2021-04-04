@@ -14,6 +14,16 @@
   }
 }
 
+.js-personal-slider {
+  .default-slider__width {
+
+
+    @media (min-width: $screen-xl) {
+      max-width: 136px;
+    }
+  }
+}
+
 .default-slider__column {
   display: block;
 }
@@ -26,7 +36,7 @@
   // margin-right: -16px;
   // padding-left: 16px;
   // padding-right: 16px;
-  
+
   &:last-child {
     border-bottom: 1px solid $color-line-border;
   }

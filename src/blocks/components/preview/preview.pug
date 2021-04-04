@@ -1,16 +1,17 @@
 mixin preview-tag(tag)
   if(tag === 'a')
-    a.preview(href="news.html")
+    a.preview(href="news.html")&attributes(attributes)
       block
   if(tag === 'div')
-    .preview
+    .preview&attributes(attributes)
       block
 mixin preview({search, picture, title, tag})
-  +preview-tag(tag)
+  +preview-tag(tag)&attributes(attributes)
     article.preview__row
       .preview__img
         img(src=`img/content/news-${picture}.jpg` alt="Повседневная практика показывает важность событий")
       .preview__wrap
+        span.preview__info.preview__info--rubric.d-none.d-xl-block Название рубрики
         if(search == true)
           ul.preview__bread-list
             li.preview__bread-item
@@ -28,4 +29,4 @@ mixin preview({search, picture, title, tag})
         if(!search)
           .preview__info-row
             span.preview__info 12 января 2021
-            span.preview__info Название рубрики
+            span.preview__info.d-xl-none Название рубрики
