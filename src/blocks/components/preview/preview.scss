@@ -6,7 +6,7 @@
 
   &--info-block {
     @media (min-width: $screen-xl) {
-      max-width: 160px;
+      //max-width: 160px;
 
       .preview__row {
         display: block;
@@ -23,6 +23,7 @@
       }
 
       .preview__wrap {
+        position: relative;
         padding: 12px 11px 15px 11px;
         background-color: #f5f5f7;
         border: 1px solid #eaecee;
@@ -33,14 +34,24 @@
 
       .preview__title {
         @include xl-text-thin();
-        font-weight: normal;
-        color: #808080;
+        @include line-clamp(3);
+        min-height: 48px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #333333;
+        //color: #808080;
+      }
+
+      .preview__info--rubric {
+        margin-bottom: 9px;
+        margin-right: 0;
       }
 
       .preview__desc {
-        @include text-small();
-        font-weight: 500;
-        color: #333333;
+        display: none;
+        //@include text-small();
+        //font-weight: 500;
+        //color: #333333;
       }
     }
   }
@@ -110,14 +121,13 @@
 }
 
 .preview__info-row {
-  @include text-small;
-  opacity: $opacity;
-
   display: flex;
   flex-wrap: wrap;
 }
 
 .preview__info {
+  @include text-small;
+  opacity: $opacity;
   &:first-child {
     margin-right: 18px;
   }

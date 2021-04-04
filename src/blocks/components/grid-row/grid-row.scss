@@ -91,3 +91,15 @@
     }
   }
 }
+
+.grid-row-xl {
+  @media (min-width: $screen-xl) {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(auto-fill, calc(20% - 12px));
+
+    .section-content__item {
+      margin-bottom: 0;
+    }
+  }
+}
