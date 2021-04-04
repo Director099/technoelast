@@ -11,7 +11,8 @@ mixin preview({search, picture, title, tag})
       .preview__img
         img(src=`img/content/news-${picture}.jpg` alt="Повседневная практика показывает важность событий")
       .preview__wrap
-        span.preview__info.preview__info--rubric.d-none.d-xl-block Название рубрики
+        if(!search)
+          span.preview__info.preview__info--rubric.d-none.d-xl-block Название рубрики
         if(search == true)
           ul.preview__bread-list
             li.preview__bread-item
