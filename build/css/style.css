@@ -3543,6 +3543,10 @@ textarea.field-text__input {
         flex-direction: column-reverse;
     }
 
+    .main-content__content {
+        max-width: 555px;
+    }
+
     .main-content__header {
         padding-left: 24px;
         padding-right: 24px;

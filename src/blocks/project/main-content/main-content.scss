@@ -89,6 +89,12 @@
   }
 }
 
+.main-content__content {
+  @media (min-width: $screen-xl) {
+    max-width: 555px;
+  }
+}
+
 .main-content__header {
   padding: 16px;
 
