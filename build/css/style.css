@@ -1648,6 +1648,23 @@ textarea.field-text__input {
     }
 }
 
+.modal__xl-close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1;
+}
+
+.modal__xl-close svg {
+    width: 22px;
+    height: 22px;
+    fill: #808080 !important;
+}
+
+.modal--char .table-char__list {
+    max-height: initial;
+}
+
 .icon-play {
     display: inline-block;
     width: 48px;
@@ -2874,22 +2891,6 @@ textarea.field-text__input {
         display: block !important;
     }
 
-    .modal__dialog {
-        width: 489px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .modal--open .modal__dialog {
-        animation: modal-content-show 0.3s 1 both;
-    }
-
-    .modal__dialog .block-form {
-        border: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .modal__backdrop {
         animation: modal-backdrop-show 0.3s 1;
     }
@@ -3252,6 +3253,41 @@ textarea.field-text__input {
         overflow: hidden;
     }
 
+    .modal {
+        position: relative;
+        border-radius: 6px;
+    }
+
+    .modal__dialog {
+        width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal--open .modal__dialog {
+        animation: modal-content-show 0.3s 1 both;
+    }
+
+    .modal__dialog .block-form {
+        border: 0;
+        width: 100%;
+        max-width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 108px 0;
+    }
+
+    .modal--char .modal__body {
+        max-width: 649px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 54px;
+    }
+
+    .modal--char .line-clump {
+        display: block;
+    }
+
     .is-loading {
         font-size: 14px;
         line-height: 20px;
@@ -3270,7 +3306,7 @@ textarea.field-text__input {
     }
 
     .table-char__list {
-        max-height: 92px;
+        max-height: 80px;
     }
 
     .phone__wrap {
