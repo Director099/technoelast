@@ -1,8 +1,8 @@
-mixin description(more)
+mixin description(more, jsLineClamp)
   .section-content
     +title-wrap('Описание')
     .section-content__wrap.section-content__wrap--description
-      .line-clump
+      .line-clump(class= jsLineClamp)
         p Акционеры крупнейших компаний набирают популярность среди определенных слоев населения, а значит, должны быть объективно рассмотрены соответствующими инстанциями.
         p Но понимание сути ресурсосберегающих технологий выявляет срочную потребность дальнейших направлений развития.
       if(more)

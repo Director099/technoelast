@@ -1,9 +1,9 @@
-mixin characteristics(title, more)
+mixin characteristics(title, more, jsLineClamp)
   .section-content
     +title-wrap(title)
     .section-content__wrap.section-content__wrap--description
       .table-char
-        ul.table-char__list
+        ul.table-char__list(class= jsLineClamp)
           li.table-char__item
             span Марка силикона
             span Всит 401/60

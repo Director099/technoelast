@@ -390,4 +390,19 @@
     });
   });
 
+  window.addEventListener('load', function () {
+    var blockText = document.querySelectorAll('.js-line-clamp');
+    if (blockText.length === 0) return;
+
+    for (var i = 0; i < blockText.length; i++) {
+      var lc = blockText[i].parentNode.querySelector('.js-desc-toggle');
+
+      if (blockText[i].offsetHeight < blockText[i].scrollHeight) {
+        lc.classList.display = 'block';
+      } else {
+        lc.style.display = 'none';
+      }
+    }
+  });
+
 })));

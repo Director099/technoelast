@@ -139,6 +139,48 @@ btnToggleText.forEach(function (item) {
   })
 });
 
+/*
+   Функция useMediaQuery для медиа запросов на js.
+   Функция useMediaQuery принимает в себя 3 параметра:
+     1) media - медиа запрос пр.: '(min-width: 992px)';
+     2) handler - функция, которая принимает в себя breakpoint.matches (true/false)
+        и выполняет функционал в зависимости от переданного media;
+     3) watch - true, если нужно отслеживать при resize, false - только при загрузке страницы;
+
+  */
+var useMediaQuery = function useMediaQuery(media, handler) {
+  var watch = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+  if (!media) {
+    throw Error('useMediaQuery: параметр media не определен');
+  }
+
+  var breakpoint = window.matchMedia(media);
+
+  var watchBreakpoint = function watchBreakpoint() {
+    if (typeof handler === 'function') {
+      handler(breakpoint.matches);
+    }
+  };
+
+  if (watch) breakpoint.addListener(watchBreakpoint);
+  watchBreakpoint();
+};
+
+window.addEventListener('load', function () {
+  var blockText = document.querySelectorAll('.js-line-clamp');
+  if (blockText.length === 0) return;
+  for (var i = 0; i < blockText.length; i++) {
+    var lc = blockText[i].parentNode.querySelector('.js-desc-toggle');
+
+    if (blockText[i].offsetHeight < blockText[i].scrollHeight) {
+        lc.classList.display = 'block';
+      } else {
+        lc.style.display = 'none';
+      }
+    }
+});
+
 
 
 
