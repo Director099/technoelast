@@ -88,9 +88,10 @@
 }
 
 .phone__link {
-  position: relative;
   @include xl-text-normal;
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
   color: $white;
   text-decoration: none;
   padding: 10px 16px;

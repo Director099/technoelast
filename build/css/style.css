@@ -1414,16 +1414,14 @@ textarea.field-text__input {
 .author__img::after {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    right: -1px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23fff'/%3E%3C/svg%3E%0A");
-    box-shadow: 0 0 0 1px white;
-    background-size: calc(100% + 1px);
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M54 0H0V54H54V0ZM27 53C41.3594 53 53 47.8 53 27C53 6.2 41.3594 1 27 1C12.6406 1 1 6.2 1 27C1 47.8 12.6406 53 27 53Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 
 .author__img img {
@@ -1571,7 +1569,6 @@ textarea.field-text__input {
 }
 
 .modal__header {
-    padding: 0 rem(40px) 0 rem(15px);
     flex-shrink: 0;
 }
 
@@ -1863,14 +1860,14 @@ textarea.field-text__input {
 .about__img::after {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    right: -1px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23f2f4f5'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M54 0H0V54H54V0ZM27 53C41.3594 53 53 47.8 53 27C53 6.2 41.3594 1 27 1C12.6406 1 1 6.2 1 27C1 47.8 12.6406 53 27 53Z' fill='%23f2f4f5'/%3E%3C/svg%3E%0A");
 }
 
 .about__title {
@@ -1945,10 +1942,11 @@ textarea.field-text__input {
 }
 
 .phone__link {
-    position: relative;
     font-size: 16px;
     line-height: 22px;
-    display: block;
+    position: relative;
+    display: flex;
+    align-items: center;
     color: white;
     text-decoration: none;
     padding: 10px 16px;
@@ -2082,6 +2080,7 @@ textarea.field-text__input {
 }
 
 .page-header {
+    position: relative;
     padding-top: 16px;
     padding-bottom: 15px;
     padding-left: 0;
@@ -3095,14 +3094,14 @@ textarea.field-text__input {
     .comment__avatar-wrap::after {
         content: "";
         position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
+        left: -1px;
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("data:image/svg+xml,%0A%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26 52C40.3594 52 52 46.8 52 26V52H26ZM0 26C0 46.8 11.6406 52 26 52H0V26ZM26 0C11.6406 0 0 5.19995 0 26V0H26ZM26 0H52V26C52 5.19995 40.3594 0 26 0Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M54 0H0V54H54V0ZM27 53C41.3594 53 53 47.8 53 27C53 6.2 41.3594 1 27 1C12.6406 1 1 6.2 1 27C1 47.8 12.6406 53 27 53Z' fill='%23fff'/%3E%3C/svg%3E%0A");
     }
 
     .collapse--faq {
@@ -3898,6 +3897,13 @@ textarea.field-text__input {
     .section-content__wrap--news {
         padding-top: 0px;
         padding-bottom: 0px;
+    }
+
+    .page-header .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .page-header__xs-row {
