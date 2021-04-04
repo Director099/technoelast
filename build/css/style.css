@@ -1945,12 +1945,35 @@ textarea.field-text__input {
 }
 
 .phone__link {
+    position: relative;
     font-size: 16px;
     line-height: 22px;
     display: block;
     color: white;
     text-decoration: none;
     padding: 10px 16px;
+}
+
+.phone__link img {
+    display: inline-block;
+    margin-right: 11px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.phone__link span {
+    position: relative;
+}
+
+.phone__link span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(239, 239, 244, 0.1);
 }
 
 .phone__link--dark {
@@ -1961,6 +1984,16 @@ textarea.field-text__input {
     padding-top: 0;
     padding-left: 0;
     padding-bottom: 0;
+}
+
+.phone__link:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 51px;
+    height: 1px;
+    background: #575757;
 }
 
 .error.field-text .field-text__input {
