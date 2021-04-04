@@ -31,11 +31,11 @@
     }
   }
 
-  @media (min-width: $screen-xl) {
+  //@media (min-width: $screen-xl) {
     &:last-child {
       border-bottom: 0;
     }
-  }
+  //}
 }
 
 .nav-list__item:last-child .nav-list__link {

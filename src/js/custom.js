@@ -27,20 +27,50 @@ var productSlider = new Swiper('.js-product-slider', {
   }
 });
 
-var mainSlider = new Swiper('.js-main-slider', {
-  loop: true,
-  mousewheel: true,
-  pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-  },
-  breakpoints: {
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 1,
-    }
+const mainSlider = document.querySelector('.js-main-slider');
+
+if (mainSlider) {
+  const allMainSlides = mainSlider.querySelectorAll('.js-main-slider .swiper-slide');
+  const sliderPagination = mainSlider.parentNode.querySelector('.swiper-pagination');
+
+  const MAX_LENGTH_SLIDER = 3;
+  let sliderAmount = null;
+  let sliderLoop = null;
+
+  if (allMainSlides.length === 1) {
+    sliderPagination.classList.add('d-none');
   }
-});
+
+  if (allMainSlides.length < MAX_LENGTH_SLIDER) {
+    sliderAmount = allMainSlides.length;
+    sliderLoop = false;
+  } else {
+    sliderAmount = 3;
+    sliderLoop = true;
+  }
+
+  new Swiper(mainSlider, {
+    loop: true,
+    mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: sliderAmount,
+        spaceBetween: 1,
+        loop: sliderLoop,
+      }
+    }
+  });
+}
+
+
+
+
+
+
 
 var companySlider = new Swiper('.js-company-slider', {
   loop: true,

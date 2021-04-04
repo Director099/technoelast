@@ -104,13 +104,15 @@
 .line {
   display: block;
   height: 6px;
-  margin: 0;
+  margin: -1px 0;
   background-color: $color-light;
   border: none;
   // border-left: none;
   // border-right: none;
-  border-bottom: 1px solid $color-line-border;
-  border-top: 1px solid $color-line-border;
+  //border-bottom: 1px solid $color-line-border;
+  //border-top: 1px solid $color-line-border;
+  border-bottom: 1px solid rgba(#B0B6D2, 0.2);
+  border-top: 1px solid rgba(#B0B6D2, 0.2);
 
   &--doubble {
     display: flex;

@@ -1268,7 +1268,9 @@ textarea.field-text__input {
     display: flex;
     justify-content: space-between;
     padding: 6.5px 16px;
+    margin: -1px 0;
     background-color: #efeff4;
+    border-top: 1px solid rgba(176, 182, 210, 0.33);
     border-bottom: 1px solid rgba(176, 182, 210, 0.33);
 }
 
@@ -2417,6 +2419,10 @@ textarea.field-text__input {
     padding-bottom: 20px;
 }
 
+.nav-list__item:last-child {
+    border-bottom: 0;
+}
+
 .nav-list__item:last-child .nav-list__link {
     border-bottom: 0;
 }
@@ -2823,6 +2829,10 @@ textarea.field-text__input {
     background-color: transparent;
 }
 
+.modal-ios .modal__xl-close {
+    display: none !important;
+}
+
 .line-clump {
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -2850,11 +2860,11 @@ textarea.field-text__input {
 .line {
     display: block;
     height: 6px;
-    margin: 0;
+    margin: -1px 0;
     background-color: #efeff4;
     border: none;
-    border-bottom: 1px solid rgba(176, 182, 210, 0.33);
-    border-top: 1px solid rgba(176, 182, 210, 0.33);
+    border-bottom: 1px solid rgba(176, 182, 210, 0.2);
+    border-top: 1px solid rgba(176, 182, 210, 0.2);
 }
 
 .line--doubble {
@@ -3673,10 +3683,6 @@ textarea.field-text__input {
         transform: rotate(90deg);
     }
 
-    .nav-list__item:last-child {
-        border-bottom: 0;
-    }
-
     .nav-list__link.active {
         background-color: white;
     }
@@ -3766,6 +3772,10 @@ textarea.field-text__input {
     .production-all {
         background-color: transparent;
         padding: 0;
+    }
+
+    .modal-ios .modal__dialog {
+        width: 486px;
     }
 
     .line {
