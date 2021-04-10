@@ -419,5 +419,21 @@
       }
     }
   });
+  const btnElemNext = document.querySelectorAll('.js-form-next');
+  const btnElemPrev = document.querySelectorAll('.js-form-prev');
+  btnElemPrev.forEach(elem => {
+    elem.addEventListener('click', () => {
+      let parent = elem.closest('.form__fieldset');
+      parent.classList.add('d-none');
+      parent.previousElementSibling.classList.remove('d-none');
+    });
+  });
+  btnElemNext.forEach(elem => {
+    elem.addEventListener('click', () => {
+      let parent = elem.closest('.form__fieldset');
+      parent.classList.add('d-none');
+      parent.nextElementSibling.classList.remove('d-none');
+    });
+  });
 
 })));

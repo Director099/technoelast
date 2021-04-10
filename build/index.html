@@ -492,9 +492,9 @@
                             <section class="title-wrap">
                                 <h2 class="title-normal title-wrap__title">Хотите списать все свои долги?</h2>
                             </section>
-                            <div class="section-content__wrap">
-                                <form class="form">
-                                    <fieldset class="form__fieldset">
+                            <div class="section-content__wrap interview__wrap">
+                                <form class="form interview__form js-form" autocomplete="off">
+                                    <fieldset class="form__fieldset form__fieldset--width">
                                         <p class="form__count"><strong>1</strong> / 3</p>
                                         <h3 class="form__legend">Сумма вашего долга?</h3>
                                         <div class="form__group-interview">
@@ -511,9 +511,10 @@
                                             <div class="field-checkbox">
                                                 <div class="field-checkbox__input-wrap"><label class="field-checkbox__name"><input class="field-checkbox__input" type="checkbox" name="check0" /><span class="field-checkbox__name-text">Более 3 000 000 руб.</span></label></div>
                                             </div>
-                                        </div><button class="btn"></button><button class="btn btn--main interview__btn" type="button">Далее</button>
+                                        </div>
+                                        <div class="form__btn-group"><button class="btn btn--main interview__btn js-form-next" type="button">Далее</button></div>
                                     </fieldset>
-                                    <fieldset class="form__fieldset">
+                                    <fieldset class="form__fieldset d-none form__fieldset--width">
                                         <p class="form__count"><strong>2</strong> / 3</p>
                                         <h3 class="form__legend">Вы хотите списать свой долг или произвести его реструктуризацию?</h3>
                                         <div class="form__group-interview">
@@ -523,11 +524,18 @@
                                                 <div class="field-radio__input-wrap"><label class="field-radio__name"><input class="field-radio__input" type="radio" name="radio-1" /><span class="field-radio__name-text">Пока не знаю</span></label></div>
                                             </div>
                                         </div>
+                                        <div class="form__btn-group"><button class="btn interview__btn-icon js-form-prev" type="button"><svg width="17" height="13">
+                                                    <use href="img/symbols.svg#icon-right"></use>
+                                                </svg></button><button class="btn btn--main interview__btn js-form-next" type="button">Далее</button></div>
                                     </fieldset>
-                                    <fieldset class="form__fieldset">
+                                    <fieldset class="form__fieldset d-none form__fieldset--width">
                                         <p class="form__count"><strong>3</strong> / 3</p>
                                         <h3 class="form__legend">Получите бесплатную проверку кредитной истории, заполнив форму</h3>
-                                        <div class="form__group-interview"><label class="field-text"><span class="field-text__input-wrap"><textarea class="field-text__input" name="comment"></textarea><span class="field-text__name">Название</span><span class="field-text__help-text">Подсказка</span></span></label><label class="field-text"><span class="field-text__input-wrap"><textarea class="field-text__input" name="comment"></textarea><span class="field-text__name">Название</span><span class="field-text__help-text">Подсказка</span></span></label></div>
+                                        <div class="form__group-interview"><label class="field-text field-text--field form__mb"><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" data-required="1" name="text" placeholder="Моё имя *"/></span></label><label class="field-text field-text--field form__mb"><span class="field-text__input-wrap"><input class="field-text__input" type="tel" value="" data-required="1" name="text" placeholder="Мой телефон *"/></span></label></div>
+                                        <div class="form__btn-group"><button class="btn interview__btn-icon js-form-prev" type="button"><svg width="17" height="13">
+                                                    <use href="img/symbols.svg#icon-right"></use>
+                                                </svg></button><button class="btn btn--main interview__btn">Отправить</button></div>
+                                        <p class="form__warning interview__mt d-none">Нажимая кнопку «Отправить» я даю свое <a href="#">согласие на обработку персональных данных</a></p>
                                     </fieldset>
                                 </form>
                             </div>

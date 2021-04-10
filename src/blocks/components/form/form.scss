@@ -19,7 +19,11 @@ $line-height:                 1.5 !default;
     border: 0;
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      //margin-bottom: 1rem;
+    }
+
+    &--width {
+      max-width: 344px;
     }
   }
 
@@ -102,9 +106,13 @@ $line-height:                 1.5 !default;
 }
 
 .form__group-interview {
-  margin-bottom: 34px;
+  margin-bottom: 25px;
+}
 
-  @media (min-width: $screen-xl) {
-    margin-bottom: 40px;
-  }
+.form__btn-group {
+  display: flex;
+}
+
+.form__mb {
+  margin-bottom: 12px;
 }

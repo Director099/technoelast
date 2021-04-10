@@ -175,3 +175,12 @@ $border-radius:               rem(3px) !default;
   opacity: 0;
   z-index: -1;
 }
+
+.field-text--field {
+  .field-text__input {
+    background: #F5F5F7;
+    border: 1px solid #EAECEE;
+    border-radius: 3.45306px;
+    padding: 12px 16px;
+  }
+}
