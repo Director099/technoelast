@@ -41,21 +41,24 @@
 }
 
 .interview__btn {
-  @include text-big();
-  max-width: 165px;
+  //@include text-big();
+  //max-width: 165px;
   width: 100%;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  max-width: 144px;
+  //padding-top: 13px;
+  //padding-bottom: 13px;
 
   @media (min-width: $screen-xl) {
-    @include text-big;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    //@include text-big;
+    //padding-top: 13px;
+    //padding-bottom: 13px;
   }
 }
 
 .interview__btn-icon {
-  width: 50px;
+  //width: 50px;
+  padding: 10px;
+  width: 40px;
   background-color: $white;
   margin-right: 8px;
   border-color: $color-primary;

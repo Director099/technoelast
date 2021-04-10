@@ -3,7 +3,7 @@ mixin interview()
     +title-wrap('Хотите списать все свои долги?')
     .section-content__wrap.interview__wrap
       +form()(autocomplete="off").interview__form.js-form
-        +fieldset().form__fieldset--width
+        +fieldset().form__fieldset--width.js-check-group
           p.form__count #[strong 1] / 3
           h3.form__legend Сумма вашего долга?
           .form__group-interview
@@ -41,7 +41,7 @@ mixin interview()
             ])
           .form__btn-group
             button.btn.btn--main.interview__btn.js-form-next(type="button") Далее
-        +fieldset().d-none.form__fieldset--width
+        +fieldset().d-none.form__fieldset--width.js-check-group
           p.form__count #[strong 2] / 3
           h3.form__legend Вы хотите списать свой долг или произвести его реструктуризацию?
           .form__group-interview
@@ -74,30 +74,32 @@ mixin interview()
               svg(width="17" height="13")
                 use(href="img/symbols.svg#icon-right")
             button.btn.btn--main.interview__btn.js-form-next(type="button") Далее
-        +fieldset().d-none.form__fieldset--width
+        +fieldset().d-none.form__fieldset--width.js-check-group
           p.form__count #[strong 3] / 3
           h3.form__legend Получите бесплатную проверку кредитной истории, заполнив форму
           .form__group-interview
             +field-text({
+              title: 'Моё имя *',
+              helpText: 'Заполните это поле',
               mods: '',
               val: '',
               attrs: {
                 'data-required': 1,
                 name: 'text',
                 type: 'text',
-                placeholder: 'Моё имя *'
               }
-            }).field-text--field.form__mb
+            }).js-field.form__mb
             +field-text({
+              title: 'Мой телефон *',
+              helpText: 'Заполните это поле',
               mods: '',
               val: '',
               attrs: {
                 'data-required': 1,
                 name: 'text',
                 type: 'tel',
-                placeholder: 'Мой телефон *'
               }
-            }).field-text--field.form__mb
+            }).js-field.form__mb
           .form__btn-group
             button.btn.interview__btn-icon.js-form-prev(type="button")
               svg(width="17" height="13")
