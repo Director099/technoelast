@@ -2855,16 +2855,13 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .interview__btn {
-    font-size: 17px;
-    line-height: 22px;
-    max-width: 165px;
     width: 100%;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    max-width: 144px;
 }
 
 .interview__btn-icon {
-    width: 50px;
+    padding: 10px;
+    width: 40px;
     background-color: white;
     margin-right: 8px;
     border-color: #3d81c6;
@@ -4049,13 +4046,6 @@ input:checked ~ .field-checkbox__name-text:after {
         background-size: contain;
         background-repeat: no-repeat;
         min-height: 460px;
-    }
-
-    .interview__btn {
-        font-size: 17px;
-        line-height: 22px;
-        padding-top: 13px;
-        padding-bottom: 13px;
     }
 
     .product__content {
