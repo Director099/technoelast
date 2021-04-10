@@ -54,6 +54,7 @@
   }
 
   @media (min-width: $screen-xl) {
+    padding: 10px;
     margin-right: 24px;
     width: 227px;
     height: 180px;
@@ -122,7 +123,7 @@
 
   @media (min-width: $screen-xl) {
     @include xl-text-normal;
-    margin-left: -16px;
+    //margin-left: -16px;
   }
 }
 
