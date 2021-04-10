@@ -116,4 +116,11 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   margin-top: 8px;
   color: $color-primary;
   border: 1px solid $bg-write;
+
+  @media (min-width: $screen-xl) {
+    font-weight: 500;
+    &:hover {
+      background-color: darken($bg-write, 10%);
+    }
+  }
 }

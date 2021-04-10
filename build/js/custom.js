@@ -280,7 +280,12 @@
     touch: false
   });
   new Inputmask({
-    mask: "+7 (999) 999 99 99",
+    mask: "+7 (X99) 999-9999",
+    definitions: {
+      'X': {
+        validator: "[1, 2, 3, 4, 5, 6, 9, 0]"
+      }
+    },
     showMaskOnHover: false
   }).mask(document.querySelectorAll("[type='tel']"));
   new Swiper('.js-product-slider', {
@@ -413,6 +418,22 @@
         lc.style.display = 'none';
       }
     }
+  });
+  const btnElemNext = document.querySelectorAll('.js-form-next');
+  const btnElemPrev = document.querySelectorAll('.js-form-prev');
+  btnElemPrev.forEach(elem => {
+    elem.addEventListener('click', () => {
+      let parent = elem.closest('.form__fieldset');
+      parent.classList.add('d-none');
+      parent.previousElementSibling.classList.remove('d-none');
+    });
+  });
+  btnElemNext.forEach(elem => {
+    elem.addEventListener('click', () => {
+      let parent = elem.closest('.form__fieldset');
+      parent.classList.add('d-none');
+      parent.nextElementSibling.classList.remove('d-none');
+    });
   });
 
 })));

@@ -1,0 +1,66 @@
+.interview {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  @media (min-width: $screen-xl) {
+    background-image: url("../img/decor/decor-interview.jpg");
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 460px;
+  }
+}
+
+.interview__wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @media (max-width: $screen-xl) {
+    padding-top: 24px;
+  }
+}
+
+.interview__mt {
+  margin-top: 17px;
+}
+
+.interview__form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .form__fieldset {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .form__group-interview {
+    flex-grow: 1;
+  }
+}
+
+.interview__btn {
+  @include text-big();
+  max-width: 165px;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+  @media (min-width: $screen-xl) {
+    @include text-big;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
+
+.interview__btn-icon {
+  width: 50px;
+  background-color: $white;
+  margin-right: 8px;
+  border-color: $color-primary;
+  svg {
+    transform: rotate(-180deg);
+    display: block;
+  }
+}
