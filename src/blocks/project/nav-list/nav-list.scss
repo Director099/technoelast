@@ -178,3 +178,16 @@
     left: 24px;
   }
 }
+
+.nav-list__item--hover {
+  &:hover {
+    .nav-list__sub-item {
+      display: block;
+    }
+  }
+
+  .nav-list__sub-item  .nav-list__link,
+  .nav-list__item:hover  .nav-list__link {
+    padding-left: 31px;
+  }
+}
