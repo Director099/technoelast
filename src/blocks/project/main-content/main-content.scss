@@ -175,6 +175,12 @@
 .main-content__desc {
   display: block;
   color: $text-color;
+
+  &--xl-width {
+    @media (min-width: $screen-xl) {
+      max-width: 767px;
+    }
+  }
 }
 
 .main-content__desc h4,

@@ -14,7 +14,6 @@
   position: relative;
   border-bottom: 1px solid $color-line-border;
 
-
   &.active {
     padding-bottom: 20px;
 
@@ -31,11 +30,22 @@
     }
   }
 
-  //@media (min-width: $screen-xl) {
-    &:last-child {
-      border-bottom: 0;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.nav-list__item:hover,
+.nav-list__item.active {
+  >  {
+    .nav-list__arrow + .nav-list__link  {
+      padding-left: 31px;
     }
-  //}
+
+    .nav-list__arrow {
+      left: 16px;
+    }
+  }
 }
 
 .nav-list__item:last-child .nav-list__link {
@@ -132,7 +142,7 @@
 .nav-list__arrow {
   display: block;
   position: absolute;
-  left: 16px;
+  left: -16px;
   top: 15px;
 
   width: 8px;
@@ -150,14 +160,21 @@
   transition: $time;
 }
 
-.nav-list__arrow + .nav-list__link  {
-  padding-left: 31px;
-}
-
 .nav-list__sub-item .nav-list__link {
   padding-left: 39px;
 }
 
 .nav-list__sub-item .nav-list__arrow {
   left: 24px;
+}
+
+.nav-list__sub-item .nav-list__item:hover,
+.nav-list__sub-item .nav-list__item.active  {
+  .nav-list__link {
+    padding-left: 39px;
+  }
+
+  .nav-list__arrow {
+    left: 24px;
+  }
 }

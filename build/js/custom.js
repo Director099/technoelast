@@ -280,7 +280,12 @@
     touch: false
   });
   new Inputmask({
-    mask: "+7 (999) 999 99 99",
+    mask: "+7 (X99) 999-9999",
+    definitions: {
+      'X': {
+        validator: "[1, 2, 3, 4, 5, 6, 9, 0]"
+      }
+    },
     showMaskOnHover: false
   }).mask(document.querySelectorAll("[type='tel']"));
   new Swiper('.js-product-slider', {

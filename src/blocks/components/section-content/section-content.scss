@@ -71,6 +71,22 @@
 
 .section-content__btn {
   width: 100%;
+
+  @media (max-width: $screen-xl - 1) {
+    @include text-small();
+
+  }
+
+  @media (min-width: $screen-xl) {
+    &--xl-tr {
+      background-color: $white;
+      border: 1px solid #EAECEE;
+
+      &:hover {
+        background-color: #f2f4f5;
+      }
+    }
+  }
 }
 
 .section-content__desc img {

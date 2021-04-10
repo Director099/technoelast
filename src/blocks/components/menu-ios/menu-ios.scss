@@ -6,6 +6,13 @@
   overflow: hidden;
 }
 
+.menu-ios__img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .menu-ios__list:last-child {
   margin-bottom: 0;
 }
@@ -16,6 +23,7 @@
 
 .menu-ios__link {
   @include text-semi-big;
+  position: relative;
   border-radius: 0;
   display: block;
   border: 0;

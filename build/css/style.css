@@ -1021,6 +1021,161 @@ textarea.field-text__input {
     z-index: -1;
 }
 
+.field-radio {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.field-radio__title {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+}
+
+.field-radio__input-wrap + .field-radio__input-wrap {
+    margin-top: 1rem;
+}
+
+.field-radio__name {
+    position: relative;
+    display: inline-block;
+    padding-left: 28px;
+    margin-right: 0.6em;
+    font-weight: 400;
+}
+
+.field-radio__name-text {
+    display: inline-block;
+}
+
+.field-radio__name-text:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #bab9be;
+    border-radius: 50%;
+}
+
+input:focus ~ .field-radio__name-text:before {
+    outline: 0;
+}
+
+.field-radio__name-text:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #3d81c6;
+    transition: opacity 0.3s;
+}
+
+input:checked ~ .field-radio__name-text:after {
+    opacity: 1;
+}
+
+.field-radio__input {
+    position: absolute;
+    top: 0.8em;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.field-radio__input:focus, .field-radio__input:active {
+    outline: 0;
+}
+
+.field-radio__help-text-wrap {
+    padding-left: 1.5em;
+}
+
+.field-checkbox {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.field-checkbox__title {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+}
+
+.field-checkbox__input-wrap + .field-checkbox__input-wrap {
+    margin-top: 1rem;
+}
+
+.field-checkbox__name {
+    position: relative;
+    display: inline-block;
+    padding-left: 28px;
+    margin-right: 0.6em;
+    font-weight: 400;
+}
+
+.field-checkbox__name-text {
+    display: inline-block;
+}
+
+.field-checkbox__name-text:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #bab9be;
+    border-radius: 2px;
+}
+
+input:focus ~ .field-checkbox__name-text:before {
+    outline: 0;
+}
+
+.field-checkbox__name-text:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 10px;
+    height: 6px;
+    opacity: 0;
+    border-left: 2.5px solid #3d81c6;
+    border-bottom: 2.5px solid #3d81c6;
+    transform: rotate(-45deg);
+    transition: opacity 0.3s;
+}
+
+input:checked ~ .field-checkbox__name-text:after {
+    opacity: 1;
+}
+
+.field-checkbox__input {
+    position: absolute;
+    top: 0.7em;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.field-checkbox__input:focus, .field-checkbox__input:active {
+    outline: 0;
+}
+
+.field-checkbox__help-text-wrap {
+    padding-left: 1.5em;
+}
+
 .form__fieldset {
     min-width: 0;
     padding: 0;
@@ -1036,12 +1191,11 @@ textarea.field-text__input {
     display: block;
     width: 100%;
     max-width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: rem(24px);
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 700;
-    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
     white-space: normal;
     color: currentColor;
 }
@@ -1071,6 +1225,23 @@ textarea.field-text__input {
 .form__warning a {
     color: #3d81c6;
     border-bottom: 1px solid currentColor;
+}
+
+.form__count {
+    margin: 0 0 17px;
+    letter-spacing: 0.3px;
+    color: #808080;
+    font-weight: 500;
+}
+
+.form__count strong {
+    font-size: 20px;
+    line-height: 24px;
+    color: #3d81c6;
+}
+
+.form__group-interview {
+    margin-bottom: 34px;
 }
 
 .comment {
@@ -1699,6 +1870,13 @@ textarea.field-text__input {
     overflow: hidden;
 }
 
+.menu-ios__img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .menu-ios__list:last-child {
     margin-bottom: 0;
 }
@@ -1710,6 +1888,7 @@ textarea.field-text__input {
 .menu-ios__link {
     font-size: 21px;
     line-height: 25px;
+    position: relative;
     border-radius: 0;
     display: block;
     border: 0;
@@ -2426,6 +2605,14 @@ textarea.field-text__input {
     border-bottom: 0;
 }
 
+.nav-list__item:hover > .nav-list__arrow + .nav-list__link, .nav-list__item.active > .nav-list__arrow + .nav-list__link {
+    padding-left: 31px;
+}
+
+.nav-list__item:hover > .nav-list__arrow, .nav-list__item.active > .nav-list__arrow {
+    left: 16px;
+}
+
 .nav-list__item:last-child .nav-list__link {
     border-bottom: 0;
 }
@@ -2503,7 +2690,7 @@ textarea.field-text__input {
 .nav-list__arrow {
     display: block;
     position: absolute;
-    left: 16px;
+    left: -16px;
     top: 15px;
     width: 8px;
     height: 8px;
@@ -2520,15 +2707,19 @@ textarea.field-text__input {
     transition: 0.3s;
 }
 
-.nav-list__arrow + .nav-list__link {
-    padding-left: 31px;
-}
-
 .nav-list__sub-item .nav-list__link {
     padding-left: 39px;
 }
 
 .nav-list__sub-item .nav-list__arrow {
+    left: 24px;
+}
+
+.nav-list__sub-item .nav-list__item:hover .nav-list__link, .nav-list__sub-item .nav-list__item.active .nav-list__link {
+    padding-left: 39px;
+}
+
+.nav-list__sub-item .nav-list__item:hover .nav-list__arrow, .nav-list__sub-item .nav-list__item.active .nav-list__arrow {
     left: 24px;
 }
 
@@ -2614,6 +2805,11 @@ textarea.field-text__input {
 .advantages__desc p {
     margin: 0;
     opacity: 0.5;
+}
+
+.interview__btn {
+    max-width: 165px;
+    width: 100%;
 }
 
 .product {
@@ -3098,12 +3294,33 @@ textarea.field-text__input {
         padding-right: 0;
     }
 
+    .form__legend {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
     .form__text {
         margin-bottom: 24px;
     }
 
     .form__group {
         margin-bottom: 12px;
+    }
+
+    .form__count strong {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .form__count {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .form__group-interview {
+        margin-bottom: 40px;
     }
 
     .comment__avatar-wrap {
@@ -3125,6 +3342,14 @@ textarea.field-text__input {
         background-repeat: no-repeat;
         background-position: center;
         background-image: url("data:image/svg+xml,%0A%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M54 0H0V54H54V0ZM27 53C41.3594 53 53 47.8 53 27C53 6.2 41.3594 1 27 1C12.6406 1 1 6.2 1 27C1 47.8 12.6406 53 27 53Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+    }
+
+    .comment__btn {
+        font-weight: 500;
+    }
+
+    .comment__btn:hover {
+        background-color: rgba(209, 209, 223, 0.6);
     }
 
     .collapse--faq {
@@ -3169,6 +3394,15 @@ textarea.field-text__input {
         margin-left: 0;
         margin-right: 12px;
         padding: 0;
+    }
+
+    .section-content__btn--xl-tr {
+        background-color: white;
+        border: 1px solid #eaecee;
+    }
+
+    .section-content__btn--xl-tr:hover {
+        background-color: #f2f4f5;
     }
 
     .section-content__item {
@@ -3402,6 +3636,8 @@ textarea.field-text__input {
         padding: 20px 24px;
         height: 178px;
         transition: 0.3s;
+        background-color: white;
+        border: 1px solid #eaecee;
     }
 
     .tovar:hover {
@@ -3591,6 +3827,10 @@ textarea.field-text__input {
         bottom: 8px;
     }
 
+    .main-content__desc--xl-width {
+        max-width: 767px;
+    }
+
     .main-content__desc h4, .main-content__desc h3 {
         font-weight: 600;
         font-size: 24px;
@@ -3742,6 +3982,13 @@ textarea.field-text__input {
     .advantages__item {
         max-width: 696px;
         padding-left: 41px;
+    }
+
+    .interview {
+        background-image: url("../img/decor/decor-interview.jpg");
+        background-position: bottom right;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .product__content {
@@ -3914,6 +4161,11 @@ textarea.field-text__input {
 
     .section-content__wrap {
         padding: 32px 16px 48px;
+    }
+
+    .section-content__btn {
+        font-size: 13px;
+        line-height: 17px;
     }
 
     .section-content__wrap--personals {

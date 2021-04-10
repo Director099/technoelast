@@ -1,0 +1,13 @@
+.interview {
+  @media (min-width: $screen-xl) {
+    background-image: url("../img/decor/decor-interview.jpg");
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.interview__btn {
+  max-width: 165px;
+  width: 100%;
+}
