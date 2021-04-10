@@ -56,14 +56,21 @@
 }
 
 .interview__btn-icon {
-  //width: 50px;
+  width: 50px;
   padding: 10px;
-  width: 40px;
+
   background-color: $white;
   margin-right: 8px;
   border-color: $color-primary;
+
   svg {
     transform: rotate(-180deg);
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 40px;
   }
 }

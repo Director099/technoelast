@@ -194,24 +194,26 @@ window.addEventListener('load', function () {
 
 const wrapCheckForm = document.querySelectorAll('.js-check-group');
 
-wrapCheckForm.forEach((elem) => {
-  const btnElemNext = elem.querySelector('.js-form-next');
-  const btnElemPrev = elem.querySelector('.js-form-prev');
+if(wrapCheckForm) {
+  wrapCheckForm.forEach((elem) => {
+    const btnElemNext = elem.querySelector('.js-form-next');
+    const btnElemPrev = elem.querySelector('.js-form-prev');
 
-  if(btnElemPrev) {
-    btnElemPrev.addEventListener('click', () => {
-      let parent = elem.closest('.form__fieldset');
-      parent.classList.add('d-none');
-      parent.previousElementSibling.classList.remove('d-none');
-    });
-  }
+    if (btnElemPrev) {
+      btnElemPrev.addEventListener('click', () => {
+        let parent = elem.closest('.form__fieldset');
+        parent.classList.add('d-none');
+        parent.previousElementSibling.classList.remove('d-none');
+      });
+    }
 
-  if(btnElemNext) {
-    btnElemNext.addEventListener('click', () => {
-      if(elem.querySelectorAll('input:checked').length === 0) return false;
-      let parent = elem.closest('.form__fieldset');
-      parent.classList.add('d-none');
-      parent.nextElementSibling.classList.remove('d-none');
-    });
-  }
-});
+    if (btnElemNext) {
+      btnElemNext.addEventListener('click', () => {
+        if (elem.querySelectorAll('input:checked').length === 0) return false;
+        let parent = elem.closest('.form__fieldset');
+        parent.classList.add('d-none');
+        parent.nextElementSibling.classList.remove('d-none');
+      });
+    }
+  });
+}
