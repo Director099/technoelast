@@ -62,11 +62,13 @@
 }
 
 .preview__img {
+  //padding: 10px;
   width: 122px;
   flex-shrink: 0;
   margin-right: 16px;
   border-radius: $border-radius;
   overflow: hidden;
+  background-color: #F5F5F6;
 
   img {
     width: 100%;

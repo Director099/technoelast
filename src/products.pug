@@ -55,5 +55,11 @@ block content
       ]
     ).d-xl-none
     hr.line
-    +production-list({}).production-all
+    .section-content.section-content--productions
+      .section-content__wrap
+        .grid-row
+          -for(var i = 0; i < 8; i++)
+            .grid-row__col.grid-row__col--xl-6.section-content__item-block
+              +tovar()
+        button(type="button").btn.btn--lighten.section-content__btn Показать еще
 

@@ -1,0 +1,59 @@
+extends pug/layout.pug
+
+block meta
+  title Продукция
+block header
+  +page-header({})
+block content
+  main
+    +navigation(
+        [
+            {
+                text: 'Главная', className: '',
+                attrs: {href: 'index.html',}
+            },
+            {
+                text: 'Продукция', className: '',
+                attrs: {href: ''},
+            }
+        ]
+    )
+    +main-content({
+        title: 'Продукция',
+        contentSlider: false,
+        contentFooter: true,
+        breadcrumbs: true,
+        className: 'main-content__header--products',
+    })
+      .category-filter.default-slider.d-none.d-xl-block
+        .swiper-container.js-auto-slider
+          .swiper-wrapper
+            .swiper-slide.category-filter__item
+              +news-category({
+                  activeClass: '',
+                  categoryValue: 'all',
+                  categoryName: 'ГОСТ',
+                  srcImage: 'img/content/news-category-item-1.png',
+              })(href="products-item-1.html")
+            .swiper-slide.category-filter__item
+              +news-category({
+                  activeClass: '',
+                  categoryValue: 'production',
+                  categoryName: 'Нестандартные РТИ',
+                  srcImage: 'img/content/news-category-item-2.png',
+              })(href="products-item-1.html")
+
+    hr.line
+    +nav-list(
+        [
+            {
+                link: 'products-item-1.html', text: 'ГОСТ'
+            },
+            {
+                link: 'products-item-2.html', text: 'Нестандартные РТИ'
+            },
+        ]
+    ).d-xl-none
+    hr.line
+    +production-list({}).production-all
+
