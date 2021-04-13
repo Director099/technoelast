@@ -1,0 +1,10 @@
+mixin theses()
+  +section-content({
+      title: 'Тезисы'
+  })
+    .grid-tpl.grid-tpl--4
+      - for(var i = 0; i < 4; i++)
+        +thesis({
+          img: 'thesis-1.jpg',
+          text: 'Акционеры крупнейших компаний набирают популярность'
+        })
