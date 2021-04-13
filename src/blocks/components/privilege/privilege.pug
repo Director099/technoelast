@@ -1,0 +1,8 @@
+mixin privilege({img, title, list, classItem})
+  a.privilege(href="#")
+    .privilege__img
+      img(src=`img/content/${img}`, alt="Преимущества банкротства")
+    h3.privilege__title= title
+    ul.privilege__list
+      each item in list
+        li.privilege__item(class=`privilege__item--${classItem}`)= item

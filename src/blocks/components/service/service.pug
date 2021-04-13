@@ -1,0 +1,12 @@
+mixin service({title, img, list})
+  .service
+    section.service__content
+      .service__img
+        img(src=`img/content/${img}`, alt=title)
+      h3.service__title= title
+      ul.service__list
+        each item in list
+          li.service__item= item
+    footer.service__footer
+      +price({iconSale: true}).price--b-none.service__price
+      a.btn.btn--ios.service__btn(href="#modal-message-order", data-fancybxo="") Заказать
