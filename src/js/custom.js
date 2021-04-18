@@ -24,7 +24,6 @@ new Inputmask({
 }).mask(document.querySelectorAll("[type='tel']"));
 
 var productSlider = new Swiper('.js-product-slider', {
-  loop: true,
   mousewheel: {
     forceToAxis: true,
   },
@@ -42,22 +41,19 @@ if (mainSlider) {
 
   const MAX_LENGTH_SLIDER = 3;
   let sliderAmount = null;
-  let sliderLoop = null;
 
   if (allMainSlides.length === 1) {
     sliderPagination.classList.add('d-none');
+    return false
   }
 
   if (allMainSlides.length < MAX_LENGTH_SLIDER) {
     sliderAmount = allMainSlides.length;
-    sliderLoop = false;
   } else {
     sliderAmount = 3;
-    sliderLoop = true;
   }
 
   new Swiper(mainSlider, {
-    loop: true,
     mousewheel: {
       forceToAxis: true,
     },
@@ -70,7 +66,6 @@ if (mainSlider) {
       1200: {
         slidesPerView: sliderAmount,
         spaceBetween: 1,
-        loop: sliderLoop,
       }
     }
   });
@@ -78,7 +73,6 @@ if (mainSlider) {
 
 
 var companySlider = new Swiper('.js-company-slider', {
-  loop: true,
   mousewheel: {
     forceToAxis: true,
   },
