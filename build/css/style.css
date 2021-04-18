@@ -4679,6 +4679,10 @@ input:checked ~ .field-checkbox__name-text:after {
         max-width: 220px;
     }
 
+    .interview {
+        background-image: none !important;
+    }
+
     .production-list__item {
         border-bottom: 1px solid rgba(176, 182, 210, 0.33);
     }
