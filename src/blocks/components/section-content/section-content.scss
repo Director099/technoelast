@@ -20,13 +20,10 @@
       padding: 0;
     }
 
-    @media (max-width: $screen-xl) {
+    @media (max-width: $screen-xl - 1) {
+      padding: 16px 16px 8px;
       .section-content__wrap {
         padding: 0;
-      }
-
-      .tovar {
-        border-radius: 0;
       }
     }
   }

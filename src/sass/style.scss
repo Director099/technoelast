@@ -187,11 +187,12 @@
     height: 100%;
   }
 }
-//
-//.fancybox-inner,
-//.fancybox-bg {
-//  position: fixed;
-//}
+
+.fancybox-slide--html {
+  @media (max-width: $screen-xl - 1) {
+    padding: 0;
+  }
+}
 
 .modal--show {
   @media (max-width: $screen-xl - 1) {
