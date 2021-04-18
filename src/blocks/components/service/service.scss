@@ -39,10 +39,9 @@
 }
 
 .service__list {
-  @include xl-text-normal();
+  @include xl-text-small();
   margin: 0;
   padding-left: 18px;
-  line-height: 23px;
   color: #808080;
 }
 

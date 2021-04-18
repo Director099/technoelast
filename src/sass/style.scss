@@ -182,10 +182,21 @@
 
 .fancybox-active {
   @media (max-width: $screen-xl - 1) {
-    //overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    overflow: hidden;
+    z-index: -1;
+    height: 100%;
+  }
+}
+//
+//.fancybox-inner,
+//.fancybox-bg {
+//  position: fixed;
+//}
+
+.modal--show {
+  @media (max-width: $screen-xl - 1) {
+    display: block !important;
+    height: 100%;
+    overflow: auto;
   }
 }

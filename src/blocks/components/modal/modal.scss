@@ -35,6 +35,7 @@ $z-index-modal:               100 !default;
   -webkit-overflow-scrolling: touch;
   padding: 0;
   background-color: #fff;
+  height: 100%;
 
   @media (min-width: $screen-xl) {
     position: relative;

@@ -44,31 +44,30 @@ if (mainSlider) {
 
   if (allMainSlides.length === 1) {
     sliderPagination.classList.add('d-none');
-    return false
-  }
-
-  if (allMainSlides.length < MAX_LENGTH_SLIDER) {
-    sliderAmount = allMainSlides.length;
   } else {
-    sliderAmount = 3;
-  }
-
-  new Swiper(mainSlider, {
-    mousewheel: {
-      forceToAxis: true,
-    },
-
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true,
-    },
-    breakpoints: {
-      1200: {
-        slidesPerView: sliderAmount,
-        spaceBetween: 1,
-      }
+    if (allMainSlides.length < MAX_LENGTH_SLIDER) {
+      sliderAmount = allMainSlides.length;
+    } else {
+      sliderAmount = 3;
     }
-  });
+
+    new Swiper(mainSlider, {
+      mousewheel: {
+        forceToAxis: true,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: sliderAmount,
+          spaceBetween: 1,
+        }
+      }
+    });
+  }
 }
 
 

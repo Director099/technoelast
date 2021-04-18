@@ -22,11 +22,14 @@
 }
 
 .menu-ios__link {
-  @include text-semi-big;
+  display: block;
+  font-size: 20px;
+  line-height: 24px;
   position: relative;
   border-radius: 0;
-  display: block;
   border: 0;
   padding-top: 16px;
   padding-bottom: 16px;
+  letter-spacing: 0.4px;
+  color: #037EE5;
 }

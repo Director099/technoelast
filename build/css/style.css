@@ -346,6 +346,7 @@ template {
     -ms-text-size-adjust: 100%;
     min-width: 320px;
     min-height: 100%;
+    height: 100%;
 }
 
 .page__inner {
@@ -549,15 +550,19 @@ a.btn--disabled {
 }
 
 .grid-tpl--2 {
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
 }
 
 .grid-tpl--3 {
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
 }
 
 .grid-tpl--4 {
-    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+}
+
+.grid-tpl--ai-s {
+    align-items: flex-start;
 }
 
 .develop__text {
@@ -853,6 +858,10 @@ a.btn--disabled {
 
 .navigation__burger {
     margin-right: 10px;
+}
+
+.navigation + .line {
+    display: none;
 }
 
 .swipe-list .tag-link {
@@ -1755,6 +1764,7 @@ input:checked ~ .field-checkbox__name-text:after {
     -webkit-overflow-scrolling: touch;
     padding: 0;
     background-color: #ffffff;
+    height: 100%;
 }
 
 .js-modal-open .modal {
@@ -1920,14 +1930,16 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .menu-ios__link {
-    font-size: 21px;
-    line-height: 25px;
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
     position: relative;
     border-radius: 0;
-    display: block;
     border: 0;
     padding-top: 16px;
     padding-bottom: 16px;
+    letter-spacing: 0.4px;
+    color: #037ee5;
 }
 
 .price {
@@ -2404,13 +2416,13 @@ input:checked ~ .field-checkbox__name-text:after {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    font-size: 16px;
-    line-height: 22px;
-    line-height: 23px;
+    font-size: 14px;
+    line-height: 20px;
     color: #808080;
 }
 
 .privilege__item {
+    min-height: 24px;
     padding-left: 36px;
     background-repeat: no-repeat;
     background-position: left top;
@@ -2480,11 +2492,10 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .service__list {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
     margin: 0;
     padding-left: 18px;
-    line-height: 23px;
     color: #808080;
 }
 
@@ -2862,6 +2873,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .nav-list__item {
     position: relative;
     border-bottom: 1px solid rgba(176, 182, 210, 0.33);
+    transition: 0.3s;
 }
 
 .nav-list__item.active {
@@ -2870,6 +2882,19 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .nav-list__item:last-child {
     border-bottom: 0;
+}
+
+.nav-list__item.d-none.active {
+    border-top: 8px solid white;
+    border-bottom: 8px solid white;
+}
+
+.nav-list__item.d-none.active .nav-list__link {
+    margin-bottom: 0;
+}
+
+.nav-list__item.d-none.active * {
+    border: 0;
 }
 
 .nav-list__item:hover > .nav-list__arrow + .nav-list__link, .nav-list__item.active > .nav-list__arrow + .nav-list__link {
@@ -2891,6 +2916,11 @@ input:checked ~ .field-checkbox__name-text:after {
     padding: 13px 16px;
     text-decoration: none;
     color: #212a40;
+}
+
+.nav-list__link a {
+    border-bottom: 1px solid #0053f0;
+    color: #0053f0;
 }
 
 .nav-list__link::after {
@@ -2941,9 +2971,6 @@ input:checked ~ .field-checkbox__name-text:after {
     padding: 0;
     margin: 0;
     display: none;
-    border-top: 8px solid white;
-    border-bottom: 8px solid white;
-    margin-bottom: -1px;
 }
 
 .nav-list__sub-item .nav-list__sub-item {
@@ -4675,10 +4702,6 @@ input:checked ~ .field-checkbox__name-text:after {
         background: url("../img/decor/decor-write.png") no-repeat center/cover;
     }
 
-    .advantages__desc {
-        max-width: 220px;
-    }
-
     .interview {
         background-image: none !important;
     }
@@ -4692,10 +4715,15 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .fancybox-active {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        overflow: hidden;
+        z-index: -1;
+        height: 100%;
+    }
+
+    .modal--show {
+        display: block !important;
+        height: 100%;
+        overflow: auto;
     }
 }
 

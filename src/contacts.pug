@@ -26,12 +26,8 @@ block content
         }
       ]
     )
-    .section-content.d-xl-none
-      +client-errors({
-        imgSrc: 'img/content/error-smile.png',
-        title: 'Ошибка 404',
-        text: 'Страница не найдена',
-      })
+    //TODO: решение на скорую руку, нужно обдумать
+    +modal-contact().modal--show
     .section-content.d-none.d-xl-block
       .contacts
         .contacts__wrap.contacts__wrap--pl
