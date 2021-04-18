@@ -819,15 +819,28 @@ a.btn--disabled {
 
 .title-wrap {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
+}
+
+.title-wrap .title-wrap__desc {
+    margin-top: 8px;
 }
 
 .title-wrap__title {
     font-weight: 600;
     letter-spacing: 0.1px;
     margin-bottom: 0;
+}
+
+.title-wrap__desc {
+    width: 100%;
+}
+
+.title-wrap__desc p {
+    margin: 0;
 }
 
 .title-small {
@@ -1764,7 +1777,6 @@ input:checked ~ .field-checkbox__name-text:after {
     -webkit-overflow-scrolling: touch;
     padding: 0;
     background-color: #ffffff;
-    height: 100%;
 }
 
 .js-modal-open .modal {
@@ -2311,6 +2323,8 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .thesis {
     text-align: center;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .thesis__img {
@@ -3656,6 +3670,15 @@ input:checked ~ .field-checkbox__name-text:after {
         height: 24px;
     }
 
+    .title-wrap .title-wrap__desc {
+        margin-top: 12px;
+        margin-bottom: -8px;
+    }
+
+    .title-wrap__desc {
+        max-width: 695px;
+    }
+
     .title-normal {
         font-size: 24px;
         line-height: 29px;
@@ -4645,6 +4668,10 @@ input:checked ~ .field-checkbox__name-text:after {
     .section-content__wrap--news {
         padding-top: 0px;
         padding-bottom: 0px;
+    }
+
+    .modal {
+        height: 100%;
     }
 
     .page-header .logo {

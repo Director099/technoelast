@@ -1,5 +1,6 @@
 .thesis {
   text-align: center;
+  @include xl-text-small;
   //@include text-normal;
 }
 
