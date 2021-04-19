@@ -279,6 +279,39 @@
   $('[data-fancybox]').fancybox({
     touch: false
   });
+
+  function MainPaginationSlider(slider) {
+    const elemSliders = slider.querySelectorAll('.swiper-slide');
+    const option = {
+      el: '.swiper-pagination',
+      dynamicBullets: true
+    };
+
+    if (elemSliders.length === 1) {
+      return false;
+    }
+
+    if (window.matchMedia("(min-width: 1200px)").matches && elemSliders.length <= 3) {
+      return false;
+    }
+
+    return option;
+  }
+
+  function paginationSlides(slider) {
+    const elemSliders = slider.querySelectorAll('.swiper-slide');
+    const option = {
+      el: '.swiper-pagination',
+      dynamicBullets: true
+    };
+
+    if (elemSliders.length === 1) {
+      return false;
+    }
+
+    return option;
+  }
+
   new Inputmask({
     mask: "+7 (X99) 999-9999",
     definitions: {
@@ -288,43 +321,40 @@
     },
     showMaskOnHover: false
   }).mask(document.querySelectorAll("[type='tel']"));
-  new Swiper('.js-product-slider', {
-    mousewheel: {
-      forceToAxis: true
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true
-    }
-  });
+  const productSlider = document.querySelector('.js-product-slider');
+
+  if (productSlider) {
+    new Swiper(productSlider, {
+      mousewheel: {
+        forceToAxis: true
+      },
+      pagination: paginationSlides(productSlider)
+    });
+  }
+
   const mainSlider = document.querySelector('.js-main-slider');
 
   if (mainSlider) {
     const allMainSlides = mainSlider.querySelectorAll('.js-main-slider .swiper-slide');
-    const sliderPagination = mainSlider.parentNode.querySelector('.swiper-pagination');
     const MAX_LENGTH_SLIDER = 3;
-    let sliderAmount = null;
 
-    if (allMainSlides.length === 1) {
-      sliderPagination.classList.add('d-none');
-    } else {
-      if (allMainSlides.length < MAX_LENGTH_SLIDER) {
-        sliderAmount = allMainSlides.length;
+    function countSlider(elem, numberCount) {
+      if (elem.length < numberCount) {
+        return allMainSlides.length;
       } else {
-        sliderAmount = 3;
+        return 3;
       }
+    }
 
+    if (allMainSlides.length > 1) {
       new Swiper(mainSlider, {
         mousewheel: {
           forceToAxis: true
         },
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true
-        },
+        pagination: MainPaginationSlider(mainSlider),
         breakpoints: {
           1200: {
-            slidesPerView: sliderAmount,
+            slidesPerView: countSlider(allMainSlides, MAX_LENGTH_SLIDER),
             spaceBetween: 1
           }
         }
@@ -332,16 +362,18 @@
     }
   }
 
-  new Swiper('.js-company-slider', {
-    mousewheel: {
-      forceToAxis: true
-    },
-    spaceBetween: 8,
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true
-    }
-  });
+  const companySlider = document.querySelector('.js-company-slider');
+
+  if (companySlider) {
+    new Swiper(companySlider, {
+      mousewheel: {
+        forceToAxis: true
+      },
+      spaceBetween: 8,
+      pagination: paginationSlides(companySlider)
+    });
+  }
+
   var autoSlider = new Swiper('.js-auto-slider', {
     slidesPerView: 'auto',
     mousewheel: {
