@@ -45,7 +45,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
     }
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 47px;
+      margin-bottom: 40px;
 
       img {
         width: 47px;
@@ -68,6 +68,11 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   border-radius: 8px 8px 8px 0px;
   background-color: $bg-write;
 
+  @media (min-width: $screen-xl) {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -85,7 +90,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 .comment__author {
   display: block;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .comment__body {
@@ -99,6 +104,10 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
   &--right {
     text-align: right;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: -5px;
   }
 }
 
@@ -120,6 +129,9 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
   @media (min-width: $screen-xl) {
     font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 0.15px;
     &:hover {
       background-color: darken($bg-write, 10%);
     }

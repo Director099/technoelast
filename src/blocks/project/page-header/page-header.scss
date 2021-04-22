@@ -8,14 +8,18 @@
   min-height: 48px;
   background-color: $color-light;
 
-  @media (max-width: $screen-xl - 1) {
-    .logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $screen-xl) {
+      left: 17px;
+      transform: translateY(-50%);
     }
   }
+
 
   @media (min-width: $screen-xl) {
     position: sticky;
@@ -26,6 +30,7 @@
     margin-bottom: 16px;
     border-bottom: 1px solid #EAECEE;
     background-color: $white;
+    height: 56px;
   }
 }
 
@@ -40,6 +45,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media(min-width: $screen-xl) {
+    position: relative;
   }
 }
 

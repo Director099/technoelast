@@ -1,0 +1,41 @@
+.block-content {
+  position: relative;
+  z-index: 1;
+  @media (min-width: $screen-xl) {
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: -1px;
+      z-index: -1;
+      background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 54.09%, rgba(255, 255, 255, 0.75) 61.15%, rgba(255, 255, 255, 0) 66.23%);
+      border-radius: $border-radius-xl;
+    }
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    background-image: none !important;
+  }
+}
+
+.block-content .section-content__wrap {
+  @media (min-width: $screen-xl) {
+    max-width: 555px;
+  }
+}
+
+.block-content__subtitle {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 16px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 8px;
+  }
+}

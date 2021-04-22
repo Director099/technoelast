@@ -429,7 +429,23 @@
       }
     });
   });
+  const charBlock = document.querySelectorAll('.js-char-clamp');
+  charBlock.forEach(item => {
+    const btnToggle = item.parentNode.querySelector('.js-desc-toggle');
+    const lengthItemChar = item.querySelectorAll('.table-char__item').length;
+    const CharHidden = {
+      Mob: 8,
+      Desc: 3
+    };
 
+    if (window.matchMedia("(max-width: 1199px)").matches && lengthItemChar <= CharHidden.Mob) {
+      btnToggle.classList.add('d-none');
+    }
+
+    if (window.matchMedia("(min-width: 1200px)").matches && lengthItemChar <= CharHidden.Desc) {
+      btnToggle.classList.add('d-none');
+    }
+  });
   window.addEventListener('load', function () {
     var blockText = document.querySelectorAll('.js-line-clamp');
     if (blockText.length === 0) return;

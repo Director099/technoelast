@@ -8,7 +8,7 @@
 
   .title-wrap__desc {
     margin-top: 8px;
-    
+
     @media (min-width: $screen-xl) {
       margin-top: 12px;
       margin-bottom: -8px;
@@ -37,6 +37,8 @@
   }
 
   @media (min-width: $screen-xl) {
-    max-width: 695px;
+    //max-width: 695px;
+    //margin-right: 66px;
+    margin-right: 138px;
   }
 }

@@ -1,6 +1,7 @@
-mixin thesis({img, text})
+mixin thesis({img, text, title})
   .thesis
     .thesis__img
       img(src=`img/content/${img}` alt="Тезис")
+    h3.thesis__title= title
     .thesis__desc
       p= text

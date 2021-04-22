@@ -42,7 +42,7 @@
 .service__title {
   @include xl-text-normal();
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -101,4 +101,9 @@
   border: 1px solid #EAECEE;
   box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
   border-radius: 6px;
+  color: $color-primary;
+
+  &:hover {
+    background-color: #F4F4F8;
+  }
 }

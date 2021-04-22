@@ -34,7 +34,7 @@
   @include text-small;
   font-weight: 500;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   @media (min-width: $screen-xl) {
     @include xl-text-small;
@@ -47,5 +47,6 @@
 
   @media (min-width: $screen-xl) {
     @include xl-text-small;
+    line-height: 17px;
   }
 }
