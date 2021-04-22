@@ -2555,7 +2555,9 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .service__content {
+    display: block;
     padding: 24px 16px;
+    color: inherit;
 }
 
 .service__list {
