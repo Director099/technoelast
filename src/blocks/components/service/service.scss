@@ -86,6 +86,10 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
+
+    span {
+      @include text-big;
+    }
   }
 
   .sale {
@@ -96,8 +100,6 @@
 }
 
 .service__btn {
-  width: 100%;
-  max-width: 144px;
 
   background: #FAFBFC;
   border: 1px solid #EAECEE;

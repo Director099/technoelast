@@ -26,8 +26,9 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
               .swiper-slide
-                .main-content__slide
+                a.main-content__slide(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&ab_channel=JazzandBluesExperience" data-fancybox="")
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+                  +icon-play().main-content__play
               .swiper-slide
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")

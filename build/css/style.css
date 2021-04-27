@@ -1999,13 +1999,8 @@ input:checked ~ .field-checkbox__name-text:after {
 .price__value {
     font-size: 22px;
     line-height: 26px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.7px;
-}
-
-.price__value span {
-    font-size: 17px;
-    line-height: 22px;
 }
 
 .price__sale {
@@ -2595,6 +2590,11 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 21px;
 }
 
+.service__price .price__value span {
+    font-size: 17px;
+    line-height: 22px;
+}
+
 .service__price .sale {
     align-self: center;
     font-size: 12px;
@@ -2602,8 +2602,6 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .service__btn {
-    width: 100%;
-    max-width: 144px;
     background: #fafbfc;
     border: 1px solid #eaecee;
     box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
@@ -3247,6 +3245,7 @@ input:checked ~ .field-checkbox__name-text:after {
     text-align: center;
     color: inherit;
     text-decoration: none;
+    overflow: hidden;
     border-radius: 5px;
     border: 1px solid rgba(176, 182, 210, 0.33);
 }
@@ -3303,6 +3302,12 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 17px;
     background-color: transparent;
     width: 100%;
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+}
+
+.product__price {
+    margin-bottom: 5px;
 }
 
 .product__price .price__sale {
@@ -3322,6 +3327,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .product__price .price__value {
     font-size: 15px;
     line-height: 20px;
+    font-weight: 500;
 }
 
 .partner__slide-wrap {
