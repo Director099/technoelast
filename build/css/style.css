@@ -3189,6 +3189,8 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .interview {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -4496,6 +4498,18 @@ input:checked ~ .field-checkbox__name-text:after {
         min-height: 460px;
     }
 
+    .interview::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: -1px;
+        z-index: -1;
+        background: linear-gradient(90deg, #ffffff 0%, #ffffff 54.09%, rgba(255, 255, 255, 0.75) 61.15%, rgba(255, 255, 255, 0) 66.23%);
+        border-radius: 6px;
+    }
+
     .interview__btn-icon {
         width: 40px;
     }
@@ -4647,7 +4661,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .block-content .section-content__wrap {
-        max-width: 555px;
+        max-width: 440px;
     }
 
     .block-content__subtitle {
