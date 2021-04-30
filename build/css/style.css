@@ -2202,8 +2202,8 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .phone__link {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 20px;
     position: relative;
     display: flex;
     align-items: center;
@@ -2244,7 +2244,12 @@ input:checked ~ .field-checkbox__name-text:after {
     padding-bottom: 0;
 }
 
-.phone__link:not(:last-child)::after {
+.phone__link--big {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.phone__link--big:not(:last-child)::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -2803,13 +2808,17 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 16px;
 }
 
+.contacts__list-wrap {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .contacts__wrap {
     padding: 16px 16px 24px;
 }
 
 .contacts__content {
-    font-size: 17px;
-    line-height: 22px;
     margin-bottom: 24px;
 }
 
@@ -3015,7 +3024,7 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .nav-list__link--color {
-    color: #0b5fff;
+    color: #3d81c6;
 }
 
 .nav-list__link--no-arrow::after {
@@ -3096,12 +3105,10 @@ input:checked ~ .field-checkbox__name-text:after {
     left: 24px;
 }
 
-.nav-list__item--hover:hover .nav-list__sub-item {
-    display: block;
-}
-
-.nav-list__item--hover .nav-list__sub-item .nav-list__link, .nav-list__item--hover .nav-list__item:hover .nav-list__link {
-    padding-left: 31px;
+.nav-list__item--hover .nav-list__sub-item {
+    height: 0;
+    transition: 0.3s;
+    overflow: hidden;
 }
 
 .block-form__title {
@@ -4045,7 +4052,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .modal__dialog {
-        width: 1170px;
+        width: 884px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -4374,7 +4381,7 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .contacts__item--color a {
         color: #333333;
-        border-bottom: none;
+        border-bottom: 1px solid transparent;
     }
 
     .contacts__item--color a:hover, .contacts__item--color a:focus {
@@ -4452,7 +4459,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .nav-list__link.active {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.33);
     }
 
     .nav-list__link {

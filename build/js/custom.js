@@ -374,7 +374,7 @@
     });
   }
 
-  var autoSlider = new Swiper('.js-auto-slider', {
+  new Swiper('.js-auto-slider', {
     slidesPerView: 'auto',
     mousewheel: {
       forceToAxis: true
@@ -397,21 +397,53 @@
         spaceBetween: 38
       }
     }
-  });
+  }); // TODO: лучше добавить класс js-hover-menu
+
+  const hoverMenu = document.querySelector('.nav-list__item--hover');
+
+  if (hoverMenu) {
+    const hoverSidebar = hoverMenu.closest('.sidebar');
+    hoverMenu.addEventListener('mouseover', function () {
+      const _this = this;
+
+      const listMenu = _this.querySelector('.nav-list__sub-item');
+
+      listMenu.style.display = 'block';
+      listMenu.style.height = listMenu.scrollHeight + 'px';
+
+      _this.classList.add('active');
+    });
+    hoverSidebar.addEventListener('mouseout', function (e) {
+      const _this = this;
+
+      const listMenu = _this.querySelector('.nav-list__sub-item');
+
+      const relatedTargetParent = e.relatedTarget.parentNode;
+
+      if (relatedTargetParent.classList.contains('sidebar') || relatedTargetParent.classList.contains('grid-row')) {
+        listMenu.style.height = 0;
+
+        _this.querySelector('.nav-list__item--hover').classList.remove('active');
+      }
+    });
+  }
+
   const btnFilter = $('[data-btn-filter]');
   const blockFilter = $("[data-filter]");
+  const fancyBoxSliders = $("[data-fancybox]");
   btnFilter.on("click", function () {
     const parents = $(this).parents('.section-content__wrap');
     parents.find(btnFilter).removeClass("active");
     $(this).addClass("active");
-    parents.find('[data-filter]').attr("hidden", "");
+    parents.find(blockFilter).attr("hidden", "");
     parents.find(".tab-filter__btn.active").each(function () {
       if ($(this).data("btn-filter") === 'all') {
         parents.find(blockFilter).removeAttr("hidden");
-        autoSlider.update();
+        parents.find(fancyBoxSliders).attr('data-fancybox', 'all');
       } else {
-        $('[data-filter="' + $(this).data("btn-filter") + '"]').removeAttr("hidden");
-        autoSlider.update();
+        let elemHiddens = $('[data-filter="' + $(this).data("btn-filter") + '"]');
+        elemHiddens.removeAttr("hidden");
+        elemHiddens.find(fancyBoxSliders).attr('data-fancybox', $(this).data("btn-filter"));
       }
     });
   });

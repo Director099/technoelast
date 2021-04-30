@@ -35,17 +35,29 @@ block content
             h1.title-big.contacts__title Контакты
             p.contacts__item-title Россия, Республика Башкортостан, г. Уфа, 450027 ул. Трамвайная, д. 2 #[a(href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%A2%D1%80%D0%B0%D0%BC%D0%B2%D0%B0%D0%B9%D0%BD%D0%B0%D1%8F,+2,+%D0%A3%D1%84%D0%B0,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%91%D0%B0%D1%88%D0%BA%D0%BE%D1%80%D1%82%D0%BE%D1%81%D1%82%D0%B0%D0%BD,+450027/@54.7979269,56.0723309,17z/data=!3m1!4b1!4m5!3m4!1s0x43d9381d8bc2701f:0x4ba1b3d559454da6!8m2!3d54.7979269!4d56.0745196" target="_blank") смотреть на карте]
             .contacts__item
-              span.contacts__item-label Работаем пн-пт
-              span.contacts__item-value 08:00 – 18:00
+              span.contacts__item-label Режим работы
+              ul.contacts__list-wrap
+                li.contacts__wrap-item
+                  span.contacts__item-value пн-пт 09:00–20:00
+                li.contacts__wrap-item
+                  span.contacts__item-value сб-вс 10:00–17:00
             .contacts__item.contacts__item--color
               span.contacts__item-label Отдел продаж
-              a(href='tel:+7917567-67-67') +7 (917) 567-67-67
+              ul.contacts__list-wrap
+                li.contacts__wrap-item
+                  a(href='tel:+7917567-67-67') +7 (917) 567-67-67
+                li.contacts__wrap-item
+                  a(href='tel:+7917567-67-67') +7 (917) 567-67-67
             .contacts__item.contacts__item--color
               span.contacts__item-label Отдел кадров
-              a(href='tel:+7917567-67-68') +7 (917) 567-67-68
+              ul.contacts__list-wrap
+                li.contacts__wrap-item
+                  a(href='tel:+7917567-67-68') +7 (917) 567-67-68
             .contacts__item
               span.contacts__item-label Электронная почта
-              a(href='mailto:info@pplans.ru') info@pplans.ru
+              ul.contacts__list-wrap
+                li.contacts__wrap-item
+                  a(href='mailto:info@pplans.ru') info@pplans.ru
             .contacts__item
               span.contacts__item-label Мессенджеры
               a(href='#') Telegram

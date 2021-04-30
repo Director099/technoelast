@@ -4,8 +4,7 @@ mixin modal-contact()
       .section-content
         +title-wrap('Контакты')
         .section-content__header
-          span.section-content__header-text Работаем пн-пт
-          span.section-content__header-text 08:00 – 18:00
+          span.section-content__header-text Адрес
         +nav-list(
             [
                 {
@@ -27,6 +26,13 @@ mixin modal-contact()
                     attrs: {
                         class: 'nav-list__link--color nav-list__link--no-arrow'
                     }
+                },
+                {
+                    link: 'tel:+7917567-67-67',
+                    text: '+7 (917) 567-67-67',
+                    attrs: {
+                        class: 'nav-list__link--color nav-list__link--no-arrow'
+                    }
                 }
             ]
         )
@@ -39,6 +45,24 @@ mixin modal-contact()
                     text: '+7 (917) 567-67-67',
                     attrs: {
                         class: 'nav-list__link--color nav-list__link--no-arrow'
+                    }
+                }
+            ]
+        )
+        .section-content__header
+          span.section-content__header-text Режим работы
+        +nav-list(
+            [
+                {
+                    text: 'пн-пт 09:00–20:00',
+                    attrs: {
+                        class: 'nav-list__link--no-arrow'
+                    }
+                },
+                {
+                    text: 'сб-вс 10:00–17:00',
+                    attrs: {
+                        class: 'nav-list__link--no-arrow'
                     }
                 }
             ]

@@ -16,7 +16,7 @@
   transition: $time;
 
   &.active {
-    padding-bottom: 20px;;
+    padding-bottom: 20px;
 
     @media (min-width: $screen-xl) {
       padding-bottom: 0;
@@ -92,7 +92,7 @@
   }
 
   &--color {
-    color: $color-main;
+    color: $color-primary;
   }
 
   &--no-arrow {
@@ -103,7 +103,7 @@
 
   &.active {
     @media (min-width: $screen-xl) {
-      background-color: $white;
+      background-color: rgba($white, 0.33%);
     }
   }
 
@@ -199,14 +199,19 @@
 }
 
 .nav-list__item--hover {
-  &:hover {
-    .nav-list__sub-item {
-      display: block;
-    }
+  .nav-list__sub-item {
+    height: 0;
+    transition: $time;
+    overflow: hidden;
   }
+  //&:hover {
+  //  .nav-list__sub-item {
+  //    display: block;
+  //  }
+  //}
 
-  .nav-list__sub-item  .nav-list__link,
-  .nav-list__item:hover  .nav-list__link {
-    padding-left: 31px;
-  }
+  //.nav-list__sub-item  .nav-list__link,
+  //.nav-list__item:hover  .nav-list__link {
+  //  padding-left: 31px;
+  //}
 }
