@@ -589,6 +589,259 @@
             </div>
         </footer>
     </div>
+    <div class="wgt-menu"><button class="wgt-menu__btn" type="button"><span class="wgt-menu__btn-wrap"><span class="wgt-menu__btn-icon wgt-menu__btn-icon--1"></span><span class="wgt-menu__btn-icon wgt-menu__btn-icon--2"></span></span></button>
+        <div class="wgt-menu__menu">
+            <ul class="wgt-menu__menu-list">
+                <li class="wgt-menu__menu-item"><a class="wgt-menu__menu-link wgt-menu__menu-link--phone" href="tel:+7(937)470-00-09"><span>+7 (937) 470-00-09</span></a></li>
+                <li class="wgt-menu__menu-item"><a class="wgt-menu__menu-link wgt-menu__menu-link--telegram" href="#"><span>Написать в Telegram</span></a></li>
+                <li class="wgt-menu__menu-item"><a class="wgt-menu__menu-link wgt-menu__menu-link--whatsapp" href="#"><span>Написать в WhatsApp</span></a></li>
+            </ul>
+            <ul class="wgt-menu__menu-list">
+                <li class="wgt-menu__menu-item"><button class="wgt-menu__menu-link wgt-menu__menu-link--close js-wgt-close" type="button">Закрыть</button></li>
+            </ul>
+        </div>
+    </div>
+    <style>
+        .wgt-menu {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 9;
+        }
+
+        .wgt-menu.active .wgt-menu__menu {
+            display: block;
+        }
+
+        .wgt-menu.active .wgt-menu__btn {
+            display: none;
+        }
+
+        .wgt-menu__menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            white-space: nowrap;
+            min-width: 226px;
+        }
+
+        .wgt-menu__menu.active {
+            display: block;
+        }
+
+        .wgt-menu__btn {
+            position: relative;
+            display: block;
+            width: 56px;
+            height: 56px;
+            padding: 0;
+            border: 0;
+            cursor: pointer;
+            background-image: url("https://pplans.ru/widget-app/icon-widget-btn-bg.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .wgt-menu__btn-wrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: block;
+            transform-style: preserve-3d;
+            animation: wcm_button_change 6s infinite;
+        }
+
+        .wgt-menu__btn-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+        }
+
+        .wgt-menu__btn-icon--1 {
+            background-image: url("https://pplans.ru/widget-app/icon-widget-btn-message.svg");
+        }
+
+        .wgt-menu__btn-icon--2 {
+            background-image: url("https://pplans.ru/widget-app/icon-widget-btn-phone.svg");
+            transform: rotateY(0deg);
+        }
+
+        .wgt-menu__menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0px;
+
+            background-color: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .wgt-menu__menu-item:not(:last-child) {
+            border-bottom: 1px solid rgba(188, 188, 188, .33);
+        }
+
+        .wgt-menu__menu-link {
+            display: block;
+            width: 100%;
+            padding: 7.5px 16px 7.5px 51px;
+            border: 0;
+            color: #037EE5;
+            font-size: 16px;
+            line-height: 25px;
+            background-repeat: no-repeat;
+            background-position: center left 16px;
+            background-size: 24px;
+            cursor: pointer;
+        }
+
+        .wgt-menu__menu-link span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .wgt-menu__menu-link span::after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            right: 0;
+            left: 0;
+            opacity: 0.5;
+            height: 1px;
+            background: rgba(3, 126, 229, 0.33);
+        }
+
+        .wgt-menu__menu-link--whatsapp {
+            background-image: url("https://pplans.ru/widget-app/icon-widget-wp.svg");
+        }
+
+        .wgt-menu__menu-link--telegram {
+            background-image: url("https://pplans.ru/widget-app/icon-widget-tg.svg");
+        }
+
+        .wgt-menu__menu-link--phone {
+            background-image: url("https://pplans.ru/widget-app/icon-widget-phone.svg");
+        }
+
+        .wgt-menu__menu-link--close {
+            font-weight: 500;
+            padding-left: 16px;
+            text-align: center;
+        }
+
+        @media (max-width: 1199px) {
+            .wgt-menu {
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .wgt-menu.active {
+                top: 0;
+                left: 0;
+                right: 0px;
+                bottom: 0px;
+                background: rgba(30, 30, 30, 0.9);
+            }
+
+            .wgt-menu__menu {
+                text-align: center;
+                bottom: 35px;
+                left: 10px;
+                right: 10px;
+            }
+
+            .wgt-menu__menu-list {
+                border-radius: 14px;
+            }
+
+            .wgt-menu__menu-link {
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 400;
+                padding: 16px 14px;
+            }
+
+            .wgt-menu__menu-link span::after {
+                display: none;
+            }
+
+            .scroll-off {
+                overflow: hidden;
+                z-index: -1;
+                height: 100%;
+            }
+        }
+
+        @keyframes wcm_button_change {
+            0% {
+                transform: rotateY(0deg)
+            }
+
+            42.5% {
+                transform: rotateY(0deg)
+            }
+
+            50% {
+                transform: rotateY(180deg)
+            }
+
+            92.5% {
+                transform: rotateY(180deg)
+            }
+
+            to {
+                transform: rotateY(0deg)
+            }
+        }
+
+        @keyframes wcm_button_change_rev {
+            0% {
+                transform: rotateY(180deg)
+            }
+
+            42.5% {
+                transform: rotateY(180deg)
+            }
+
+            50% {
+                transform: rotateY(0deg)
+            }
+
+            92.5% {
+                transform: rotateY(0deg)
+            }
+
+            to {
+                transform: rotateY(180deg)
+            }
+        }
+    </style><script>document.addEventListener("DOMContentLoaded", function () {
+  const wgtMain = document.querySelector('.wgt-menu');
+  const wgtBtn = wgtMain.querySelector('.wgt-menu__btn');
+  const wgtCloseBtn = wgtMain.querySelector('.js-wgt-close');
+
+  wgtBtn.addEventListener('click', function () {
+    wgtMain.classList.add('active');
+    document.body.classList.add('scroll-off');
+  });
+
+  wgtCloseBtn.addEventListener('click', function () {
+    wgtMain.classList.remove('active');
+    document.body.classList.remove('scroll-off');
+  })
+});</script>
     <div class="modal" id="modal-callback" tabindex="-1" role="dialog"><a class="icon-btn modal__xl-close d-none d-xl-block" href="#" data-fancybox-close=""><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.334 0.333313L22.691 2.69034L13.869 11.5116L22.691 20.3333L20.334 22.6903L11.5123 13.8683L2.69101 22.6903L0.333984 20.3333L9.15565 11.5116L0.333984 2.69034L2.69101 0.333313L11.5123 9.15498L20.334 0.333313Z" fill="#808080"></path>
             </svg></a>
