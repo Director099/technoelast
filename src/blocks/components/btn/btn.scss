@@ -86,6 +86,10 @@ $field-padding-horizontal:    14px !default;
      //border: 1px solid $color-primary;
      border: 1px solid #EAECEE;
 
+     @media (min-width: $screen-xl) {
+       font-weight: 500;
+     }
+
      &:hover {
        color: $white;
        background: #2F74BA;
@@ -115,12 +119,18 @@ $field-padding-horizontal:    14px !default;
   &--ios {
     color: $color-main;
     background-color: $white;
+
+    @media (min-width: $screen-xl) {
+      font-weight: 500;
+    }
   }
 
   @media (min-width: $screen-xl) {
     font-size: 14px;
     line-height: 20px;
-    padding-top: 8.5px;
-    padding-bottom: 8.5px;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+    letter-spacing: 0.15px;
   }
 }

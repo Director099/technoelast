@@ -41,7 +41,8 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
               .swiper-slide
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
-
+          .swiper-button-next
+          .swiper-button-prev
           .swiper-pagination.main-content__pagination
       if(contentSlider === true)
         .main-content__container.main-content__container--company
@@ -63,6 +64,8 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
               .swiper-slide
                 .main-content__slide
                   img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
+          .swiper-button-next
+          .swiper-button-prev
           .swiper-pagination.main-content__pagination
     if(contentFooter === true)
       footer.main-content__footer

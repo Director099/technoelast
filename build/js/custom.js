@@ -328,6 +328,10 @@
       mousewheel: {
         forceToAxis: true
       },
+      navigation: {
+        nextEl: productSlider.parentNode.querySelector('.swiper-button-next'),
+        prevEl: productSlider.parentNode.querySelector('.swiper-button-prev')
+      },
       pagination: paginationSlides(productSlider)
     });
   }
@@ -352,6 +356,10 @@
           forceToAxis: true
         },
         pagination: MainPaginationSlider(mainSlider),
+        navigation: {
+          nextEl: mainSlider.parentNode.querySelector('.swiper-button-next'),
+          prevEl: mainSlider.parentNode.querySelector('.swiper-button-prev')
+        },
         breakpoints: {
           1200: {
             slidesPerView: countSlider(allMainSlides, MAX_LENGTH_SLIDER),
@@ -369,35 +377,56 @@
       mousewheel: {
         forceToAxis: true
       },
+      navigation: {
+        nextEl: companySlider.parentNode.querySelector('.swiper-button-next'),
+        prevEl: companySlider.parentNode.querySelector('.swiper-button-prev')
+      },
       spaceBetween: 8,
       pagination: paginationSlides(companySlider)
     });
   }
 
-  new Swiper('.js-auto-slider', {
-    slidesPerView: 'auto',
-    mousewheel: {
-      forceToAxis: true
-    },
-    spaceBetween: 8,
-    breakpoints: {
-      1200: {
-        spaceBetween: 12
+  const initialAutoSlider = document.querySelectorAll('.js-auto-slider');
+  var autoSlider;
+  initialAutoSlider.forEach(function (item) {
+    autoSlider = new Swiper(item, {
+      slidesPerView: 'auto',
+      mousewheel: {
+        forceToAxis: true
+      },
+      spaceBetween: 8,
+      navigation: {
+        nextEl: item.parentNode.querySelector('.swiper-button-next'),
+        prevEl: item.parentNode.querySelector('.swiper-button-prev')
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 12
+        }
       }
-    }
+    });
   });
-  new Swiper('.js-personal-slider', {
-    slidesPerView: 'auto',
-    mousewheel: {
-      forceToAxis: true
-    },
-    spaceBetween: 8,
-    breakpoints: {
-      1200: {
-        spaceBetween: 38
+  const personalSlider = document.querySelector('.js-personal-slider');
+
+  if (personalSlider) {
+    new Swiper(personalSlider, {
+      slidesPerView: 'auto',
+      mousewheel: {
+        forceToAxis: true
+      },
+      navigation: {
+        nextEl: personalSlider.parentNode.querySelector('.swiper-button-next'),
+        prevEl: personalSlider.parentNode.querySelector('.swiper-button-prev')
+      },
+      spaceBetween: 8,
+      breakpoints: {
+        1200: {
+          spaceBetween: 38
+        }
       }
-    }
-  }); // TODO: лучше добавить класс js-hover-menu
+    });
+  } // TODO: лучше добавить класс js-hover-menu
+
 
   const hoverMenu = document.querySelector('.nav-list__item--hover');
 
@@ -408,21 +437,19 @@
 
       const listMenu = _this.querySelector('.nav-list__sub-item');
 
-      listMenu.style.display = 'block';
-      listMenu.style.height = listMenu.scrollHeight + 'px';
+      listMenu.style.display = 'block'; // listMenu.style.height = listMenu.scrollHeight + 'px';
 
       _this.classList.add('active');
     });
     hoverSidebar.addEventListener('mouseout', function (e) {
       const _this = this;
 
-      const listMenu = _this.querySelector('.nav-list__sub-item');
+      _this.querySelector('.nav-list__sub-item');
 
       const relatedTargetParent = e.relatedTarget.parentNode;
 
       if (relatedTargetParent.classList.contains('sidebar') || relatedTargetParent.classList.contains('grid-row')) {
-        listMenu.style.height = 0;
-
+        // listMenu.style.height = 0;
         _this.querySelector('.nav-list__item--hover').classList.remove('active');
       }
     });
@@ -440,10 +467,12 @@
       if ($(this).data("btn-filter") === 'all') {
         parents.find(blockFilter).removeAttr("hidden");
         parents.find(fancyBoxSliders).attr('data-fancybox', 'all');
+        autoSlider.update;
       } else {
         let elemHiddens = $('[data-filter="' + $(this).data("btn-filter") + '"]');
         elemHiddens.removeAttr("hidden");
         elemHiddens.find(fancyBoxSliders).attr('data-fancybox', $(this).data("btn-filter"));
+        autoSlider.update;
       }
     });
   });

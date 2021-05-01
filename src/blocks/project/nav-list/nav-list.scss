@@ -12,7 +12,8 @@
 
 .nav-list__item {
   position: relative;
-  border-bottom: 1px solid $color-line-border;
+  //border-bottom: 1px solid $color-line-border;
+  border-bottom: 1px solid #e5e8eb;
   transition: $time;
 
   &.active {
@@ -31,9 +32,11 @@
     }
   }
 
-  //&:last-child {
-  //  border-bottom: 0;
-  //}
+  @media (min-width: $screen-xl) {
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
 }
 
 .nav-list__item.d-none.active {
@@ -69,7 +72,7 @@
 .nav-list__link {
   position: relative;
   display: block;
-  margin-bottom: -1px;
+  //margin-bottom: -1px;
   padding: 13px 16px;
   text-decoration: none;
   color: $text-color;
