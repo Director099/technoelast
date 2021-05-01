@@ -986,9 +986,10 @@ a.btn--disabled {
 }
 
 textarea.field-text__input {
-    height: auto;
-    min-height: calc(30px + 2px);
-    resize: vertical;
+    height: 52px;
+    min-height: 52px;
+    overflow: hidden;
+    resize: none;
 }
 
 .field-text__help-text {
@@ -1508,6 +1509,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .section-content__header {
     font-size: 13px;
     line-height: 17px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 6.5px 16px;
@@ -2974,8 +2976,8 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
 }
 
-.nav-list__item.active {
-    padding-bottom: 20px;
+.nav-list__item.active .nav-list__subitem-wrap {
+    margin-bottom: 20px;
 }
 
 .nav-list__item.d-none.active {
@@ -3540,6 +3542,7 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .line {
+    position: relative;
     display: block;
     height: 6px;
     margin: -1px 0;
@@ -3825,6 +3828,11 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .field-text__name {
         padding: 0;
+    }
+
+    textarea.field-text__input {
+        min-height: 52px;
+        resize: vertical;
     }
 
     .field-text__input {
@@ -4391,6 +4399,11 @@ input:checked ~ .field-checkbox__name-text:after {
         border-top-right-radius: 6px;
     }
 
+    .main-content__container--main .swiper-container {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
     .main-content__pagination {
         bottom: 8px;
     }
@@ -4493,10 +4506,6 @@ input:checked ~ .field-checkbox__name-text:after {
         border-radius: 6px;
         overflow: hidden;
         border: 1px solid #e7e8ec;
-    }
-
-    .nav-list__item.active {
-        padding-bottom: 0;
     }
 
     .nav-list__item.active > .nav-list__sub-item {
@@ -4912,6 +4921,11 @@ input:checked ~ .field-checkbox__name-text:after {
     .modal {
         height: 100%;
         margin: 0 !important;
+        background-color: #efeff4;
+    }
+
+    .modal .section-content, .modal .contacts {
+        background-color: white;
     }
 
     .page-header__xs-row {

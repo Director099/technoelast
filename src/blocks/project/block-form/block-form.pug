@@ -24,11 +24,13 @@ mixin block-form()
             +field-text({
               title: 'О задаче и сроках *',
               helpText: 'Заполните это поле',
+              isTextarea: true,
               mods: '',
               val: '',
               attrs: {
                 name: 'desc',
-                'data-required': 1
+                'data-required': 1,
+                class: 'js-tx-auto-height'
               }
             }).js-field
           .form__group

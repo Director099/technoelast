@@ -124,6 +124,7 @@
 
 .section-content__header {
   @include text-small;
+  position: relative;
   display: flex;
   justify-content: space-between;
 

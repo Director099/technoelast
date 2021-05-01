@@ -39,7 +39,13 @@ $z-index-modal:               100 !default;
   @media (max-width: $screen-xl - 1) {
     height: 100%;
     margin: 0 !important;
-    //min-height: 100vh;
+    background-color: #EFEFF4;
+
+    .section-content,
+    .contacts {
+      background-color: $white;
+    }
+
   }
 
   @media (min-width: $screen-xl) {
