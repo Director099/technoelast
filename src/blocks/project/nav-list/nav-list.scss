@@ -31,9 +31,9 @@
     }
   }
 
-  &:last-child {
-    border-bottom: 0;
-  }
+  //&:last-child {
+  //  border-bottom: 0;
+  //}
 }
 
 .nav-list__item.d-none.active {
@@ -88,7 +88,9 @@
     height: 10px;
     border-bottom: 2px solid $color-line-border;
     border-right: 2px solid $color-line-border;
-    transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg);
+    margin-top: -5px;
+    transition: $time;
   }
 
   &--color {

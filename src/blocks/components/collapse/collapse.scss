@@ -7,6 +7,10 @@
     .collapse__title::after {
       transform: rotate(-0deg);
     }
+
+    .nav-list__link::after {
+      transform: rotate(45deg);
+    }
   }
 }
 
