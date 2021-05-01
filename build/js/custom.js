@@ -367,6 +367,9 @@
           }
         }
       });
+    } else {
+      mainSlider.parentNode.querySelector('.swiper-button-next').classList.add('d-none');
+      mainSlider.parentNode.querySelector('.swiper-button-prev').classList.add('d-none');
     }
   }
 
