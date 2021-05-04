@@ -36,12 +36,13 @@
 .price__value {
   font-size: 22px;
   line-height: 26px;
-  font-weight: 700;
+  //font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.7px;
 
-  span {
-    @include text-big;
-  }
+  //span {
+  //  @include text-big;
+  //}
 }
 
 .price__sale {

@@ -20,14 +20,25 @@
       padding: 0;
     }
 
-    @media (max-width: $screen-xl) {
+    @media (max-width: $screen-xl - 1) {
+      padding: 16px 16px 8px;
       .section-content__wrap {
         padding: 0;
       }
+    }
+  }
 
-      .tovar {
-        border-radius: 0;
+  &--excellence {
+    @media (max-width: $screen-xl - 1) {
+      .section-content__wrap {
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 36px;
+      padding-bottom: 36px;
     }
   }
 
@@ -95,6 +106,7 @@
   }
 
   @media (min-width: $screen-xl) {
+    letter-spacing: inherit;
     &--xl-tr {
       background-color: $white;
       border: 1px solid #EAECEE;
@@ -112,6 +124,7 @@
 
 .section-content__header {
   @include text-small;
+  position: relative;
   display: flex;
   justify-content: space-between;
 

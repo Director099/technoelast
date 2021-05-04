@@ -4,15 +4,36 @@ mixin nav-list(navList)
       - const { link, text, attrs} = item
       li.nav-list__item
         a.nav-list__link(href= link)&attributes(attrs)!= text
-    li.nav-list__item.nav-list__item--hover.d-none.d-xl-block
+    li.nav-list__item.nav-list__item--hover.js-hover-menu.d-none.d-xl-block
       a.nav-list__link.nav-list__link--no-arrow Продукция 2ой варик
       ul.nav-list__sub-item
+        li.nav-list__item.collapse
+          button.nav-list__arrow.js-collapse-click(aria-label="Расскрыть меню")
+          a.nav-list__link.nav-list__link--no-arrow Продукция
+          ul.nav-list__sub-item.collapse__wrap
+            li.nav-list__item.collapse
+              button.nav-list__arrow.js-collapse-click(aria-label="Расскрыть меню")
+              a.nav-list__link.nav-list__link--no-arrow(href="#") ГОСТ
+              ul.nav-list__sub-item.nav-list__sub-item--b0.collapse__wrap
+                li.nav-list__item
+                  a.nav-list__link.nav-list__link--no-arrow(href="#") Каучуковые кольца
+                li.nav-list__item
+                  a.nav-list__link.nav-list__link--no-arrow(href="#") Фторкаучуковые кольца
+            li.nav-list__item.collapse
+              button.nav-list__arrow.js-collapse-click(aria-label="Расскрыть меню")
+              a.nav-list__link.nav-list__link--no-arrow(href="#") Нестандартные РТИ
+              ul.nav-list__sub-item.nav-list__sub-item--b0.collapse__wrap
+                li.nav-list__item
+                  a.nav-list__link.nav-list__link--no-arrow(href="#") Каучуковые кольца
+                li.nav-list__item
+                  a.nav-list__link.nav-list__link--no-arrow(href="#") Фторкаучуковые кольца
         li.nav-list__item
           a.nav-list__link.nav-list__link--no-arrow(href="#") ГОСТ
         li.nav-list__item
           a.nav-list__link.nav-list__link--no-arrow(href="#") Каучуковые кольца
         li.nav-list__item
           a.nav-list__link.nav-list__link--no-arrow(href="#") Фторкаучуковые кольца
+
     li.nav-list__item.collapse.d-none.d-xl-block
       button.nav-list__arrow.js-collapse-click(aria-label="Расскрыть меню")
       a.nav-list__link.nav-list__link--no-arrow Продукция

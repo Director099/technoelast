@@ -1,9 +1,24 @@
 .default-slider {
-  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+      &:not(.swiper-button-disabled) {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    overflow: hidden;
+  }
 }
 
 .default-slider .swiper-container {
-  overflow: visible;
+  @media (max-width: $screen-xl - 1) {
+    overflow: visible;
+  }
 }
 
 .default-slider__width {
@@ -16,8 +31,6 @@
 
 .js-personal-slider {
   .default-slider__width {
-
-
     @media (min-width: $screen-xl) {
       max-width: 136px;
     }

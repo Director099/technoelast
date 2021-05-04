@@ -12,13 +12,17 @@
 
 .nav-list__item {
   position: relative;
-  border-bottom: 1px solid $color-line-border;
+  //border-bottom: 1px solid $color-line-border;
+  border-bottom: 1px solid #e5e8eb;
+  transition: $time;
 
   &.active {
-    padding-bottom: 20px;
+    .nav-list__subitem-wrap {
+      margin-bottom: 20px;
+    }
 
     @media (min-width: $screen-xl) {
-      padding-bottom: 0;
+      //padding-bottom: 0;
       > .nav-list__sub-item {
         display: block;
         height: auto;
@@ -30,8 +34,23 @@
     }
   }
 
-  &:last-child {
-    border-bottom: 0;
+  @media (min-width: $screen-xl) {
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.nav-list__item.d-none.active {
+  border-top: 8px solid $white;
+  border-bottom: 8px solid $white;
+
+  .nav-list__link {
+    margin-bottom: 0;
+  }
+
+  * {
+    border: 0;
   }
 }
 
@@ -55,10 +74,15 @@
 .nav-list__link {
   position: relative;
   display: block;
-  margin-bottom: -1px;
+  //margin-bottom: -1px;
   padding: 13px 16px;
   text-decoration: none;
   color: $text-color;
+
+  a {
+    border-bottom: 1px solid #0053F0;
+    color: #0053F0;
+  }
 
   &::after {
     content: '';
@@ -69,11 +93,13 @@
     height: 10px;
     border-bottom: 2px solid $color-line-border;
     border-right: 2px solid $color-line-border;
-    transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg);
+    margin-top: -5px;
+    transition: $time;
   }
 
   &--color {
-    color: $color-main;
+    color: $color-primary;
   }
 
   &--no-arrow {
@@ -84,7 +110,7 @@
 
   &.active {
     @media (min-width: $screen-xl) {
-      background-color: $white;
+      background-color: rgba($white, 0.33%);
     }
   }
 
@@ -126,9 +152,9 @@
 .nav-list__sub-item {
   @include ul-none;
   display: none;
-  border-top: 8px solid $white;
-  border-bottom: 8px solid $white;
-  margin-bottom: -1px;
+  //border-top: 8px solid $white;
+  //border-bottom: 8px solid $white;
+  //margin-bottom: -1px;
 
   .nav-list__sub-item {
     border: 0;
@@ -180,14 +206,19 @@
 }
 
 .nav-list__item--hover {
-  &:hover {
-    .nav-list__sub-item {
-      display: block;
-    }
+  .nav-list__sub-item {
+    height: 0;
+    transition: $time;
+    overflow: hidden;
   }
+  //&:hover {
+  //  .nav-list__sub-item {
+  //    display: block;
+  //  }
+  //}
 
-  .nav-list__sub-item  .nav-list__link,
-  .nav-list__item:hover  .nav-list__link {
-    padding-left: 31px;
-  }
+  //.nav-list__sub-item  .nav-list__link,
+  //.nav-list__item:hover  .nav-list__link {
+  //  padding-left: 31px;
+  //}
 }

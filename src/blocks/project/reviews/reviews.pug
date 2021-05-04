@@ -10,30 +10,33 @@ mixin reviews({filter, title})
             a.tab-filter__btn(data-btn-filter="letter") Письма
           li.tab-filter__item
             a.tab-filter__btn(data-btn-filter="video") Видео
-      .swiper-container.js-auto-slider
-        .swiper-wrapper
-          .swiper-slide.default-slider__width(data-filter="letter")
-            a.rev-img(href="img/content/review-1.jpg" data-fancybox="")
-              img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
-              .rev-img__info
-                p.rev-img__desc Описание
-          .swiper-slide.default-slider__width(data-filter="letter")
-            a.rev-img(href="img/content/review-1.jpg" data-fancybox="")
-              img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
-              .rev-img__info
-                p.rev-img__desc Описание
-          .swiper-slide.default-slider__width(data-filter="letter")
-            a.rev-img(href="img/content/review-1.jpg" data-fancybox="")
-              img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
-              .rev-img__info
-                p.rev-img__desc Описание
-          .swiper-slide.default-slider__width(data-filter="video")
-            a.rev-img(href="img/content/review-1.jpg" data-fancybox="")
-              img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
-              .rev-img__info
-                p.rev-img__desc Описание
-          .swiper-slide.default-slider__width(data-filter="video")
-            a.rev-img(href="img/content/review-1.jpg" data-fancybox="")
-              img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
-              .rev-img__info
-                p.rev-img__desc Описание
+      .default-slider
+        .swiper-container.js-auto-slider
+          .swiper-wrapper
+            .swiper-slide.default-slider__width(data-filter="letter")
+              a.rev-img(href="img/content/review-1.jpg" data-fancybox="all")
+                img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
+                .rev-img__info
+                  p.rev-img__desc Описание
+            .swiper-slide.default-slider__width(data-filter="letter")
+              a.rev-img(href="img/content/review-1.jpg" data-fancybox="all")
+                img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
+                .rev-img__info
+                  p.rev-img__desc Описание
+            .swiper-slide.default-slider__width(data-filter="letter")
+              a.rev-img(href="img/content/review-1.jpg" data-fancybox="all")
+                img(src="img/content/review-1.jpg" alt="data-fancyboxРезинотехнические изделия")
+                .rev-img__info
+                  p.rev-img__desc Описание
+            .swiper-slide.default-slider__width(data-filter="video")
+              a.rev-img(href="img/content/review-1.jpg" data-fancybox="all")
+                img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
+                .rev-img__info
+                  p.rev-img__desc Описание
+            .swiper-slide.default-slider__width(data-filter="video")
+              a.rev-img(href="img/content/review-1.jpg" data-fancybox="all")
+                img(src="img/content/review-1.jpg" alt="Резинотехнические изделия")
+                .rev-img__info
+                  p.rev-img__desc Описание
+        .swiper-button-next
+        .swiper-button-prev

@@ -2,6 +2,10 @@
   margin-bottom: 16px;
 }
 
+.contacts__list-wrap {
+  @include ul-none;
+}
+
 .contacts__wrap {
   padding: 16px 16px 24px;
 
@@ -13,7 +17,7 @@
 }
 
 .contacts__content {
-  @include text-big;
+  //@include text-big;
   margin-bottom: 24px;
 }
 
@@ -27,7 +31,7 @@
   a {
     text-decoration: none;
     color: $color-primary;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px solid $link-border;
 
     @media (min-width: $screen-xl) {
       display: inline-block;
@@ -43,7 +47,7 @@
   &--color a {
     @media (min-width: $screen-xl) {
       color: #333333;
-      border-bottom: none;
+      border-bottom: 1px solid transparent;
 
       &:hover,
       &:focus {
@@ -74,7 +78,7 @@
 
     a {
       color: $color-primary;
-      border-bottom: 1px solid currentColor;
+      border-bottom: 1px solid $link-border;
     }
   }
 }

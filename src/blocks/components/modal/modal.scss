@@ -36,6 +36,18 @@ $z-index-modal:               100 !default;
   padding: 0;
   background-color: #fff;
 
+  @media (max-width: $screen-xl - 1) {
+    height: 100%;
+    margin: 0 !important;
+    background-color: #EFEFF4;
+
+    .section-content,
+    .contacts {
+      background-color: $white;
+    }
+
+  }
+
   @media (min-width: $screen-xl) {
     position: relative;
     border-radius: 6px;
@@ -53,7 +65,7 @@ $z-index-modal:               100 !default;
     height: 100%;
 
     @media (min-width: $screen-xl) {
-      width: 1170px;
+      width: 884px;
       margin-left: auto;
       margin-right: auto;
       //height: auto;
@@ -80,7 +92,8 @@ $z-index-modal:               100 !default;
     display: flex;
     flex-direction: column;
     min-width: 100%;
-    min-height: 100%;
+    //min-height: 100%;
+    height: 100%;
     //background-color: #fff;
     outline: 0;
   }

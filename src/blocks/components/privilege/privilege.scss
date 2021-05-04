@@ -50,12 +50,12 @@
 
 .privilege__list {
   @include ul-none;
-  @include xl-text-normal();
-  line-height: 23px;
+  @include xl-text-small();
   color: #808080;
 }
 
 .privilege__item {
+  min-height: 24px;
   padding-left: 36px;
   background-repeat: no-repeat;
   background-position: left top;
@@ -63,7 +63,7 @@
 
 
   &:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 
   &--smile {

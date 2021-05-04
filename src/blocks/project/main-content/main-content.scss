@@ -127,6 +127,15 @@
   border: 1px solid transparent;
   //padding: 1px 2px 0;
 
+  &:hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+      &:not(.swiper-button-disabled) {
+        opacity: 1;
+      }
+    }
+  }
+
   @media (max-width: $screen-xl - 1) {
     padding: 0;
     border: 0;
@@ -144,9 +153,14 @@
 
   &--main {
     @media (min-width: $screen-xl) {
-      overflow: hidden;
+      //overflow: hidden;
       border-top-left-radius: $border-radius-xl;
       border-top-right-radius: $border-radius-xl;
+
+      .swiper-container {
+        border-top-left-radius: $border-radius-xl;
+        border-top-right-radius: $border-radius-xl;
+      }
     }
     //background-color: $color-light;
     // border-top: 1px solid $color-line-border;
@@ -236,7 +250,7 @@
 }
 
 .main-content__btn {
-  margin-top: 16px;
+  margin-top: 24px;
 
   @media (max-width: $screen-xl - 1) {
     width: 100%;

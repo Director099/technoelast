@@ -88,11 +88,16 @@ $border-radius:               rem(3px) !default;
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+      height: 52px;
+      min-height: 52px;
+      overflow: hidden;
+      resize: none;
+      //padding: 0;
 
-      height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
-      resize: vertical;
+      @media (min-width: $screen-xl) {
+        min-height: 52px;
+        resize: vertical;
+      }
     }
 
     @media (min-width: $screen-xl) {
