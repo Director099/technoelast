@@ -74,7 +74,6 @@ body {
 }
 
 a {
-    cursor: pointer;
     transition: 0.3s;
     color: #0b5fff;
     background-color: transparent;
