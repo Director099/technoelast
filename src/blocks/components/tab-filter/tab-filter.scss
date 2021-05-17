@@ -27,6 +27,7 @@
   color: #808080;
   transition: $time;
   text-decoration: none;
+  cursor: pointer;
 
   &.active {
     border-color: $color-primary;

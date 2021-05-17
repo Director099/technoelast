@@ -22,6 +22,7 @@
 }
 
 .contacts__item {
+  @include text-big();
   margin-bottom: 22px;
 
   p {

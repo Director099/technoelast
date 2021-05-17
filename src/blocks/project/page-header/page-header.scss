@@ -38,6 +38,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $screen-xl) {
+    min-height: 30px;
+
+    .phone {
+      margin-left: auto;
+    }
+  }
 }
 
 .page-header__xs-row {
