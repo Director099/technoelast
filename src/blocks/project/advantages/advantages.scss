@@ -46,6 +46,7 @@
 }
 
 .advantages__desc {
+  color: #808080;
   @media (max-width: $screen-xl - 1) {
     //max-width: 351px;
   }
@@ -53,5 +54,5 @@
 
 .advantages__desc p {
   margin: 0;
-  opacity: $opacity;
+  //opacity: $opacity;
 }

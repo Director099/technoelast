@@ -15,8 +15,9 @@
 .product-item__category {
   @include text-small;
   display: block;
-  color: #A5A5A5;
+  color: #808080;
   margin-bottom: 8px;
+  cursor: pointer;
 
   @media (min-width: $screen-xl) {
     display: inline-block;

@@ -3,7 +3,7 @@
   background-color: $color-light;
   text-align: center;
   @include text-small;
-  color: $color-dark-light;
+  color: #808080;
 
   @media (min-width: $screen-xl) {
     padding-top: 24px;

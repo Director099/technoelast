@@ -43,7 +43,7 @@
 
 .author__desc {
   @include text-small;
-  opacity: $opacity;
+  color: #808080;
 
   @media (min-width: $screen-xl) {
     @include xl-text-small;

@@ -16,7 +16,7 @@
 .excellence__text {
   @include text-small();
   margin-bottom: 0;
-  color: rgba($black, $opacity);
+  color: #808080;
 
   @media (min-width: $screen-xl) {
     @include xl-text-small;

@@ -9,10 +9,13 @@
 
   .title-wrap__desc {
     margin-top: 8px;
+    font-weight: 500;
 
     @media (min-width: $screen-xl) {
-      margin-top: 12px;
-      margin-bottom: -8px;
+      //margin-top: 12px;
+      margin-top: 8px;
+      margin-bottom: 0;
+      //margin-bottom: -8px;
     }
   }
 
@@ -28,6 +31,10 @@
   font-weight: 600;
   letter-spacing: 0.1px;
   margin-bottom: 0;
+
+  @media (min-width: $screen-xl) {
+    max-width: 590px;
+  }
 }
 
 .title-wrap__desc {

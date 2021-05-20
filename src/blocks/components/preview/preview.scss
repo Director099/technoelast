@@ -129,7 +129,8 @@
 
 .preview__info {
   @include text-small;
-  opacity: $opacity;
+  color: #808080;
+
   &:first-child {
     margin-right: 18px;
   }

@@ -820,6 +820,7 @@ a.btn--disabled {
 
 .title-wrap .title-wrap__desc {
     margin-top: 8px;
+    font-weight: 500;
 }
 
 .title-wrap__title {
@@ -1476,6 +1477,12 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 0;
 }
 
+.section-content a:not([class]) {
+    color: #3d81c6;
+    border-bottom: 1px solid rgba(61, 129, 198, 0.25);
+    text-decoration: none;
+}
+
 .section-content:hover .link-all {
     opacity: 1;
     z-index: 1;
@@ -1685,7 +1692,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .author__desc {
     font-size: 13px;
     line-height: 17px;
-    opacity: 0.5;
+    color: #808080;
 }
 
 .preview {
@@ -1744,7 +1751,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .preview__info {
     font-size: 13px;
     line-height: 17px;
-    opacity: 0.5;
+    color: #808080;
 }
 
 .preview__info:first-child {
@@ -2389,6 +2396,7 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .thesis__desc {
+    color: #808080;
     line-height: 17px;
 }
 
@@ -2654,7 +2662,7 @@ input:checked ~ .field-checkbox__name-text:after {
     text-align: center;
     font-size: 13px;
     line-height: 17px;
-    color: #8a8a8e;
+    color: #808080;
 }
 
 .page-footer__develop {
@@ -2865,8 +2873,12 @@ input:checked ~ .field-checkbox__name-text:after {
     text-decoration: none;
 }
 
-.contacts-info__header-link svg {
+.contacts-info__header-link svg, .contacts-info__header-link img {
     margin-right: 11px;
+}
+
+.contacts-info__header-link span {
+    border-bottom: 1px solid rgba(61, 129, 198, 0.25);
 }
 
 .contacts-info__desc {
@@ -2958,7 +2970,7 @@ input:checked ~ .field-checkbox__name-text:after {
     font-size: 13px;
     line-height: 17px;
     margin-bottom: 0;
-    color: rgba(0, 0, 0, 0.5);
+    color: #808080;
 }
 
 .nav-list {
@@ -2977,11 +2989,6 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .nav-list__item.active .nav-list__subitem-wrap {
     margin-bottom: 20px;
-}
-
-.nav-list__item.d-none.active {
-    border-top: 8px solid white;
-    border-bottom: 8px solid white;
 }
 
 .nav-list__item.d-none.active .nav-list__link {
@@ -3132,6 +3139,10 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 25px;
 }
 
+.block-form__row {
+    position: relative;
+}
+
 .block-form__btn {
     font-weight: 600;
     width: 100%;
@@ -3139,6 +3150,13 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .block-form__mt {
     margin-top: 30px;
+}
+
+.block-form__field-file {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .write__content {
@@ -3198,9 +3216,12 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 6px;
 }
 
+.advantages__desc {
+    color: #808080;
+}
+
 .advantages__desc p {
     margin: 0;
-    opacity: 0.5;
 }
 
 .interview {
@@ -3375,8 +3396,9 @@ input:checked ~ .field-checkbox__name-text:after {
     font-size: 13px;
     line-height: 17px;
     display: block;
-    color: #a5a5a5;
+    color: #808080;
     margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .product-item__content {
@@ -3810,8 +3832,12 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .title-wrap .title-wrap__desc {
-        margin-top: 12px;
-        margin-bottom: -8px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+    .title-wrap__title {
+        max-width: 590px;
     }
 
     .title-wrap__desc {
@@ -4221,7 +4247,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .tovar__title {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 21px;
         letter-spacing: 0.1px;
         font-weight: 500;
@@ -4553,13 +4579,6 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .block-form__group {
         margin-bottom: 40px;
-    }
-
-    .block-form__row {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: space-between;
     }
 
     .block-form__btn {
@@ -4979,6 +4998,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .block-form__field-file {
+        position: static;
         margin-bottom: 25px;
     }
 

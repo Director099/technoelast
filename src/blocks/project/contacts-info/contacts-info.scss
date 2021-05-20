@@ -15,8 +15,13 @@
   color: $color-primary;
   text-decoration: none;
 
-  svg {
+  svg,
+  img {
     margin-right: 11px;
+  }
+
+  span {
+    border-bottom: 1px solid rgba(61,129,198,.25);
   }
 }
 
