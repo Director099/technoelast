@@ -48,6 +48,10 @@
   margin-top: 30px;
 }
 
+.block-content__form-mb {
+  margin-bottom: 28px;
+}
+
 .block-form__field-file {
   position: absolute;
   right: 0;
@@ -56,5 +60,6 @@
   @media (max-width: $screen-xl - 1) {
     position: static;
     margin-bottom: 25px;
+    transform: translate(0);
   }
 }

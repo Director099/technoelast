@@ -1503,6 +1503,7 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .section-content__btn {
     width: 100%;
+    margin-top: 16px;
 }
 
 .section-content__desc img {
@@ -1610,6 +1611,8 @@ input:checked ~ .field-checkbox__name-text:after {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 8px;
     margin-bottom: 14px;
 }
 
@@ -1638,6 +1641,7 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
     text-decoration: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .tab-filter__btn.active {
@@ -3152,6 +3156,10 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-top: 30px;
 }
 
+.block-content__form-mb {
+    margin-bottom: 28px;
+}
+
 .block-form__field-file {
     position: absolute;
     right: 0;
@@ -3528,6 +3536,7 @@ input:checked ~ .field-checkbox__name-text:after {
     display: block;
     font-weight: 500;
     margin-bottom: 16px;
+    line-height: 25px;
 }
 
 .modal-ios {
@@ -3841,7 +3850,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .title-wrap__desc {
-        margin-right: 138px;
+        margin-right: 243px;
     }
 
     .title-normal {
@@ -4005,6 +4014,10 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .section-content__item-block {
         margin-bottom: 16px;
+    }
+
+    .section-content__item-block:nth-last-child(-n+2) {
+        margin-bottom: 0;
     }
 
     .rev-img {
@@ -4419,11 +4432,11 @@ input:checked ~ .field-checkbox__name-text:after {
         padding-left: 24px;
         padding-right: 24px;
         padding-top: 24px;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
     }
 
     .main-content__title {
-        margin-bottom: 8px;
+        margin-bottom: 24px;
     }
 
     .main-content__container--company {
@@ -4923,6 +4936,7 @@ input:checked ~ .field-checkbox__name-text:after {
     .section-content__btn {
         font-size: 13px;
         line-height: 17px;
+        margin-top: 0px;
     }
 
     .section-content__wrap--personals {
@@ -4946,6 +4960,15 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .default-slider .swiper-container {
         overflow: visible;
+    }
+
+    .tab-filter {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: auto;
+        flex-wrap: nowrap;
     }
 
     .modal {
@@ -5000,6 +5023,7 @@ input:checked ~ .field-checkbox__name-text:after {
     .block-form__field-file {
         position: static;
         margin-bottom: 25px;
+        transform: translate(0);
     }
 
     .write__content {
