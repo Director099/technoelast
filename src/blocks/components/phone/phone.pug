@@ -9,7 +9,7 @@ mixin phone(mod)
         li.phone__list-item
           .phone__header
             span Отдел продаж
-            span пн-пт 09:00 – 18:00
+          a.phone__link(href="tel:+7(347)246–22–58") +7 (347) 246–22–58
           a.phone__link(href="tel:+7(347)246–22–58") +7 (347) 246–22–58
         li.phone__list-item
           .phone__header
@@ -17,11 +17,22 @@ mixin phone(mod)
           a.phone__link(href="tel:+7(347)246–22–58") +7 (347) 246–22–58
         li.phone__list-item
           .phone__header
+            span Режим работы
+          span.phone__link пн-пт 09:00–20:00
+          span.phone__link сб-вс 10:00–17:00
+        li.phone__list-item
+          .phone__header
             span Электронная почта
-          a.phone__link(href="mailto:tehnoelast@bk.ru") tehnoelast@bk.ru
+          a.phone__link.phone__link--big(href="mailto:tehnoelast@bk.ru")
+            img(src="img/sprite/icon-mail-ios.svg", alt="Иконка")
+            span tehnoelast@bk.ru
         li.phone__list-item
           .phone__header
             span Мессенджеры
-          a.phone__link(href="#") Telegram
-          a.phone__link(href="#") WhatsApp
+          a.phone__link.phone__link--big(href="#")
+            img(src="img/sprite/icon-tg.svg", alt="Иконка")
+            span Telegram
+          a.phone__link.phone__link--big(href="#")
+            img(src="img/sprite/icon-wp.svg", alt="Иконка")
+            span WhatsApp
 

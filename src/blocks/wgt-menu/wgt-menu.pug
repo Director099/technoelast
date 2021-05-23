@@ -1,0 +1,23 @@
+mixin wgt-menu()
+  .wgt-menu
+    button.wgt-menu__btn(type="button")
+      span.wgt-menu__btn-wrap
+        span.wgt-menu__btn-icon.wgt-menu__btn-icon--1
+        span.wgt-menu__btn-icon.wgt-menu__btn-icon--2
+    .wgt-menu__menu
+      ul.wgt-menu__menu-list
+        li.wgt-menu__menu-item
+          a.wgt-menu__menu-link.wgt-menu__menu-link--phone(href="tel:+7(937)470-00-09")
+            span +7 (937) 470-00-09
+        li.wgt-menu__menu-item
+          a.wgt-menu__menu-link.wgt-menu__menu-link--telegram(href="#")
+            span Написать в Telegram
+        li.wgt-menu__menu-item
+          a.wgt-menu__menu-link.wgt-menu__menu-link--whatsapp(href="#")
+            span Написать в WhatsApp
+      ul.wgt-menu__menu-list
+        li.wgt-menu__menu-item
+          button.wgt-menu__menu-link.wgt-menu__menu-link--close.js-wgt-close(type="button") Закрыть
+  link(rel="stylesheet" href="https://pplans.ru/widget-app/style.css")
+  script(src="https://pplans.ru/widget-app/script.js")
+

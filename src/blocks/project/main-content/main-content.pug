@@ -22,9 +22,13 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
         .main-content__container.main-content__container--main
           .swiper-container(class=`${productSlider === true ? 'js-product-slider' : 'js-main-slider'}`)
             .swiper-wrapper
-              .d-none.d-xl-block
+              .swiper-slide
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              .swiper-slide
+                a.main-content__slide(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&ab_channel=JazzandBluesExperience" data-fancybox="")
+                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+                  +icon-play().main-content__play
               .swiper-slide
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
@@ -37,6 +41,8 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
               .swiper-slide
                 .main-content__slide
                   img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+          .swiper-button-next
+          .swiper-button-prev
           .swiper-pagination.main-content__pagination
       if(contentSlider === true)
         .main-content__container.main-content__container--company
@@ -58,6 +64,8 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
               .swiper-slide
                 .main-content__slide
                   img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")
+          .swiper-button-next
+          .swiper-button-prev
           .swiper-pagination.main-content__pagination
     if(contentFooter === true)
       footer.main-content__footer

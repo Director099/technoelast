@@ -1,8 +1,5 @@
-.section-content--excellence {
-  @media (min-width: $screen-xl) {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+.excellence {
+  text-align: center;
 }
 
 .excellence__title {
@@ -19,7 +16,7 @@
 .excellence__text {
   @include text-small();
   margin-bottom: 0;
-  color: rgba($black, $opacity);
+  color: #808080;
 
   @media (min-width: $screen-xl) {
     @include xl-text-small;

@@ -1,0 +1,95 @@
+.interview {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+
+  @media (min-width: $screen-xl) {
+    background-image: url("../img/decor/decor-interview.jpg");
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 460px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: -1px;
+      z-index: -1;
+      background: linear-gradient(90deg,#fff 0%,#fff 54.09%,rgba(255,255,255,.75) 61.15%,rgba(255,255,255,0) 66.23%);
+      border-radius: 6px;
+    }
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    background-image: none !important;
+  }
+}
+
+.interview__wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @media (max-width: $screen-xl) {
+    padding-top: 24px;
+  }
+}
+
+.interview__mt {
+  margin-top: 17px;
+}
+
+.interview__form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .form__fieldset {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .form__group-interview {
+    flex-grow: 1;
+  }
+}
+
+.interview__btn {
+  //@include text-big();
+  //max-width: 165px;
+  width: 100%;
+  max-width: 144px;
+  //padding-top: 13px;
+  //padding-bottom: 13px;
+
+  @media (min-width: $screen-xl) {
+    //@include text-big;
+    //padding-top: 13px;
+    //padding-bottom: 13px;
+  }
+}
+
+.interview__btn-icon {
+  width: 50px;
+  padding: 10px;
+
+  background-color: $white;
+  margin-right: 8px;
+  border-color: $color-primary;
+
+  svg {
+    transform: rotate(-180deg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: 40px;
+  }
+}

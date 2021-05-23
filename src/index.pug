@@ -34,7 +34,7 @@ block content
     })
       .main-content__content-wrap.main-content__content-wrap--xl-row
         .main-content__content
-          h2.title-big.main-content__title Резинотехнические изделия
+          h2.title-big.main-content__title.d-none.d-xl-block Резинотехнические изделия
           .main-content__desc
             p Произведем формовые резинотехнические изделия под заказ по вашим чертежам
           a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
@@ -48,8 +48,14 @@ block content
     })
     hr.line
     +list-production({
-        title: 'Продукция'
+      title: 'Продукция'
     })
+    hr.line
+    +privileges()
+    hr.line
+    +services()
+    hr.line
+    +theses()
     hr.line
     +advantages('Преимущества 🔥')
     hr.line
@@ -59,6 +65,12 @@ block content
         title: 'Отзывы',
         filter: true
     })
+    hr.line
+    +interview()
+    hr.line
+    +block-content()
+    hr.line
+    +block-content-2()
     hr.line
     +faq()
     hr.line
@@ -84,5 +96,4 @@ block content
     ).d-xl-none
     hr.line
     +block-form()
-block footer
-  +page-footer()
+

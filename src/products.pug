@@ -42,7 +42,8 @@ block content
                 categoryName: 'Нестандартные РТИ',
                 srcImage: 'img/content/news-category-item-2.png',
               })(href="products-item-1.html")
-
+        .swiper-button-next
+        .swiper-button-prev
     hr.line
     +nav-list(
       [
@@ -55,6 +56,11 @@ block content
       ]
     ).d-xl-none
     hr.line
-    +production-list({}).production-all
-block footer
-  +page-footer()
+    .section-content.section-content--productions
+      .section-content__wrap
+        .grid-row
+          -for(var i = 0; i < 8; i++)
+            .grid-row__col.grid-row__col--xl-6.section-content__item-block
+              +tovar()
+        button(type="button").btn.btn--lighten.section-content__btn Показать еще
+

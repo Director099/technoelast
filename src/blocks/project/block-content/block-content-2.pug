@@ -1,0 +1,71 @@
+mixin block-content-2()
+  +section-content({
+      title: 'Связаться с нами'
+  }).block-content(style="background-image: url('img/decor/decor-interview.jpg')")
+    .block-content__subtitle
+      p Прежде, чем мы приступим к оценке проекта, нам важно его обсудить с вами. Начать диалог можно в форме, ниже. Или позвонив по номеру #[a(href="tel:+79175676767") +7 917 567-67-67]
+    +form()(autocomplete="off").js-form
+      .block-content__form-mb
+        .form__group
+          +field-text({
+            title: 'Название компании *',
+            helpText: 'Заполните это поле',
+            mods: '',
+            val: '',
+            attrs: {
+              name: 'company',
+              'data-required': 1
+            }
+          }).js-field
+        .form__group
+          +field-text({
+            title: 'О задаче и сроках *',
+            helpText: 'Заполните это поле',
+            isTextarea: true,
+            mods: '',
+            val: '',
+            attrs: {
+              name: 'desc',
+              'data-required': 1,
+              class: 'js-tx-auto-height'
+            }
+          }).js-field
+        .form__group
+          +field-text({
+            title: 'Электронная почта *',
+            helpText: 'Не верный формат email',
+            mods: '',
+            val: '',
+            attrs: {
+              name: 'mail',
+              'data-type': 'email',
+              'data-required': 1
+            }
+          }).js-field
+        .form__group
+          +field-text({
+            title: 'Телефон *',
+            helpText: 'Заполните это поле',
+            mods: '',
+            val: '',
+            attrs: {
+              name: 'phone',
+              type: 'tel',
+              'data-required': 1
+            }
+          }).js-field
+      .block-form__row
+        +field-file({
+          mods: '',
+          attrs: {
+            name: 'commentFile',
+            multiple: true,
+          },
+          text: {
+            selectText: 'Выберите файл(ы)',
+            nothingText: 'Прикрепить файл',
+            flesSelectedText: 'Выбрано файлов:',
+          },
+        }).block-form__field-file
+        button.btn.btn--main.block-form__btn Отправить
+      p.form__warning.block-form__mt.d-none Нажимая кнопку «Отправить» я даю свое #[a(href="#") согласие на обработку персональных данных]

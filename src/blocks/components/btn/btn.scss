@@ -82,13 +82,22 @@ $field-padding-horizontal:    14px !default;
    &--main {
      color: $white;
      background-color: $color-primary;
-     border: 1px solid $color-primary;
+     box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+     //border: 1px solid $color-primary;
+     border: 1px solid #EAECEE;
 
-     &:hover,
-     &:focus {
+     @media (min-width: $screen-xl) {
+       font-weight: 500;
+     }
+
+     &:hover {
        color: $white;
-       background-color: darken($color-primary, 10%);
-       border-color: darken($color-primary, 12%);
+       background: #2F74BA;
+     }
+
+     &:focus {
+       border: 1px solid #8D8D8D;
+       box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
      }
    }
 
@@ -110,12 +119,18 @@ $field-padding-horizontal:    14px !default;
   &--ios {
     color: $color-main;
     background-color: $white;
+
+    @media (min-width: $screen-xl) {
+      font-weight: 500;
+    }
   }
 
   @media (min-width: $screen-xl) {
     font-size: 14px;
     line-height: 20px;
-    padding-top: 8.5px;
-    padding-bottom: 8.5px;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+    letter-spacing: 0.15px;
   }
 }

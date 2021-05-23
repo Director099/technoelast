@@ -19,7 +19,11 @@ $line-height:                 1.5 !default;
     border: 0;
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      //margin-bottom: 1rem;
+    }
+
+    &--width {
+      max-width: 344px;
     }
   }
 
@@ -27,23 +31,29 @@ $line-height:                 1.5 !default;
     display: block;
     width: 100%;
     max-width: 100%; // Привет IE
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: $font-size--h3;
-    font-family: $font-family--headings;
-    font-weight: 700;
-    line-height: $line-height;
+    margin-top: 0;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
     white-space: normal; // Привет IE
     color: currentColor;
+
+    @media (min-width: $screen-xl) {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 }
 
 .form__text {
-  max-width: 550px;
+  max-width: 555px;
   margin-bottom: 16px;
 
   a {
-    color: inherit;
+    color: $color-primary;
+    border-bottom: 1px solid rgba(61,129,198,.25);
     text-decoration: none;
   }
 
@@ -68,5 +78,42 @@ $line-height:                 1.5 !default;
 
   a {
     color: $color-primary;
+    border-bottom: 1px solid currentColor;
   }
+}
+
+.form__count {
+  margin: 0 0 17px;
+  letter-spacing: 0.3px;
+  color: #808080;
+  font-weight: 500;
+
+  strong {
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-primary;
+
+    @media (min-width: $screen-xl) {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+
+.form__group-interview {
+  margin-bottom: 25px;
+}
+
+.form__btn-group {
+  display: flex;
+}
+
+.form__mb {
+  margin-bottom: 12px;
 }

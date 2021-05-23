@@ -30,11 +30,12 @@
     border-radius: 50px;
     width: 21px;
     height: 21px;
-    background-color: $color-light;
+    background-color: #f5f5f6;
   }
 
   @media (min-width: $screen-xl) {
     max-width: 696px;
+    padding-left: 41px;
   }
 }
 
@@ -45,12 +46,13 @@
 }
 
 .advantages__desc {
+  color: #808080;
   @media (max-width: $screen-xl - 1) {
-    max-width: 220px;
+    //max-width: 351px;
   }
 }
 
 .advantages__desc p {
   margin: 0;
-  opacity: $opacity;
+  //opacity: $opacity;
 }

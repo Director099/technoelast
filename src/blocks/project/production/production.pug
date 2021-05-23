@@ -1,7 +1,7 @@
 mixin production({title, filter, category, categoryTag})
   .section-content
     +title-wrap(title)
-      a.icon-btn.icon-btn--blue(href="products.html") Все
+      a.link-all(href="products.html", data-text="Посмотреть все") Все
     .section-content__wrap.default-slider
       if(filter === true)
         ul.tab-filter
@@ -11,30 +11,43 @@ mixin production({title, filter, category, categoryTag})
             a.tab-filter__btn(data-btn-filter="gost") ГОСТ
           li.tab-filter__item
             a.tab-filter__btn(data-btn-filter="rti") Нестандартные РТИ
-      .swiper-container.js-auto-slider
-        .swiper-wrapper
-          .swiper-slide.default-slider__width(data-filter="gost")
-            +product({
-                category: category,
-                categoryTag: tag
-            })
-          .swiper-slide.default-slider__width(data-filter="gost")
-            +product({
-                category: category,
-                categoryTag: tag
-            })
-          .swiper-slide.default-slider__width(data-filter="gost")
-            +product({
-                category: category,
-                categoryTag: tag
-            })
-          .swiper-slide.default-slider__width(data-filter="rti")
-            +product({
-                category: category,
-                categoryTag: tag
-            })
-          .swiper-slide.default-slider__width(data-filter="rti")
-            +product({
-                category: category,
-                categoryTag: tag
-            })
+      .default-slider
+        .swiper-container.js-auto-slider
+          .swiper-wrapper
+            .swiper-slide.default-slider__width(data-filter="gost")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+            .swiper-slide.default-slider__width(data-filter="gost")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+            .swiper-slide.default-slider__width(data-filter="gost")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+            .swiper-slide.default-slider__width(data-filter="rti")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+            .swiper-slide.default-slider__width(data-filter="rti")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+            .swiper-slide.default-slider__width(data-filter="rti")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+            .swiper-slide.default-slider__width(data-filter="rti")
+              +product({
+                  category: category,
+                  categoryTag: tag
+              })
+        .swiper-button-next
+        .swiper-button-prev

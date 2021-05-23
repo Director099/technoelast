@@ -1,8 +1,8 @@
 mixin production-list({className})
   .section-content&attributes(attributes)
-    .section-content__wrap.section-content__wrap--news
+    .section-content__wrap
       ul.production-list
-        li.production-list__item(class= className)
+        li.production-list__item
           +product-item()
         li.production-list__item
           +product-item()

@@ -26,16 +26,30 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   }
 
   &__avatar-wrap {
+    position: relative;
     flex-shrink: 0;
     align-self: flex-end;
     margin-right: 13px;
     margin-bottom: 38px;
+    width: 47px;
+
+    &::after {
+      @include mask-photo(url("data:image/svg+xml,%0A%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M54 0H0V54H54V0ZM27 53C41.3594 53 53 47.8 53 27C53 6.2 41.3594 1 27 1C12.6406 1 1 6.2 1 27C1 47.8 12.6406 53 27 53Z' fill='%23fff'/%3E%3C/svg%3E%0A"));
+    }
 
     img {
       display: block;
       width: 47px;
       height: 47px;
       object-fit: cover;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+
+      img {
+        width: 47px;
+      }
     }
   }
 
@@ -54,6 +68,12 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   border-radius: 8px 8px 8px 0px;
   background-color: $bg-write;
 
+  @media (min-width: $screen-xl) {
+    padding-top: 16px;
+    padding-left: 16px;
+    background-color: #f5f5f6;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -62,15 +82,19 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
     width: 13px;
     height: 13px;
+    opacity: 0.6;
     background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.723 12.7539C7.44271 11.9368 11.9368 7.4427 12.7539 1.723L13 0V13H0L1.723 12.7539Z' fill='%23EFEFF4'/%3E%3C/svg%3E%0A");
-    //background-color: red;
+
+    @media (min-width: $screen-xl) {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13' fill='none'%3E%3Cpath d='M1.723 12.7539C7.44271 11.9368 11.9368 7.4427 12.7539 1.723L13 0V13H0L1.723 12.7539Z' fill='%23f5f5f6'/%3E%3C/svg%3E");
+    }
   }
 }
 
 .comment__author {
   display: block;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .comment__body {
@@ -84,6 +108,10 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
   &--right {
     text-align: right;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: -5px;
   }
 }
 
@@ -102,4 +130,16 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
   margin-top: 8px;
   color: $color-primary;
   border: 1px solid $bg-write;
+
+  @media (min-width: $screen-xl) {
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 0.15px;
+    background-color: #f5f5f6;
+
+    &:hover {
+      background-color: darken($bg-write, 10%);
+    }
+  }
 }

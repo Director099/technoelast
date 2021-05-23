@@ -10,3 +10,8 @@
 .navigation__burger {
   margin-right: 10px;
 }
+
+//TODO: Убираю линию, надо подумать как избавиться от тега hr
+.navigation + .line {
+  display: none;
+}

@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   padding-top: 16px;
   padding-bottom: 15px;
   padding-left: 0;
@@ -7,6 +8,19 @@
   min-height: 48px;
   background-color: $color-light;
 
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $screen-xl) {
+      left: 17px;
+      transform: translateY(-50%);
+    }
+  }
+
+
   @media (min-width: $screen-xl) {
     position: sticky;
     top: 0;
@@ -14,7 +28,9 @@
     padding-top: 13px;
     padding-bottom: 13px;
     margin-bottom: 16px;
+    border-bottom: 1px solid #EAECEE;
     background-color: $white;
+    height: 56px;
   }
 }
 
@@ -22,6 +38,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $screen-xl) {
+    min-height: 30px;
+
+    .phone {
+      margin-left: auto;
+    }
+  }
 }
 
 .page-header__xs-row {
@@ -29,6 +53,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media(min-width: $screen-xl) {
+    position: relative;
   }
 }
 

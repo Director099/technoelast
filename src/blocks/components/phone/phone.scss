@@ -88,11 +88,35 @@
 }
 
 .phone__link {
-  @include xl-text-normal;
-  display: block;
+  @include xl-text-small;
+  position: relative;
+  display: flex;
+  align-items: center;
   color: $white;
   text-decoration: none;
   padding: 10px 16px;
+
+  img {
+    display: inline-block;
+    margin-right: 11px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+
+  span {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(#EFEFF4, 0.1);
+    }
+  }
 
   &--dark {
     color: $text-color;
@@ -102,5 +126,20 @@
     padding-top: 0;
     padding-left: 0;
     padding-bottom: 0;
+  }
+
+  &--big {
+    @include xl-text-normal;
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 51px;
+        height: 1px;
+        background: #575757;
+      }
+    }
   }
 }
