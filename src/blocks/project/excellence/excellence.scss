@@ -20,5 +20,6 @@
 
   @media (min-width: $screen-xl) {
     @include xl-text-small;
+    line-height: 17px;
   }
 }

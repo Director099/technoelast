@@ -1,5 +1,5 @@
 .modal-ios {
-  background-color: transparent;
+  background-color: transparent !important;
 
   .modal__dialog {
     @media (min-width: $screen-xl) {
