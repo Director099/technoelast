@@ -9,6 +9,7 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 
   $block-name:                &; // #{$block-name}__element
   @include text-normal;
+  font-size: 16px;
 
   @media (min-width: $screen-md) {
 

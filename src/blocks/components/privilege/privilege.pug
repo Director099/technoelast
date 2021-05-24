@@ -1,8 +1,16 @@
-mixin privilege({img, title, list, classItem})
-  a.privilege(href="#")
-    .privilege__img
-      img(src=`img/content/${img}`, alt="Преимущества банкротства")
-    h3.privilege__title= title
-    ul.privilege__list
-      each item in list
-        li.privilege__item(class=`privilege__item--${classItem}`)= item
+mixin privilege({img, icon, title, list, classItem})
+  .privilege
+    a.privilege__content(href="#")
+      .privilege__img
+        img(src=`img/content/${img}`, alt="Преимущества банкротства")
+      header.privilege__header
+        h3.privilege__title= title
+        p.privilege__subtitle Место для подзаголовка
+      ul.privilege__list
+        each item in list
+          li.privilege__item-row
+            img(src=icon alt="Иконка")
+            span= item
+    footer.privilege__footer
+      +price({iconSale: true}).price--b-none.privilege__price
+      a.btn.btn--ios.privilege__btn(href="#modal-message-order", data-fancybox="") Заказать

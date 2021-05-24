@@ -1,9 +1,8 @@
 .privilege {
-  display: block;
-  color: inherit;
-  padding: 24px 16px;
-  border: 1px solid #EAECEE;
   border-radius: 6px;
+  border: 1px solid #EAECEE;
+  overflow: hidden;
+
   transition: $time;
 
   &:hover {
@@ -17,6 +16,13 @@
       }
     }
   }
+}
+
+
+.privilege__content {
+  display: block;
+  color: inherit;
+  padding: 24px;
 }
 
 .privilege__img {
@@ -44,8 +50,19 @@
 .privilege__title {
   @include xl-text-normal();
   font-weight: 500;
-  margin-bottom: 16px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.privilege__subtitle {
+  @include xl-text-small();
+  color: #808080;
+  margin: 0;
+}
+
+.privilege__header {
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .privilege__list {
@@ -72,5 +89,69 @@
 
   &--sad {
     background-image: url("../img/icon/icon-emoji-sad.png");
+  }
+}
+
+.privilege__item-row {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 8px;
+  }
+}
+
+.privilege__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background-color: $color-lighten;
+}
+
+.privilege__price {
+  margin-bottom: 12px;
+
+  .price__sale-del,
+  .price__sub {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .price__value {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+
+    span {
+      @include text-big;
+    }
+  }
+
+  .sale {
+    align-self: center;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.privilege__btn {
+  background: #FAFBFC;
+  border: 1px solid #EAECEE;
+  box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  color: $color-primary;
+  min-width: 144px;
+
+  &:hover {
+    background-color: #F4F4F8;
   }
 }
