@@ -2406,6 +2406,8 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .privilege {
+    display: block;
+    color: inherit;
     border-radius: 6px;
     border: 1px solid #eaecee;
     overflow: hidden;
