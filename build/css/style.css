@@ -2406,7 +2406,8 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .privilege {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: inherit;
     border-radius: 6px;
     border: 1px solid #eaecee;
@@ -2416,6 +2417,10 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .privilege:hover {
     background-color: #f5f5f7;
+}
+
+.privilege:hover .privilege__footer {
+    background-color: white;
 }
 
 .privilege:hover .privilege__img {
@@ -2438,7 +2443,8 @@ input:checked ~ .field-checkbox__name-text:after {
 .privilege__content {
     display: block;
     color: inherit;
-    padding: 24px;
+    padding: 24px 16px;
+    flex-grow: 1;
 }
 
 .privilege__img {
@@ -2544,6 +2550,7 @@ input:checked ~ .field-checkbox__name-text:after {
     align-items: center;
     padding: 24px 16px;
     background-color: #f5f5f7;
+    transition: 0.3s;
 }
 
 .privilege__price {
@@ -3304,7 +3311,7 @@ input:checked ~ .field-checkbox__name-text:after {
     font-size: 15px;
     line-height: 20px;
     font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
 .advantages__desc {
@@ -4428,6 +4435,10 @@ input:checked ~ .field-checkbox__name-text:after {
         max-width: 200px;
     }
 
+    .thesis__title {
+        font-size: 16px;
+    }
+
     .page-header .logo {
         left: 17px;
         transform: translateY(-50%);
@@ -4697,7 +4708,11 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .advantages__item {
         max-width: 696px;
-        padding-left: 41px;
+        padding-left: 32px;
+    }
+
+    .advantages__title {
+        font-size: 16px;
     }
 
     .interview {

@@ -1,5 +1,6 @@
 .privilege {
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: inherit;
   border-radius: 6px;
   border: 1px solid #EAECEE;
@@ -9,6 +10,10 @@
 
   &:hover {
     background-color: $color-lighten;
+
+    .privilege__footer {
+      background-color: $white;
+    }
 
     .privilege__img {
       background-color: $white;
@@ -24,7 +29,8 @@
 .privilege__content {
   display: block;
   color: inherit;
-  padding: 24px;
+  padding: 24px 16px;
+  flex-grow: 1;
 }
 
 .privilege__img {
@@ -117,6 +123,7 @@
   align-items: center;
   padding: 24px 16px;
   background-color: $color-lighten;
+  transition: $time;
 }
 
 .privilege__price {
