@@ -191,6 +191,10 @@
   display: block;
   color: $text-color;
 
+  strong:not([class]) {
+    font-weight: 600;
+  }
+
   &--xl-width {
     @media (min-width: $screen-xl) {
       max-width: 767px;
@@ -222,8 +226,6 @@
 }
 
 .main-content__desc ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
 }
 

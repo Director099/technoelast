@@ -40,7 +40,8 @@
   width: 100%;
 
   @media (min-width: $screen-xl) {
-    max-width: 144px;
+    min-width: 144px;
+    width: auto;
   }
 }
 

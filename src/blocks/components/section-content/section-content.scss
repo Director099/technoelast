@@ -5,6 +5,10 @@
     text-decoration: none;
   }
 
+  strong:not([class]) {
+    font-weight: 600;
+  }
+
   @media (min-width: $screen-xl) {
     padding: 24px;
     background-color: $white;

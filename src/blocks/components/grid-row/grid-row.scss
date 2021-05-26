@@ -99,7 +99,7 @@
   @media (min-width: $screen-xl) {
     display: grid;
     grid-gap: 12px;
-    grid-template-columns: repeat(auto-fill, calc(20% - 12px));
+    grid-template-columns: repeat(auto-fill, calc(20% - 9.6px));
 
     .section-content__item {
       margin-bottom: 0;
