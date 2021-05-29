@@ -8,20 +8,12 @@
 
   transition: $time;
 
+  .text-center {
+    justify-content: center;
+  }
+
   &:hover {
-    background-color: $color-lighten;
-
-    .privilege__footer {
-      background-color: $white;
-    }
-
-    .privilege__img {
-      background-color: $white;
-
-      &::after {
-        @include mask-photo(url("data:image/svg+xml,%0A%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M54 0H0V54H54V0ZM27 53C41.3594 53 53 47.8 53 27C53 6.2 41.3594 1 27 1C12.6406 1 1 6.2 1 27C1 47.8 12.6406 53 27 53Z' fill='%23f2f4f5'/%3E%3C/svg%3E%0A"))
-      }
-    }
+    @include hover-shadow;
   }
 }
 
@@ -57,9 +49,9 @@
 
 .privilege__title {
   @include xl-text-normal();
-  font-weight: 500;
+  font-weight: 600;
   line-height: 25px;
-  margin: 0;
+  margin: 0 0 16px;
 }
 
 .privilege__subtitle {

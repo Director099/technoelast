@@ -7,18 +7,21 @@
   color: inherit;
   height: 170px;
   padding: 16px 20px 16px 16px;
-  background: rgba(239, 239, 244, 0.6);
+  //background: rgba(239, 239, 244, 0.6);
+
+  background-color: $color-lighten;
 
   @media (min-width: $screen-xl) {
     padding: 20px 24px;
     height: 178px;
     transition: $time;
-    background-color: $white;
+    //background-color: $white;
     border: 1px solid #EAECEE;
 
+    background-color: $color-lighten;
+
     &:hover {
-      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05), 0px 3px 1px rgba(0, 0, 0, 0.03);
-      transform: scale(1.01);
+      @include hover-shadow;
     }
   }
 }

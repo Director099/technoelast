@@ -260,3 +260,10 @@
 .text-center {
   text-align: center !important;
 }
+
+@media (max-width: $screen-xl - 1) {
+  ::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none
+  }
+}
