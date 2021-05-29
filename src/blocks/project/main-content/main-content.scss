@@ -13,6 +13,7 @@
   }
 
   &--products {
+
     .main-content__header {
       padding-bottom: 20px;
 
@@ -100,7 +101,7 @@
 }
 
 .main-content__header {
-  padding: 16px;
+  padding: 16px 16px 0;
 
   @media (min-width: $screen-xl) {
     padding-left: 24px;
@@ -142,7 +143,7 @@
   }
 
   @media (max-width: $screen-xl - 1) {
-    padding: 0;
+    padding: 16px 0 0;
     border: 0;
     margin-left: 17px;
     margin-right: 17px;
