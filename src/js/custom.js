@@ -170,24 +170,21 @@ if(personalSlider) {
 // TODO: лучше добавить класс js-hover-menu
 const hoverMenu = document.querySelector('.nav-list__item--hover');
 if (hoverMenu) {
-  const hoverSidebar = hoverMenu.closest('.sidebar');
+  const hoverNav = hoverMenu.closest('.nav-list');
 
   hoverMenu.addEventListener('mouseover', function () {
     const _this = this;
     const listMenu = _this.querySelector('.nav-list__sub-item');
     listMenu.style.display = 'block';
-    // listMenu.style.height = listMenu.scrollHeight + 'px';
+    listMenu.style.height = listMenu.scrollHeight + 'px';
     _this.classList.add('active');
   });
 
-  hoverSidebar.addEventListener('mouseout', function (e) {
+  hoverNav.addEventListener('mouseleave', function (e) {
     const _this = this;
     const listMenu = _this.querySelector('.nav-list__sub-item');
-    const relatedTargetParent = e.relatedTarget.parentNode;
-    if (relatedTargetParent.classList.contains('sidebar') || relatedTargetParent.classList.contains('grid-row')) {
-      // listMenu.style.height = 0;
-      _this.querySelector('.nav-list__item--hover').classList.remove('active');
-    }
+    listMenu.style.height = 0;
+    // _this.querySelector('.nav-list__item--hover').classList.remove('active');
   });
 }
 
