@@ -40,7 +40,9 @@ block content
           +price({
               iconSale: true
           })
-        a.btn.btn--main.main-content__btn(href="#modal-message-order" data-fancybox="") Обсудить проект
+        .main-content__btn
+          a.btn.btn--main(href="#modal-message-order" data-fancybox="") Обсудить проект
+          a.btn.btn--ios(href="#modal-message-order" data-fancybox="") Заказать
     hr.line
     +production({
         title: 'Разновидности',

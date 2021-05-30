@@ -262,8 +262,22 @@
 .main-content__btn {
   margin-top: 24px;
 
-  @media (max-width: $screen-xl - 1) {
+
+  .btn {
     width: 100%;
+
+    & + .btn {
+      margin-top: 8px;
+
+      @media (min-width: $screen-xl) {
+        margin-left: 8px;
+        margin-top: 0;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+    }
   }
 }
 

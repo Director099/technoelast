@@ -117,7 +117,7 @@ $field-padding-horizontal:    14px !default;
   }
 
   &--ios {
-    color: $color-main;
+    color: $color-primary;
     background-color: $white;
 
     @media (min-width: $screen-xl) {

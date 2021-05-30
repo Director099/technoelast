@@ -436,7 +436,7 @@ a.btn--disabled {
 }
 
 .btn--ios {
-    color: #0b5fff;
+    color: #3d81c6;
     background-color: white;
 }
 
@@ -2832,6 +2832,14 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-top: 24px;
 }
 
+.main-content__btn .btn {
+    width: 100%;
+}
+
+.main-content__btn .btn + .btn {
+    margin-top: 8px;
+}
+
 .main-content__slide {
     position: relative;
     display: block;
@@ -4578,6 +4586,15 @@ input:checked ~ .field-checkbox__name-text:after {
         padding-left: 20px;
     }
 
+    .main-content__btn .btn + .btn {
+        margin-left: 8px;
+        margin-top: 0;
+    }
+
+    .main-content__btn .btn {
+        width: auto;
+    }
+
     .main-content__slide {
         overflow: hidden;
     }
@@ -5118,10 +5135,6 @@ input:checked ~ .field-checkbox__name-text:after {
         margin-left: 17px;
         margin-right: 17px;
         margin-bottom: 4px;
-    }
-
-    .main-content__btn {
-        width: 100%;
     }
 
     .block-form__content {
