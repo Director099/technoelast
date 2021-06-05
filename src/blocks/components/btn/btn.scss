@@ -24,6 +24,7 @@ $field-padding-horizontal:    14px !default;
   text-align: center;
   font-size: 17px;
   line-height: 21px;
+  font-weight: 500;
   font-family: inherit;
   text-decoration: none;
   text-transform: none;
@@ -33,6 +34,7 @@ $field-padding-horizontal:    14px !default;
   background-color: $gray-lightest;
   background-image: none;
   cursor: pointer;
+  letter-spacing: 0.3px;
 
   &:hover,
   &:focus {
@@ -118,10 +120,11 @@ $field-padding-horizontal:    14px !default;
 
   &--ios {
     color: $color-primary;
-    background-color: $white;
+    background: #fafbfc;
+    border: 1px solid #eaecee;
 
-    @media (min-width: $screen-xl) {
-      font-weight: 500;
+    &:hover {
+      background-color: #F4F4F8;
     }
   }
 

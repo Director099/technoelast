@@ -4,7 +4,9 @@
 
 .excellence__title {
   @include text-semi-big();
-  display: block;
+  font-size: 25px;
+  font-weight: 600;
+  //display: block;
 
   @media (min-width: $screen-xl) {
     font-weight: 500;

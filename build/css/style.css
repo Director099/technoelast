@@ -102,10 +102,6 @@ textarea {
     resize: vertical;
 }
 
-svg {
-    fill: currentColor;
-}
-
 a svg, button svg {
     pointer-events: none;
 }
@@ -380,6 +376,7 @@ template {
     text-align: center;
     font-size: 17px;
     line-height: 21px;
+    font-weight: 500;
     font-family: inherit;
     text-decoration: none;
     text-transform: none;
@@ -389,6 +386,7 @@ template {
     background-color: #e6e6e6;
     background-image: none;
     cursor: pointer;
+    letter-spacing: 0.3px;
 }
 
 .btn--disabled, .btn:disabled {
@@ -437,7 +435,12 @@ a.btn--disabled {
 
 .btn--ios {
     color: #3d81c6;
-    background-color: white;
+    background: #fafbfc;
+    border: 1px solid #eaecee;
+}
+
+.btn--ios:hover {
+    background-color: #f4f4f8;
 }
 
 .link {
@@ -1959,10 +1962,7 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .menu-ios__img {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 24px;
 }
 
 .menu-ios__list:last-child {
@@ -1984,6 +1984,7 @@ input:checked ~ .field-checkbox__name-text:after {
     padding-bottom: 16px;
     letter-spacing: 0.4px;
     color: #037ee5;
+    background-color: white;
 }
 
 .price {
@@ -2206,7 +2207,7 @@ input:checked ~ .field-checkbox__name-text:after {
     display: inline-block;
     vertical-align: middle;
     margin-right: 13px;
-    fill: #fbd826;
+    fill: #212a40;
 }
 
 .phone__header {
@@ -2322,7 +2323,10 @@ input:checked ~ .field-checkbox__name-text:after {
     overflow: hidden;
     font-size: 15px;
     line-height: 20px;
+    font-size: 17px;
     margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: 0.1px;
 }
 
 .tovar__category {
@@ -3044,7 +3048,8 @@ input:checked ~ .field-checkbox__name-text:after {
 .excellence__title {
     font-size: 21px;
     line-height: 25px;
-    display: block;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .excellence__text {
@@ -3778,10 +3783,6 @@ input:checked ~ .field-checkbox__name-text:after {
         font-weight: 500;
     }
 
-    .btn--ios {
-        font-weight: 500;
-    }
-
     .btn {
         font-size: 14px;
         line-height: 20px;
@@ -4094,7 +4095,6 @@ input:checked ~ .field-checkbox__name-text:after {
         padding: 0;
         margin: 0 0 16px;
         border-radius: 6px;
-        overflow: hidden;
     }
 
     .section-content__item-block {
@@ -4160,6 +4160,15 @@ input:checked ~ .field-checkbox__name-text:after {
         line-height: 17px;
     }
 
+    .preview {
+        border-radius: 6px;
+    }
+
+    .preview:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05), 0px 3px 1px rgba(0, 0, 0, 0.03);
+        transform: scale(1.01);
+    }
+
     .preview--info-block .preview__row {
         display: block;
     }
@@ -4211,7 +4220,7 @@ input:checked ~ .field-checkbox__name-text:after {
         height: 180px;
         margin-right: 24px;
         border: 1px solid white;
-        border-radius: 5px 5px 0 0;
+        border-radius: 5px 0px 0px 5px;
     }
 
     .preview__wrap {
@@ -4283,6 +4292,14 @@ input:checked ~ .field-checkbox__name-text:after {
         border-radius: 6px;
     }
 
+    .menu-ios__img {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 0;
+    }
+
     .menu-ios__link {
         font-size: 16px;
         line-height: 25px;
@@ -4335,6 +4352,10 @@ input:checked ~ .field-checkbox__name-text:after {
         min-width: 270px;
     }
 
+    .phone__icon {
+        fill: #3d81c6;
+    }
+
     .tovar {
         padding: 20px 24px;
         height: 178px;
@@ -4356,8 +4377,6 @@ input:checked ~ .field-checkbox__name-text:after {
     .tovar__title {
         font-size: 18px;
         line-height: 21px;
-        letter-spacing: 0.1px;
-        font-weight: 500;
     }
 
     .tovar__category {
@@ -5106,6 +5125,17 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .modal .section-content, .modal .contacts {
         background-color: white;
+    }
+
+    .menu-ios__link {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .menu-ios__link[data-fancybox-close] {
+        font-weight: 600;
+        justify-content: center;
     }
 
     .page-header__xs-row {

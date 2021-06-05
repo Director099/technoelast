@@ -51,14 +51,15 @@
 .tovar__title {
   @include line-clamp(2);
   @include text-normal;
+  font-size: 17px;
   //min-height: 52px;
   margin-bottom: 0;
+  font-weight: 500;
+  letter-spacing: 0.1px;
 
   @media (min-width: $screen-xl) {
     font-size: 18px;
     line-height: 21px;
-    letter-spacing: 0.1px;
-    font-weight: 500;
   }
 }
 

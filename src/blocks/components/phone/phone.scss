@@ -74,7 +74,11 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 13px;
-  fill: #FBD826;
+
+  fill: #212A40;
+  @media (min-width: $screen-xl) {
+    fill: $color-primary;
+  }
 }
 
 .phone__header {
