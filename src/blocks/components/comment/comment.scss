@@ -123,16 +123,17 @@ $bg-write:                    rgba(239, 239, 244, 0.6);
 }
 
 .comment__btn {
-  @include text-small;
-  font-weight: 600;
+  //@include text-small;
+  //font-weight: 600;
   width: 100%;
   background-color: $bg-write;
-  padding: 5.5px 10px;
+  //padding: 5.5px 10px;
   margin-top: 8px;
   color: $color-primary;
   border: 1px solid $bg-write;
 
   @media (min-width: $screen-xl) {
+    @include text-small;
     font-weight: 500;
     padding-top: 5px;
     padding-bottom: 5px;

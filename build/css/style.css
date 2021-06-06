@@ -1390,12 +1390,8 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .comment__btn {
-    font-size: 13px;
-    line-height: 17px;
-    font-weight: 600;
     width: 100%;
     background-color: rgba(239, 239, 244, 0.6);
-    padding: 5.5px 10px;
     margin-top: 8px;
     color: #3d81c6;
     border: 1px solid rgba(239, 239, 244, 0.6);
@@ -3253,7 +3249,7 @@ input:checked ~ .field-checkbox__name-text:after {
     transform: translateY(-50%);
 }
 
-.write__content {
+.write__content .comment {
     max-width: 485px;
 }
 
@@ -4012,6 +4008,8 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .comment__btn {
+        font-size: 13px;
+        line-height: 17px;
         font-weight: 500;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -5181,7 +5179,7 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .write__content {
         padding: 32px 16px 48px;
-        background: url("../img/decor/decor-write.png") no-repeat center/cover;
+        background: url("../img/decor/decor-write.png") repeat;
     }
 
     .interview {
