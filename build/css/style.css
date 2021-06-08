@@ -1973,6 +1973,7 @@ input:checked ~ .field-checkbox__name-text:after {
     display: block;
     font-size: 20px;
     line-height: 24px;
+    font-weight: 400;
     position: relative;
     border-radius: 0;
     border: 0;
