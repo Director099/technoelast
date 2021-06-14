@@ -2765,6 +2765,10 @@ input:checked ~ .field-checkbox__name-text:after {
     padding: 16px 16px 0;
 }
 
+.main-content__header--bottom {
+    padding-bottom: 16px;
+}
+
 .main-content__header--company {
     padding-bottom: 21px;
 }
@@ -2782,6 +2786,11 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .main-content__container:hover .swiper-button-next:not(.swiper-button-disabled), .main-content__container:hover .swiper-button-prev:not(.swiper-button-disabled) {
     opacity: 1;
+}
+
+.main-content__container--company .main-content__slide {
+    overflow: hidden;
+    border-radius: 6px;
 }
 
 .main-content__pagination {
@@ -3207,6 +3216,8 @@ input:checked ~ .field-checkbox__name-text:after {
     height: 0;
     transition: 0.3s;
     overflow: hidden;
+    display: block;
+    border-top: 0;
 }
 
 .nav-list__item--hover .nav-list__sub-item .nav-list__link, .nav-list__item--hover .nav-list__item:hover .nav-list__link {
@@ -4555,6 +4566,10 @@ input:checked ~ .field-checkbox__name-text:after {
         padding-bottom: 0px;
     }
 
+    .main-content__header--bottom {
+        padding-bottom: 24px;
+    }
+
     .main-content__container {
         padding-top: 24px;
     }
@@ -4715,6 +4730,10 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .nav-list__link:hover {
         background-color: white;
+    }
+
+    .nav-list__item--hover {
+        height: 40px;
     }
 
     .block-form {

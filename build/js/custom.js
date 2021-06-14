@@ -225,14 +225,12 @@
         }
 
         if (elem.type == 'tel') {
-          const tel = new Inputmask({
+          new Inputmask({
             mask: "+7 (999) 999 99 99",
             showMaskOnHover: false
-          }).mask(document.querySelectorAll("[type='tel']"));
-
-          if (!tel.isComplete()) {
-            _this.addInvalid(elem);
-          }
+          }).mask(document.querySelectorAll("[type='tel']")); // if (!tel.isComplete()) {
+          //   _this.addInvalid(elem);
+          // }
         }
 
         if ($(this).data('type') == "password") {
@@ -444,6 +442,8 @@
       listMenu.style.height = listMenu.scrollHeight + 'px';
 
       _this.classList.add('active');
+
+      _this.style.height = 'auto'; // Решение бага удвоенный бордер(на ss все перепробовал)
     });
     hoverNav.addEventListener('mouseleave', function (e) {
       const _this = this;

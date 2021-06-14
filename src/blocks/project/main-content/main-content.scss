@@ -109,6 +109,14 @@
     padding-top: 24px;
     padding-bottom: 0px;
   }
+
+  &--bottom {
+    padding-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 24px;
+    }
+  }
 }
 
 .main-content__header--company {
@@ -175,6 +183,13 @@
     // border-bottom: 1px solid $color-line-border;
     //margin-left: 16px;
     //margin-right: 18px;
+  }
+}
+
+.main-content__container--company {
+  .main-content__slide {
+    overflow: hidden;
+    border-radius: $border-radius-xl;
   }
 }
 

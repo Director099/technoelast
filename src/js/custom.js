@@ -178,6 +178,7 @@ if (hoverMenu) {
     listMenu.style.display = 'block';
     listMenu.style.height = listMenu.scrollHeight + 'px';
     _this.classList.add('active');
+    _this.style.height = 'auto' // Решение бага удвоенный бордер(на ss все перепробовал)
   });
 
   hoverNav.addEventListener('mouseleave', function (e) {

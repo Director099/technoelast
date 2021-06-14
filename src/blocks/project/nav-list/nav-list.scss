@@ -206,10 +206,17 @@
 }
 
 .nav-list__item--hover {
+  @media (min-width: $screen-xl) {
+    height: 40px;
+  }
+
   .nav-list__sub-item {
     height: 0;
     transition: $time;
     overflow: hidden;
+
+    display: block;
+    border-top: 0;
   }
   //&:hover {
   //  .nav-list__sub-item {
