@@ -90,8 +90,15 @@
 .line-clump {
   @include line-clamp(4);
 
+  @media (max-width: $screen-xl - 1) {
+    max-height: 80px;
+  }
+
   &.active {
+    -webkit-box-orient: inherit;
     -webkit-line-clamp: inherit;
+    display: block;
+    max-height: inherit;
   }
 }
 
