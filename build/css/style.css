@@ -3659,7 +3659,10 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .line-clump.active {
+    -webkit-box-orient: inherit;
     -webkit-line-clamp: inherit;
+    display: block;
+    max-height: inherit;
 }
 
 .sidebar {
@@ -5226,6 +5229,10 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .block-content {
         background-image: none !important;
+    }
+
+    .line-clump {
+        max-height: 80px;
     }
 
     .fancybox-active {
