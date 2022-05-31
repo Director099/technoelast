@@ -299,7 +299,7 @@
   function paginationSlides(slider) {
     const elemSliders = slider.querySelectorAll('.swiper-slide');
     const option = {
-      el: '.swiper-pagination',
+      el: slider.parentNode.querySelector('.swiper-pagination'),
       dynamicBullets: true
     };
 
@@ -371,19 +371,21 @@
     }
   }
 
-  const companySlider = document.querySelector('.js-company-slider');
+  const jsCompanySlider = document.querySelectorAll('.js-company-slider');
 
-  if (companySlider) {
-    new Swiper(companySlider, {
-      mousewheel: {
-        forceToAxis: true
-      },
-      navigation: {
-        nextEl: companySlider.parentNode.querySelector('.swiper-button-next'),
-        prevEl: companySlider.parentNode.querySelector('.swiper-button-prev')
-      },
-      spaceBetween: 8,
-      pagination: paginationSlides(companySlider)
+  if (jsCompanySlider) {
+    jsCompanySlider.forEach(item => {
+      new Swiper(item, {
+        mousewheel: {
+          forceToAxis: true
+        },
+        navigation: {
+          nextEl: item.parentNode.querySelector('.swiper-button-next'),
+          prevEl: item.parentNode.querySelector('.swiper-button-prev')
+        },
+        spaceBetween: 8,
+        pagination: paginationSlides(item)
+      });
     });
   }
 
