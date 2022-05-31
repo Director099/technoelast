@@ -2727,6 +2727,10 @@ input:checked ~ .field-checkbox__name-text:after {
     width: 100%;
 }
 
+.page-header__burger {
+    padding: 2px 0;
+}
+
 .page-footer {
     position: relative;
     background-color: #efeff4;

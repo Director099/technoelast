@@ -3,9 +3,7 @@ mixin page-header({modalHeader})
     .container
       .page-header__xs-row
         if(modalHeader !== true)
-          a.icon-btn.icon-btn--header-phone.d-xl-none(href='#modal-callback' data-fancybox="")
-            svg(width='20' height='17')
-              use(href='img/symbols.svg#icon-phone')
+          +burger('Меню').d-xl-none.page-header__burger
         else
           a.icon-btn(href='#' data-fancybox-close="")
             svg(width='17' height='14')
@@ -29,11 +27,7 @@ mixin page-header({modalHeader})
                 }).field-text--search.js-field
                   button.field-text__reset(type="reset" aria-label="Сброс")
               +phone
-        if(modalHeader !== true)
-          a.icon-btn.icon-btn--header-mail.d-xl-none(href='#modal-message' data-fancybox="")
-            svg(width='21' height='16')
-              use(href='img/symbols.svg#icon-mail')
-        else
+        if(modalHeader === true)
           a.icon-btn(href='#' data-fancybox-close="")
             svg(width='14' height='14')
               use(href='img/symbols.svg#icon-close')
