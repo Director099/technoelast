@@ -1313,9 +1313,8 @@ input:checked ~ .field-checkbox__name-text:after {
     position: relative;
     flex-shrink: 0;
     align-self: flex-end;
-    margin-right: 13px;
+    margin-right: 24px;
     margin-bottom: 38px;
-    width: 47px;
 }
 
 .comment__avatar-wrap::after {
@@ -4011,11 +4010,12 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .comment__avatar-wrap {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
     .comment__avatar-wrap img {
-        width: 47px;
+        width: 88px;
+        height: 88px;
     }
 
     .comment__wrap {
@@ -4029,7 +4029,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .comment__footer {
-        margin-top: -5px;
+        margin-top: 15px;
     }
 
     .comment__btn {

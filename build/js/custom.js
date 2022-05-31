@@ -1,7 +1,7 @@
 (function (factory) {
   typeof define === 'function' && define.amd ? define('custom', factory) :
   factory();
-}((function () { 'use strict';
+})((function () { 'use strict';
 
   document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('to-top')) {
@@ -559,4 +559,4 @@
     }
   });
 
-})));
+}));
