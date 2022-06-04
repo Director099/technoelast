@@ -203,3 +203,28 @@
     }
   }
 }
+
+.section-content__grid-review {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(136px,1fr));
+    grid-gap: 12px;
+    @media (min-width: $screen-xl) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .default-slider__width {
+    max-width: 100%;
+  }
+
+  .rev-img {
+    @media (min-width: $screen-xl) {
+      height: 330px;
+    }
+  }
+
+  + .section-content__btn {
+    margin-top: 12px;
+  }
+}

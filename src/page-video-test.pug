@@ -1,0 +1,90 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header({})
+block content
+  main
+    +navigation(
+        [
+            {
+                text: 'Продукция', className: '',
+                attrs: {href: 'products.html',}
+            },
+            {
+                text: 'Компания', className: '',
+                attrs: {href: 'company.html',}
+            },
+            {
+                text: 'Новости', className: '',
+                attrs: {href: 'all-news.html',}
+            },
+            {
+                text: 'Контакты', className: '',
+                attrs: {href: '#modal-contact', 'data-fancybox': ''}
+            }
+        ]
+    )
+    +main-content({
+        title: 'Резинотехнические изделия',
+        mainSlider: true,
+        video: "https://barashev.com/image/video/Barashev.mp4",
+        contentFooter: true,
+        className: 'd-xl-none'
+    })
+      .main-content__content-wrap.main-content__content-wrap--xl-row
+        .main-content__content
+          h2.title-big.main-content__title.d-none.d-xl-block Резинотехнические изделия
+          .main-content__desc
+            p Произведем формовые резинотехнические изделия под заказ по вашим чертежам
+          .main-content__btn
+            a.btn.btn--main(href="#modal-message-order" data-fancybox="") Обсудить проект
+            a.btn.btn--ios(href="#modal-message-order" data-fancybox="") Заказать
+        .main-content__price.d-none.d-xl-block
+          +price({iconSale: '22%'})
+    hr.line
+    +main-content({
+        title: 'Фторкаучуковые кольца',
+        mainSlider: true,
+        video: "https://img.artlebedev.ru/everything/thunder/morda/cover.mp4",
+        contentFooter: true,
+        productSlider: true,
+        className: 'd-xl-none'
+    }).main-content--p-current
+      .main-content__content
+        h2.title-big.main-content__title Фторкаучуковые кольца
+        .main-content__desc
+          p Производим фторкаучуковые кольца под заказ  по вашим чертежам
+          +price({
+              iconSale: true
+          })
+        .main-content__btn
+          a.btn.btn--main(href="#modal-message-order" data-fancybox="") Обсудить проект
+          a.btn.btn--ios(href="#modal-message-order" data-fancybox="") Заказать
+    hr.line
+    +production({
+        title: 'Продукция',
+        filter: true,
+        categoryTag: 'a'
+    })
+    hr.line
+    +list-production({
+        title: 'Продукция',
+        videoTovar: true
+    })
+    hr.line
+    +reviews({
+        title: 'Отзывы',
+        filter: true,
+        video: true
+    })
+    hr.line
+    +privileges()
+    hr.line
+    +services()
+    hr.line
+    +theses()
+    hr.line
+    +partner()
+    hr.line

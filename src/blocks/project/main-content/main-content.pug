@@ -1,4 +1,4 @@
-mixin main-content({title, mainSlider, contentSlider, contentFooter, className, productSlider, breadcrumbs})
+mixin main-content({title, mainSlider, contentSlider, contentFooter, className, productSlider, breadcrumbs, video})
   article.main-content&attributes(attributes)
     if(breadcrumbs === true)
       .main-content__breadcrumbs.d-none.d-xl-block
@@ -22,25 +22,29 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
         .main-content__container.main-content__container--main
           .swiper-container(class=`${productSlider === true ? 'js-product-slider' : 'js-main-slider'}`)
             .swiper-wrapper
-              .swiper-slide
-                .main-content__slide
-                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
-              .swiper-slide
-                a.main-content__slide(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&ab_channel=JazzandBluesExperience" data-fancybox="")
-                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
-                  +icon-play().main-content__play
-              .swiper-slide
-                .main-content__slide
-                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
-              .swiper-slide
-                .main-content__slide
-                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
-              .swiper-slide
-                .main-content__slide
-                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
-              .swiper-slide
-                .main-content__slide
-                  img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              if(video)
+                .swiper-slide
+                  .main-content__slide
+                    video(src=video id="video" allow="autoplay" playsinline="" width="100%" autoplay muted loop)
+              //.swiper-slide
+              //  .main-content__slide
+              //    img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              //.swiper-slide
+              //  a.main-content__slide(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&ab_channel=JazzandBluesExperience" data-fancybox="")
+              //    img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              //    +icon-play().main-content__play
+              //.swiper-slide
+              //  .main-content__slide
+              //    img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              //.swiper-slide
+              //  .main-content__slide
+              //    img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              //.swiper-slide
+              //  .main-content__slide
+              //    img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
+              //.swiper-slide
+              //  .main-content__slide
+              //    img(src="img/content/main-slide-1.jpg" alt="Резинотехнические изделия")
           .swiper-button-next
           .swiper-button-prev
           .swiper-pagination.main-content__pagination
@@ -48,6 +52,10 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
         .main-content__container.main-content__container--company
           .swiper-container.js-company-slider
             .swiper-wrapper
+              if(video === true)
+                .swiper-slide
+                  .main-content__slide
+                    video(src="https://barashev.com/image/video/Barashev.mp4" id="video" allow="autoplay" playsinline="" width="100%" autoplay muted loop)
               .swiper-slide
                 a.main-content__slide(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&ab_channel=JazzandBluesExperience" data-fancybox="")
                   img(src="img/content/content-1.jpg" alt="Резинотехнические изделия")

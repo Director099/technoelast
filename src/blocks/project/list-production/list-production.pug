@@ -1,4 +1,4 @@
-mixin list-production({title})
+mixin list-production({title, videoTovar})
   .section-content
     +title-wrap(title)
       a.link-all(href="#", data-text="Посмотреть все") Все
@@ -6,5 +6,5 @@ mixin list-production({title})
       .grid-row
         -for(var i = 0; i < 8; i++)
           .grid-row__col.grid-row__col--xl-6.section-content__item-block
-            +tovar()
+            +tovar(videoTovar)
       button(type="button").btn.btn--lighten.section-content__btn.section-content__btn--xl-tr.d-none.d-xl-block Показать еще
