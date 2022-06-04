@@ -1314,7 +1314,9 @@ input:checked ~ .field-checkbox__name-text:after {
     flex-shrink: 0;
     align-self: flex-end;
     margin-right: 24px;
-    margin-bottom: 38px;
+    margin-bottom: 58px;
+    width: 47px;
+    height: 47px;
 }
 
 .comment__avatar-wrap::after {
@@ -1332,8 +1334,8 @@ input:checked ~ .field-checkbox__name-text:after {
 
 .comment__avatar-wrap img {
     display: block;
-    width: 47px;
-    height: 47px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -2306,7 +2308,7 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-left: 15px;
 }
 
-.tovar__img img {
+.tovar__img img, .tovar__img video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -4015,9 +4017,6 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .comment__avatar-wrap {
         margin-bottom: 35px;
-    }
-
-    .comment__avatar-wrap img {
         width: 88px;
         height: 88px;
     }
