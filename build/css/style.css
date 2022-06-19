@@ -4031,6 +4031,7 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .comment__avatar-wrap {
         margin-bottom: 35px;
+        margin-right: 24px;
         width: 88px;
         height: 88px;
     }
