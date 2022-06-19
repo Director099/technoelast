@@ -1313,10 +1313,10 @@ input:checked ~ .field-checkbox__name-text:after {
     position: relative;
     flex-shrink: 0;
     align-self: flex-end;
-    margin-right: 24px;
+    margin-right: 13px;
     margin-bottom: 58px;
-    width: 47px;
-    height: 47px;
+    width: 58px;
+    height: 58px;
 }
 
 .comment__avatar-wrap::after {
