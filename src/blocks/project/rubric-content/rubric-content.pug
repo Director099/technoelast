@@ -1,0 +1,36 @@
+mixin rubric-content({title})
+  .section-content.rubric-content
+    +title-wrap(title)
+      a.link-all(href="#", data-text="Посмотреть все") Все
+    .section-content__wrap
+      .grid-row.grid-row--i-12
+        .grid-row__col.grid-row__col--ratio-16-9.grid-row__col--6.rubric-content__col
+          +rubric({
+            video: false,
+              img: '16x9'
+          })(href="https://pplans.ru/" target="_blank" )
+        .grid-row__col.grid-row__col--6.grid-row__col--ratio-16-9.rubric-content__col
+          +rubric({
+              video: false,
+              img: '9x8'
+          })
+          +rubric({
+              video: true,
+              img: '9x8'
+          })
+        .grid-row__col.grid-row__col--ratio-9-16.grid-row__col--12.rubric-content__col
+          +rubric({
+              video: false,
+              img: '9x16'
+          })(data-fancybox="rubric")
+        .grid-row__col.grid-row__col--ratio-1.grid-row__col--6.rubric-content__col
+          +rubric({
+              video: false,
+              img: '1x1'
+          })(data-fancybox="rubric")
+        .grid-row__col.grid-row__col--ratio-1.grid-row__col--6.rubric-content__col
+          +rubric({
+              video: false,
+              img: '1x1'
+          })(data-fancybox="rubric")
+      button(type="button").btn.btn--lighten.section-content__btn.section-content__btn--xl-tr.d-none.d-xl-block Показать еще

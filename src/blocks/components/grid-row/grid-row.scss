@@ -12,6 +12,16 @@
 .grid-row {
   @include row(16px, 16px, 16px, 16px, 16px);
 
+  &--i-12 {
+    @include row(12px, 12px, 12px, 12px, 12px);
+    gap: 12px 0;
+
+    .grid-row__col {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+
   &--sb {
     justify-content: space-between;
   }
@@ -66,6 +76,26 @@
   //margin-bottom: 16px;
   &--auto {
     flex-basis: auto;
+  }
+
+  &--ratio-16-9 {
+    aspect-ratio: 40 / 72;
+  }
+
+  &--ratio-9-16 {
+    aspect-ratio: 83 / 47;
+  }
+
+  &--ratio-1 {
+    aspect-ratio: 1;
+  }
+
+  &--12 {
+    @include make-col(12, 12, 16px);
+  }
+
+  &--6 {
+    @include make-col(6, 12, 16px);
   }
 
   &--4 {

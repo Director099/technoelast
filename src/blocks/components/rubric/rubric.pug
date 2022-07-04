@@ -1,0 +1,8 @@
+mixin rubric({video, img})
+  a.rubric(href=`${video ? "#" : `img/test/${img}.jpg`}`)&attributes(attributes)
+    if (video)
+      video(src="https://img.artlebedev.ru/everything/thunder/morda/cover.mp4"  playsinline=""  autoplay="" muted loop)
+    else
+      img(src=`img/test/${img}.jpg` alt="Резинотехнические изделия")
+    .rubric__info(style="background: linear-gradient(360deg, #D2D8E4 0%, rgba(210, 216, 228, 0) 100%);")
+      p.rubric__desc Место для заголовка место для заголовка
