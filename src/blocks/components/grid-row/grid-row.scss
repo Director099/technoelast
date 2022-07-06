@@ -78,12 +78,20 @@
     flex-basis: auto;
   }
 
+  &--ratio-a4-h {
+    aspect-ratio: 169 / 118;
+  }
+
+  &--ratio-a4-v {
+    aspect-ratio: 422 / 583;
+  }
+
   &--ratio-16-9 {
-    aspect-ratio: 40 / 72;
+    aspect-ratio: 422 / 724;
   }
 
   &--ratio-9-16 {
-    aspect-ratio: 83 / 47;
+    aspect-ratio: 845 / 469;
   }
 
   &--ratio-1 {

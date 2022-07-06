@@ -2,10 +2,23 @@
   position: relative;
   display: block;
   border-radius: $border-radius;
+  border: 1px solid #EAECEE;
   overflow: hidden;
   background-color: #F5F5F7;
+  background-size: cover;
+  background-position: center;
 
-  img,
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+
   video {
     position: absolute;
     top: 0;

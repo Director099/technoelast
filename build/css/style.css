@@ -553,12 +553,20 @@ a.btn--disabled {
     flex-basis: auto;
 }
 
+.grid-row__col--ratio-a4-h {
+    aspect-ratio: 169 / 118;
+}
+
+.grid-row__col--ratio-a4-v {
+    aspect-ratio: 422 / 583;
+}
+
 .grid-row__col--ratio-16-9 {
-    aspect-ratio: 40 / 72;
+    aspect-ratio: 422 / 724;
 }
 
 .grid-row__col--ratio-9-16 {
-    aspect-ratio: 83 / 47;
+    aspect-ratio: 845 / 469;
 }
 
 .grid-row__col--ratio-1 {
@@ -2761,11 +2769,25 @@ input:checked ~ .field-checkbox__name-text:after {
     position: relative;
     display: block;
     border-radius: 5px;
+    border: 1px solid #eaecee;
     overflow: hidden;
     background-color: #f5f5f7;
+    background-size: cover;
+    background-position: center;
 }
 
-.rubric img, .rubric video {
+.rubric img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.rubric video {
     position: absolute;
     top: 0;
     left: 0;

@@ -7,30 +7,53 @@ mixin rubric-content({title})
         .grid-row__col.grid-row__col--ratio-16-9.grid-row__col--6.rubric-content__col
           +rubric({
             video: false,
-              img: '16x9'
-          })(href="https://pplans.ru/" target="_blank" )
+              img: 'img-16x9.png'
+          })(href="https://pplans.ru/" target="_blank" style="background-image: url(img/test/bg-16x9.jpg)")
         .grid-row__col.grid-row__col--6.grid-row__col--ratio-16-9.rubric-content__col
           +rubric({
               video: false,
-              img: '9x8'
+              img: '9x8.jpg',
+              text: 'Место для заголовка место для заголовка'
           })
           +rubric({
               video: true,
-              img: '9x8'
+              img: '9x8.jpg',
+              text: 'Место для заголовка место для заголовка'
           })
         .grid-row__col.grid-row__col--ratio-9-16.grid-row__col--12.rubric-content__col
           +rubric({
               video: false,
-              img: '9x16'
+              img: '9x16.jpg',
+              text: 'Место для заголовка место для заголовка'
           })(data-fancybox="rubric")
         .grid-row__col.grid-row__col--ratio-1.grid-row__col--6.rubric-content__col
           +rubric({
               video: false,
-              img: '1x1'
+              img: '1x1.jpg',
+              text: 'Место для заголовка место для заголовка'
           })(data-fancybox="rubric")
         .grid-row__col.grid-row__col--ratio-1.grid-row__col--6.rubric-content__col
           +rubric({
               video: false,
-              img: '1x1'
+              img: '1x1.jpg',
+              text: 'Место для заголовка место для заголовка'
           })(data-fancybox="rubric")
+        .grid-row__col.grid-row__col--ratio-a4-v.grid-row__col--6.rubric-content__col
+          +rubric({
+              video: false,
+              img: 'img-16x9.png',
+              text: 'a4-v'
+          })(data-fancybox="rubric" style="background-image: url(img/test/bg-16x9.jpg)")
+        .grid-row__col.grid-row__col--ratio-a4-v.grid-row__col--6.rubric-content__col
+          +rubric({
+              video: false,
+              img: 'img-16x9.png',
+              text: 'a4-v'
+          })(data-fancybox="rubric" style="background-image: url(img/test/bg-16x9.jpg)")
+        .grid-row__col.grid-row__col--ratio-a4-h.grid-row__col--12.rubric-content__col
+          +rubric({
+              video: false,
+              img: 'img-16x9.png',
+              text: 'a4-h'
+          })(data-fancybox="rubric" style="background-image: url(img/test/bg-16x9.jpg)")
       button(type="button").btn.btn--lighten.section-content__btn.section-content__btn--xl-tr.d-none.d-xl-block Показать еще
