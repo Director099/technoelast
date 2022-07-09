@@ -1,6 +1,6 @@
 .rubric {
   position: relative;
-  display: block;
+  //display: block;
   border-radius: $border-radius;
   border: 1px solid #EAECEE;
   overflow: hidden;
@@ -8,21 +8,27 @@
   background-size: cover;
   background-position: center;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    display: block;
+    //width: 100%;
+    //height: 100%;
+    //object-fit: cover;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //bottom: 0;
+    //right: 0;
     width: auto;
     height: auto;
-    margin: auto;
+    max-height: 100%;
   }
 
   video {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
