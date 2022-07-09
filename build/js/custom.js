@@ -304,6 +304,8 @@
     };
 
     if (elemSliders.length === 1) {
+      const link = slider.querySelector('.main-content__slide[href]');
+      link ? slider.classList.add('hover-slide') : '';
       return false;
     }
 
