@@ -71,6 +71,12 @@
   }
 }
 
+.grid-row--i-12 + .section-content__btn {
+  @media (max-width: $screen-xl - 1) {
+    margin-top: 12px;
+  }
+}
+
 .grid-row__col {
   @include make-col(12, 12, 16px);
   //margin-bottom: 16px;

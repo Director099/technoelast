@@ -562,5 +562,64 @@
       $el.height(this.scrollHeight - offset);
     }
   });
+  const btnShare = document.querySelectorAll('.js-share');
+
+  if (btnShare.length > 0) {
+    btnShare.forEach(elem => {
+      elem.addEventListener("click", () => elem.classList.toggle("active"));
+    });
+    window.addEventListener('click', e => {
+      if (!e.target.matches('.js-share')) {
+        btnShare.forEach(item => {
+          if (!e.target.matches('.js-buffer-copy')) {
+            item.classList.remove('active');
+          } else {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  const fieldShareCopy = document.querySelectorAll('.js-buffer-copy');
+  fieldShareCopy.forEach(elem => {
+    elem.addEventListener('click', e => {
+      const input = e.currentTarget.querySelector('input');
+      const inputText = e.currentTarget.querySelector('.btn-icon__share-text');
+      input.select();
+      inputText.textContent = 'Copied';
+      document.execCommand('copy');
+    });
+  });
+  const btnIcon = document.querySelectorAll('.js-btn-icon');
+  btnIcon.forEach(elem => {
+    elem.addEventListener('click', e => {
+      elem.classList.toggle('active');
+      const dislike = elem.dataset.icon === 'dislike';
+      const like = elem.dataset.icon === 'like';
+      const parent = elem.closest('.main-content__footer-user-evt');
+      const btnDislike = parent.querySelector('[data-icon="dislike"]');
+      const btnLike = parent.querySelector('[data-icon="like"]');
+      let textCount = btnLike.querySelector('.btn-icon__text');
+
+      if (textCount) {
+        const copyText = textCount.textContent;
+        if (like) btnDislike.classList.remove('active');
+
+        if (dislike && btnLike.classList.contains('active')) {
+          btnLike.classList.remove('active');
+          textCount.textContent = Number(copyText) - 1;
+        }
+
+        if (like) {
+          if (btnLike.classList.contains('active')) {
+            textCount.textContent = Number(copyText) + 1;
+          } else {
+            textCount.textContent = Number(copyText) - 1;
+          }
+        }
+      }
+    });
+  });
 
 }));

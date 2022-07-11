@@ -111,7 +111,7 @@ const images = () => {
 const symbols = () => {
   return gulp.src(dirs.source + '/img/sprite/*.svg')
     .pipe(plumber())
-    .pipe(svgmin())
+    // .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))

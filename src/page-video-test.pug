@@ -63,6 +63,14 @@ block content
           a.btn.btn--main(href="#modal-message-order" data-fancybox="") Обсудить проект
           a.btn.btn--ios(href="#modal-message-order" data-fancybox="") Заказать
     hr.line
+    +main-content({
+        contentSlider: true,
+        contentFooter: true,
+        shared: true,
+    })
+      .main-content__desc.main-content__desc--xl-width
+        p Акционеры крупнейших компаний набирают популярность среди определенных слоев населения, а значит, должны быть объективно рассмотрены соответствующими инстанциями.
+    hr.line
     +production({
         title: 'Продукция',
         filter: true,

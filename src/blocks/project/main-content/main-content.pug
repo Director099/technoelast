@@ -1,4 +1,4 @@
-mixin main-content({title, mainSlider, contentSlider, contentFooter, className, productSlider, breadcrumbs, video})
+mixin main-content({title, mainSlider, contentSlider, contentFooter, className, productSlider, breadcrumbs, video, shared})
   article.main-content&attributes(attributes)
     if(breadcrumbs === true)
       .main-content__breadcrumbs.d-none.d-xl-block
@@ -16,8 +16,9 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
           tagLinkTag: 'a'
         })
     section.main-content__wrap
-      header.main-content__header(class= className)
-        h1.title-big.main-content__title= title
+      if(title)
+        header.main-content__header(class= className)
+          h1.title-big.main-content__title= title
       if(mainSlider === true)
         .main-content__container.main-content__container--main
           .swiper-container(class=`${productSlider === true ? 'js-product-slider' : 'js-main-slider'}`)
@@ -77,4 +78,18 @@ mixin main-content({title, mainSlider, contentSlider, contentFooter, className, 
           .swiper-pagination.main-content__pagination
     if(contentFooter === true)
       footer.main-content__footer
+        if(shared === true)
+          .main-content__footer-user-evt
+            .main-content__footer-user-evt-wrap
+              +btn-icon({
+                icon: 'icon-like',
+                text: '346',
+              })(data-icon="like").js-btn-icon
+              +btn-icon({
+                icon: 'icon-share',
+                share: true
+              }).js-share
+            +btn-icon({
+              icon: 'icon-dislike',
+            })(data-icon="dislike").js-btn-icon
         block

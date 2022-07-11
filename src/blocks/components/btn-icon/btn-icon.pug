@@ -1,0 +1,37 @@
+mixin btn-icon({icon, text, share})
+  .btn-icon&attributes(attributes)
+    svg.btn-icon__icon(width="32" height="32")
+      use(href=`img/symbols.svg#${icon}`)
+    if(text)
+      span.btn-icon__text= text
+    if(share === true)
+      .btn-icon__share
+        h3.btn-icon__title-share.d-xl-none Share
+        .btn-icon__share-list
+          .btn-icon__share-link.js-buffer-copy
+            input(value="https://barashev.com/")
+            .btn-icon__share-icon-wrap
+              svg(width="20" height="20")
+                use(href=`img/symbols.svg#icon-share-copy`)
+            span.btn-icon__share-text Copy link
+          a.btn-icon__share-link(href="https://vkontakte.ru/share.php?url=https://barashev.com/" target="_blank")
+            .btn-icon__share-icon-wrap
+              svg(width="20" height="20")
+                use(href=`img/symbols.svg#icon-share-vk`)
+            span.btn-icon__share-text VK
+          a.btn-icon__share-link(href="https://telegram.me/share/url?url=https://barashev.com/" target="_blank")
+            .btn-icon__share-icon-wrap
+              svg(width="20" height="20")
+                use(href=`img/symbols.svg#icon-share-telegram`)
+            span.btn-icon__share-text Telegram
+          a.btn-icon__share-link(href="https://api.whatsapp.com/send?text=https://barashev.com/" target="_blank")
+            .btn-icon__share-icon-wrap
+              svg(width="20" height="20")
+                use(href=`img/symbols.svg#icon-share-watsapp`)
+            span.btn-icon__share-text WhatsApp
+          a.btn-icon__share-link(href="https://connect.ok.ru/offer?url=https://barashev.com/" target="_blank")
+            .btn-icon__share-icon-wrap
+              svg(width="20" height="20")
+                use(href=`img/symbols.svg#icon-share-odnoklassniki`)
+            span.btn-icon__share-text Odnoklassniki
+        button.btn-icon__share-btn(type="button").btn.d-xl-none Close
