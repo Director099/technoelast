@@ -7,22 +7,22 @@
 
   @media (min-width: $screen-xl) {
     background-image: url("../img/decor/decor-interview.jpg");
-    background-position: bottom right;
-    background-size: contain;
+    background-position: center right;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 460px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: -1px;
-      z-index: -1;
-      background: linear-gradient(90deg,#fff 0%,#fff 54.09%,rgba(255,255,255,.75) 61.15%,rgba(255,255,255,0) 66.23%);
-      border-radius: 6px;
-    }
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  left: 0;
+    //  top: 0;
+    //  right: 0;
+    //  bottom: -1px;
+    //  z-index: -1;
+    //  background: linear-gradient(90deg,#fff 0%,#fff 54.09%,rgba(255,255,255,.75) 61.15%,rgba(255,255,255,0) 66.23%);
+    //  border-radius: 6px;
+    //}
   }
 
   @media (max-width: $screen-xl - 1) {
