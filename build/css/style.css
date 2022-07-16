@@ -1587,10 +1587,6 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
 }
 
-.collapse.active {
-    background-color: transparent;
-}
-
 .collapse.active .collapse__title::after {
     transform: rotate(0deg);
 }
@@ -1600,14 +1596,8 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .collapse--faq {
-    padding: 13px 16px 13px 16px;
     border-radius: 5px;
     border: 1px solid rgba(176, 182, 210, 0.33);
-    background-color: #efeff4;
-}
-
-.collapse--faq.active .collapse__title {
-    margin-bottom: 14px;
 }
 
 .collapse--faq.active .collapse__wrap {
@@ -1622,15 +1612,16 @@ input:checked ~ .field-checkbox__name-text:after {
     margin: 0;
     cursor: pointer;
     transition: 0.3s;
-    padding-right: 30px;
+    background-color: #efeff4;
+    padding: 14px 46px 16px 16px;
 }
 
 .collapse__title::after {
     display: block;
     content: "";
     position: absolute;
-    right: 0;
-    top: 3px;
+    right: 16px;
+    top: 19px;
     width: 14px;
     height: 14px;
     opacity: 0.2;
@@ -1645,17 +1636,13 @@ input:checked ~ .field-checkbox__name-text:after {
 .collapse__wrap {
     height: 0px;
     overflow: hidden;
-    border-top: 1px solid transparent;
-    margin-left: -16px;
-    margin-right: -16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    background-color: transparent;
     transition: 0.3s;
 }
 
 .collapse__content {
     opacity: 0.6;
-    margin-top: 14px;
+    padding: 14px 16px 16px;
     transition: 0.3s;
 }
 
@@ -3038,6 +3025,11 @@ input:checked ~ .field-checkbox__name-text:after {
     opacity: 1;
 }
 
+.main-content__container--main .swiper-container {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
 .main-content__container--company .main-content__slide {
     overflow: hidden;
     border-radius: 6px;
@@ -3396,6 +3388,7 @@ input:checked ~ .field-checkbox__name-text:after {
     display: block;
     padding: 13px 16px;
     text-decoration: none;
+    margin-bottom: 0;
     color: #212a40;
 }
 
@@ -4924,6 +4917,10 @@ input:checked ~ .field-checkbox__name-text:after {
     .main-content__container--company {
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    .main-content__container--main .swiper-container {
+        border-radius: 6px 6px 0 0;
     }
 
     .main-content__container--main {

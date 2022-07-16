@@ -2,7 +2,7 @@
   transition: $time;
 
   &.active {
-    background-color: transparent;
+    //background-color: transparent;
 
     .collapse__title::after {
       transform: rotate(-0deg);
@@ -15,14 +15,13 @@
 }
 
 .collapse--faq {
-  padding: 13px 16px 13px 16px;
+  //padding: 13px 16px 13px 16px;
   border-radius: $border-radius;
   border: 1px solid $color-line-border;
-  background-color: $color-light;
 
   &.active {
     .collapse__title {
-      margin-bottom: 14px;
+      //margin-bottom: 14px;
     }
 
     .collapse__wrap {
@@ -46,15 +45,15 @@
   margin: 0;
   cursor: pointer;
   transition: $time;
-
-  padding-right: 30px;
+  background-color: $color-light;
+  padding: 14px 46px 16px 16px;
 
   &::after {
     display: block;
     content: '';
     position: absolute;
-    right: 0;
-    top: 3px;
+    right: 16px;
+    top: 19px;
     width: 14px;
     height: 14px;
     opacity: 0.2;
@@ -75,17 +74,20 @@
 .collapse__wrap {
   height: 0px;
   overflow: hidden;
-  border-top: 1px solid transparent;
-  margin-left: -16px;
-  margin-right: -16px;
-  padding-left: 16px;
-  padding-right: 16px;
+
+  background-color: transparent;
+  //margin-left: -16px;
+  //margin-right: -16px;
+  //padding-left: 16px;
+  //padding-right: 16px;
   transition: $time;
 }
 
 .collapse__content {
   opacity: 0.6;
-  margin-top: 14px;
+  padding: 14px 16px 16px;
+
+  //margin-top: 14px;
   transition: $time;
 
   @media (min-width: $screen-xl) {

@@ -167,8 +167,16 @@
   }
 
   &--main {
+    .swiper-container {
+      overflow: hidden;
+      border-radius: $border-radius-xl;
+
+      @media (min-width: $screen-xl) {
+        border-radius: $border-radius-xl $border-radius-xl 0 0;
+      }
+    }
+
     @media (min-width: $screen-xl) {
-      //overflow: hidden;
       padding-top: 0;
       border-top-left-radius: $border-radius-xl;
       border-top-right-radius: $border-radius-xl;
@@ -178,11 +186,6 @@
         border-top-right-radius: $border-radius-xl;
       }
     }
-    //background-color: $color-light;
-    // border-top: 1px solid $color-line-border;
-    // border-bottom: 1px solid $color-line-border;
-    //margin-left: 16px;
-    //margin-right: 18px;
   }
 }
 
