@@ -10,7 +10,9 @@
 .advantages__item {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 12px;
+  // Отстпу по последним правкам возможно придется вернуть
+  //margin-bottom: 12px;
+  margin-bottom: 24px;
 
   &:last-child {
     margin-bottom: 0;

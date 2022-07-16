@@ -3177,6 +3177,10 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
 }
 
+.main-content__container .hover-slide img {
+    border-radius: 6px;
+}
+
 .main-content__container .hover-slide:hover {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05), 0 3px 1px rgba(0, 0, 0, 0.03);
     transform: scale(1.01);
@@ -3571,7 +3575,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .advantages__item {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
 }
 
 .advantages__item:last-child {
@@ -5529,6 +5533,19 @@ input:checked ~ .field-checkbox__name-text:after {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .page-header__xs-row--burger-right {
+        justify-content: flex-end;
+    }
+
+    .page-header__xs-row--burger-right .page-header__burger {
+        margin-right: -16px;
+    }
+
+    .page-header__xs-row--logo-left .logo {
+        left: 16px;
+        transform: translate(0%, -50%);
     }
 
     .page-footer__service {

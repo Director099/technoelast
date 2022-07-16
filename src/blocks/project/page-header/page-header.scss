@@ -53,6 +53,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &--burger-right {
+      .page-header__burger {
+        margin-right: -16px;
+      }
+
+      justify-content: flex-end;
+    }
+
+    &--logo-left .logo {
+      left: 16px;
+      transform: translate(0%,-50%);
+    }
   }
 
   @media(min-width: $screen-xl) {
