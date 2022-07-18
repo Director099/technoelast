@@ -1,5 +1,5 @@
 mixin rubric({video, img, text})
-  a.rubric(href=`${video ? "#" : `img/test/${img}.jpg`}`)&attributes(attributes)
+  a.rubric(href=`${video ? "#" : `img/test/${img}`}`)&attributes(attributes)
     if (video)
       video(src="https://img.artlebedev.ru/everything/thunder/morda/cover.mp4"  playsinline=""  autoplay="" muted loop)
     else
