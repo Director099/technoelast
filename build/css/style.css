@@ -3005,12 +3005,12 @@ input:checked ~ .field-checkbox__name-text:after {
     padding-bottom: 16px;
 }
 
-.main-content__header--company {
-    padding-bottom: 21px;
+.main-content__header--company .main-content__title {
+    margin: 0;
 }
 
 .main-content__title {
-    margin-bottom: 0;
+    margin-bottom: 12px;
     font-weight: 600;
     letter-spacing: 0.1px;
 }
@@ -4888,10 +4888,6 @@ input:checked ~ .field-checkbox__name-text:after {
         max-width: 555px;
     }
 
-    .main-content__content .main-content__title {
-        margin-bottom: 16px;
-    }
-
     .main-content__header {
         padding-left: 24px;
         padding-right: 24px;
@@ -4901,6 +4897,10 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .main-content__header--bottom {
         padding-bottom: 24px;
+    }
+
+    .main-content__title {
+        margin-bottom: 16px;
     }
 
     .main-content__container {

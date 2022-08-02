@@ -93,10 +93,6 @@
 .main-content__content {
   @media (min-width: $screen-xl) {
     max-width: 555px;
-
-    .main-content__title {
-      margin-bottom: 16px;
-    }
   }
 }
 
@@ -120,26 +116,28 @@
 }
 
 .main-content__header--company {
-  padding-bottom: 21px;
+  //padding-bottom: 21px;
+
+  .main-content__title {
+    margin: 0;
+  }
 }
 
 
 
 .main-content__title {
-  margin-bottom: 0;
+  margin-bottom: 12px;
   font-weight: 600;
   letter-spacing: 0.1px;
 
   @media (min-width: $screen-xl) {
-    //margin-bottom: 8px;
-    //margin-bottom: 24px;/
+    margin-bottom: 16px;
   }
 }
 
 .main-content__container {
   position: relative;
   border: 1px solid transparent;
-  //padding: 1px 2px 0;
 
   &:hover {
     .swiper-button-next,
