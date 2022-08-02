@@ -334,32 +334,40 @@ fieldShareCopy.forEach((elem) => {
 });
 
 const btnIcon = document.querySelectorAll('.js-btn-icon');
-btnIcon.forEach((elem) => {
-  elem.addEventListener('click', (e) => {
+btnIcon.forEach(elem => {
+  const dislike = elem.dataset.icon === 'dislike';
+  const like = elem.dataset.icon === 'like';
+  const parent = elem.closest('.main-content__footer-user-evt');
+  const btnDislike = parent.querySelector('[data-icon="dislike"]');
+  const btnLike = parent.querySelector('[data-icon="like"]');
+  let currentCount = Number(btnLike.dataset.count);
+
+  const MAX_NUMBER_FORMATTING = 1000;
+  like ? elem.insertAdjacentHTML('beforeend', `<span class="btn-icon__text"></span>`) : '';
+  const textCount = btnLike.querySelector('.btn-icon__text');
+  const isNumberFormatting = MAX_NUMBER_FORMATTING > currentCount;
+  const stringCurrentCount = String(currentCount).slice(0, -2);
+  const lastStringCurrentCount = stringCurrentCount.length;
+  const isTotalCount = isNumberFormatting ? currentCount : String(currentCount).slice(0, -3) + `,${stringCurrentCount[lastStringCurrentCount - 1]} k`;
+  const isZero = currentCount > 0 ? isTotalCount : '';
+
+  textCount.textContent = isZero;
+
+  elem.addEventListener('click', e => {
     elem.classList.toggle('active');
-    const dislike = elem.dataset.icon === 'dislike';
-    const like = elem.dataset.icon === 'like';
-    const parent = elem.closest('.main-content__footer-user-evt');
-    const btnDislike = parent.querySelector('[data-icon="dislike"]');
-    const btnLike = parent.querySelector('[data-icon="like"]');
-    let textCount = btnLike.querySelector('.btn-icon__text');
 
-    if(textCount) {
-      const copyText = textCount.textContent;
+    if (like) btnDislike.classList.remove('active');
 
-      if (like) btnDislike.classList.remove('active');
+    if (dislike && btnLike.classList.contains('active')) {
+      btnLike.classList.remove('active');
+      textCount.textContent = isZero;
+    }
 
-      if (dislike && btnLike.classList.contains('active')) {
-        btnLike.classList.remove('active');
-        textCount.textContent = Number(copyText) - 1;
-      }
-
-      if (like) {
-        if(btnLike.classList.contains('active')) {
-          textCount.textContent = Number(copyText) + 1;
-        } else {
-          textCount.textContent = Number(copyText) - 1;
-        }
+    if (like) {
+      if (btnLike.classList.contains('active')) {
+        textCount.textContent = isNumberFormatting ? currentCount + 1 : isZero;
+      } else {
+        textCount.textContent = isZero;
       }
     }
   });
