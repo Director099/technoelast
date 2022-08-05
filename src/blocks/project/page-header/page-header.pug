@@ -1,7 +1,7 @@
 mixin page-header({modalHeader})
   header.page-header&attributes(attributes).page__header
     .container
-      .page-header__xs-row.page-header__xs-row--burger-right.page-header__xs-row--logo-left
+      .page-header__xs-row.page-header__xs-row--burger-right
         if(modalHeader !== true)
           +burger('Меню').d-xl-none.page-header__burger
         else
