@@ -418,6 +418,11 @@ a.btn--disabled {
     box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
 }
 
+.btn--main:active {
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 8px, transparent 0, transparent 20px);
+    animation: 0.5s linear 0s normal none infinite running typoWorking;
+}
+
 .btn--main-b {
     color: #3d81c6;
     border-color: #3d81c6;
@@ -441,6 +446,11 @@ a.btn--disabled {
 
 .btn--ios:hover {
     background-color: #f4f4f8;
+}
+
+.btn--ios:active {
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 8px, transparent 0, transparent 20px);
+    animation: 0.5s linear 0s normal none infinite running typoWorking;
 }
 
 .btn.animated {
@@ -3403,6 +3413,7 @@ input:checked ~ .field-checkbox__name-text:after {
     text-decoration: none;
     margin-bottom: 0;
     color: #212a40;
+    border: none;
 }
 
 .nav-list__link a {
