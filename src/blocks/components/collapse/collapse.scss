@@ -32,10 +32,6 @@
   @media (max-width: $screen-xl - 1) {
     @include text-normal();
   }
-
-  //@media (min-width: $screen-xl) {
-  //  background-color: #f5f5f6;
-  //}
 }
 
 .collapse__title {
@@ -45,7 +41,7 @@
   margin: 0;
   cursor: pointer;
   transition: $time;
-  background-color: $color-light;
+  background-color: #f5f5f6;
   padding: 14px 46px 16px 16px;
 
   &::after {
