@@ -36,23 +36,6 @@ $field-padding-horizontal:    14px !default;
   cursor: pointer;
   letter-spacing: 0.3px;
 
-  &:hover,
-  &:focus {
-    //text-decoration: none;
-    //color: $text-color;
-    //background-color: darken($gray-lightest, 10%);
-    //border-color: darken($gray-lighter, 12%);
-  }
-
-  //&:visited {
-  //  color: $text-color;
-  //}
-
-  //&:active,
-  //&:focus {
-  //  @include field-focus;
-  //}
-
   &--disabled,
   &:disabled {
     opacity: $opacity;
@@ -66,42 +49,32 @@ $field-padding-horizontal:    14px !default;
     }
   }
 
+  &--main {
+    color: $white;
+    background-color: $color-primary;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+    //border: 1px solid $color-primary;
+    border: 1px solid #EAECEE;
 
-//   &--disabled,
-//   &:disabled {
-//     color: #fff;
-//     background-color: $color-main;
-//     border-color: $color-main;
-//   }
+    @media (min-width: $screen-xl) {
+     font-weight: 500;
+    }
 
-  // &__icon {
-  //   display: inline-block;
-  //   vertical-align: middle;
-  // }
-
-
-
-   &--main {
+    &:hover {
      color: $white;
-     background-color: $color-primary;
+     background: #2F74BA;
+    }
+
+    &:focus {
+     border: 1px solid #8D8D8D;
      box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
-     //border: 1px solid $color-primary;
-     border: 1px solid #EAECEE;
+    }
 
-     @media (min-width: $screen-xl) {
-       font-weight: 500;
-     }
-
-     &:hover {
-       color: $white;
-       background: #2F74BA;
-     }
-
-     &:focus {
-       border: 1px solid #8D8D8D;
-       box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
-     }
-   }
+    &:active {
+     background-image: repeating-linear-gradient(45deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 8px,transparent 0,transparent 20px);
+     animation: .5s linear 0s normal none infinite running typoWorking;
+    }
+  }
 
   &--main-b {
     color: $color-primary;
@@ -125,6 +98,11 @@ $field-padding-horizontal:    14px !default;
 
     &:hover {
       background-color: #F4F4F8;
+    }
+
+    &:active {
+      background-image: repeating-linear-gradient(45deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 8px,transparent 0,transparent 20px);
+      animation: .5s linear 0s normal none infinite running typoWorking;
     }
   }
 
