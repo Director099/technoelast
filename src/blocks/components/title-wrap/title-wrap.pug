@@ -1,6 +1,11 @@
 mixin title-wrap(name)
-  section.title-wrap&attributes(attributes)
-    h2.title-normal.title-wrap__title= name
-    block
-    .title-wrap__desc
-      p Разнообразный и богатый опыт дальнейшее развитие
+	section.title-wrap&attributes(attributes)
+		h2.title-normal.title-wrap__title
+			span.title-wrap__name= name
+			span.emoji-row
+				img(src="img/icon/emoji-like.png", alt="")
+				img(src="img/icon/emoji-cloud.png", alt="")
+				img(src="img/icon/emoji-smile.png", alt="")
+		block
+		.title-wrap__desc
+			p Разнообразный и богатый опыт дальнейшее развитие

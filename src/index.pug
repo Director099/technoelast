@@ -1,12 +1,12 @@
 extends pug/layout.pug
 
 block meta
-  title Главная
+	title Главная
 block header
-  +page-header({})
+	+page-header({})
 block content
-  main
-    +navigation(
+	main
+		+navigation(
       [
         {
           text: 'Продукция', className: '',
@@ -25,62 +25,67 @@ block content
           attrs: {href: '#modal-contact', 'data-fancybox': ''}
         }
       ]
-    )
-    +main-content({
+		)
+		+main-content({
       mainSlider: true,
       contentFooter: true,
       className: 'd-xl-none'
     })
-      .main-content__content-wrap.main-content__content-wrap--xl-row
-        .main-content__content
-          h1.title-big.main-content__title Резинотехнические изделия
-          .main-content__desc
-            p Произведем формовые резинотехнические изделия под заказ по вашим чертежам
-          .main-content__btn
-            a.btn.btn--main(href="#modal-message-order" data-fancybox="") Обсудить проект
-            a.btn.btn--ios(href="#modal-message-order" data-fancybox="") Заказать
-        .main-content__price.d-none.d-xl-block
-          +price({iconSale: '22%'})
-    hr.line
-    +production({
-        title: 'Продукция',
-        filter: true,
-        categoryTag: 'a'
+			.main-content__content-wrap.main-content__content-wrap--xl-row
+				.main-content__content
+					h1.title-big.main-content__title
+						span.main-content__title-name Резинотехнические изделия
+						span.emoji-row
+							img(src="img/icon/emoji-like.png", alt="")
+							img(src="img/icon/emoji-cloud.png", alt="")
+							img(src="img/icon/emoji-smile.png", alt="")
+					.main-content__desc
+						p Произведем формовые резинотехнические изделия под заказ по вашим чертежам
+					.main-content__btn
+						a.btn.btn--main(href="#modal-message-order" data-fancybox="") Обсудить проект
+						a.btn.btn--ios(href="#modal-message-order" data-fancybox="") Заказать
+				.main-content__price.d-none.d-xl-block
+					+price({iconSale: '22%'})
+		hr.line
+		+production({
+      title: 'Продукция',
+      filter: true,
+      categoryTag: 'a'
     })
-    hr.line
-    +list-production({
+		hr.line
+		+list-production({
       title: 'Продукция'
     })
-    hr.line
-    +privileges()
-    hr.line
-    +services()
-    hr.line
-    +theses()
-    hr.line
-    +advantages('Преимущества 🔥')
-    hr.line
-    +partner()
-    hr.line
-    +reviews({
-        title: 'Отзывы',
-        filter: true,
-        tplSlider: true
+		hr.line
+		+privileges()
+		hr.line
+		+services()
+		hr.line
+		+theses()
+		hr.line
+		+advantages('Преимущества 🔥')
+		hr.line
+		+partner()
+		hr.line
+		+reviews({
+      title: 'Отзывы',
+      filter: true,
+      tplSlider: true
     })
-    hr.line
-    +interview()
-    hr.line
-    +block-content()
-    hr.line
-    +block-content-2()
-    hr.line
-    +faq()
-    hr.line
-    +write()
-    hr.line
-    +contacts({})
-    hr.line
-    +nav-list(
+		hr.line
+		+interview()
+		hr.line
+		+block-content()
+		hr.line
+		+block-content-2()
+		hr.line
+		+faq()
+		hr.line
+		+write()
+		hr.line
+		+contacts({})
+		hr.line
+		+nav-list(
       [
         {
           link: 'products.html', text: 'Продукция'
@@ -95,7 +100,7 @@ block content
           attrs: {href: '#modal-contact', 'data-fancybox': ''}, text: 'Контакты'
         },
       ]
-    ).d-xl-none
-    hr.line
-    +block-form()
+		).d-xl-none
+		hr.line
+		+block-form()
 

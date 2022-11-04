@@ -1041,6 +1041,10 @@ a.btn--disabled {
     margin-bottom: 0;
 }
 
+.title-wrap__name {
+    margin-right: 8px;
+}
+
 .title-wrap__desc {
     width: 100%;
 }
@@ -2955,6 +2959,19 @@ input:checked ~ .field-checkbox__name-text:after {
     transition: 0.3s;
 }
 
+.emoji-row {
+    display: inline-flex;
+    gap: 8px;
+    margin-top: -4px;
+    vertical-align: middle;
+}
+
+.emoji-row img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 .page-header {
     position: relative;
     padding-top: 16px;
@@ -3037,6 +3054,10 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 12px;
     font-weight: 600;
     letter-spacing: 0.1px;
+}
+
+.main-content__title-name {
+    margin-right: 8px;
 }
 
 .main-content__container {

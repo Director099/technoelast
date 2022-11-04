@@ -1,0 +1,12 @@
+.emoji-row {
+  display: inline-flex;
+  gap: 8px;
+  margin-top: -4px;
+  vertical-align: middle;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
