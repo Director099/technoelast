@@ -274,6 +274,71 @@
     return false;
   });
 
+  class FormStep {
+    constructor(selector, {
+      btnNext,
+      btnPrev,
+      parentGroup,
+      ...cbFunc
+    }) {
+      this.$el = selector;
+      this._this = this;
+      this._parentGroup = this.$el.querySelectorAll(parentGroup);
+      this._elemNext = this.$el.querySelectorAll(btnNext);
+      this._elemPrev = this.$el.querySelectorAll(btnPrev);
+      this._STEP = 0;
+      this.options = cbFunc;
+
+      this._init();
+    }
+
+    step(step = this._STEP) {
+      this._STEP = step;
+
+      this._parentGroup.forEach((e, index) => step === index ? e.style = null : e.style.display = 'none');
+    }
+
+    stepNext() {
+      if (this.options.onNextHandler) {
+        this.options.onNextHandler(this._parentGroup[this._STEP], result => {
+          if (result) this.step(++this._STEP);
+        });
+      } else {
+        this.step(++this._STEP);
+      }
+    }
+
+    stepPrev() {
+      if (this.options.onPrevHandler) {
+        this.options.onPrevHandler(this._parentGroup[this._STEP], result => {
+          if (result) this.step(--this._STEP);
+        });
+      } else {
+        this.step(--this._STEP);
+      }
+    }
+
+    handleNext() {
+      this._elemNext.forEach(elemNext => elemNext.addEventListener('click', () => this.stepNext()));
+    }
+
+    handlePrev() {
+      this._elemPrev.forEach(elemPrev => elemPrev.addEventListener('click', () => this.stepPrev()));
+    }
+
+    _events() {
+      this.handleNext();
+      this.handlePrev();
+    }
+
+    _init() {
+      this.step();
+
+      this._events();
+    }
+
+  }
+
   $('[data-fancybox]').fancybox({
     touch: false
   });
@@ -524,32 +589,40 @@
       }
     }
   });
-  const wrapCheckForm = document.querySelectorAll('.js-check-group');
-
-  if (wrapCheckForm) {
-    wrapCheckForm.forEach(elem => {
-      const btnElemNext = elem.querySelector('.js-form-next');
-      const btnElemPrev = elem.querySelector('.js-form-prev');
-
-      if (btnElemPrev) {
-        btnElemPrev.addEventListener('click', () => {
-          let parent = elem.closest('.form__fieldset');
-          parent.classList.add('d-none');
-          parent.previousElementSibling.classList.remove('d-none');
-        });
-      }
-
-      if (btnElemNext) {
-        btnElemNext.addEventListener('click', () => {
-          if (elem.querySelectorAll('input:checked').length === 0) return false;
-          let parent = elem.closest('.form__fieldset');
-          parent.classList.add('d-none');
-          parent.nextElementSibling.classList.remove('d-none');
-        });
+  const elemsFormStep = document.querySelectorAll(".js-form-step");
+  elemsFormStep.forEach(elem => {
+    const fieldCheckInput = elem.querySelectorAll('[type="checkbox"], [type="radio"]');
+    const formStep = new FormStep(elem, {
+      parentGroup: '.form__fieldset',
+      btnNext: '.js-form-next',
+      btnPrev: '.js-form-prev',
+      onNextHandler: ($currentElementStep, cb) => {
+        const allCheckInputGroup = $currentElementStep.querySelectorAll('input:checked');
+        cb(allCheckInputGroup.length !== 0);
       }
     });
-  }
+    let timeout;
 
+    function startTimeout(btnElem) {
+      timeout = setTimeout(() => {
+        btnElem.classList.remove('animated');
+        formStep.stepNext();
+      }, 500); // ХЗ сколько поставить, написано 0,7 но это пздц
+    }
+
+    function stopTimeout(btnElem) {
+      btnElem.classList.add('animated');
+      clearTimeout(timeout);
+    }
+
+    fieldCheckInput.forEach(input => {
+      input.addEventListener('click', evt => {
+        const btnNext = evt.target.closest('.form__fieldset').querySelector('.js-form-next');
+        stopTimeout(btnNext);
+        startTimeout(btnNext);
+      });
+    });
+  });
   const fieldTextarea = $('.js-tx-auto-height');
   fieldTextarea.on('keyup paste', function () {
     var $el = $(this),

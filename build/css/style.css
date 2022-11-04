@@ -443,6 +443,20 @@ a.btn--disabled {
     background-color: #f4f4f8;
 }
 
+.btn.animated {
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 8px, transparent 0, transparent 20px);
+    animation: 0.5s linear 0s normal none infinite running typoWorking;
+}
+
+@keyframes typoWorking {
+    from {
+        background-position: 28px 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
 .btn-icon {
     position: relative;
     display: flex;

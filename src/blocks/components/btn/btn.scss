@@ -128,6 +128,12 @@ $field-padding-horizontal:    14px !default;
     }
   }
 
+
+  &.animated {
+    background-image: repeating-linear-gradient(45deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 8px,transparent 0,transparent 20px);
+    animation: .5s linear 0s normal none infinite running typoWorking;
+  }
+
   @media (min-width: $screen-xl) {
     font-size: 14px;
     line-height: 20px;
@@ -135,5 +141,15 @@ $field-padding-horizontal:    14px !default;
     padding-top: 9px;
     padding-bottom: 9px;
     letter-spacing: 0.15px;
+  }
+}
+
+@keyframes typoWorking {
+  from {
+    background-position: 28px 0
+  }
+
+  to {
+    background-position: 0 0
   }
 }

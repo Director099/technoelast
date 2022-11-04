@@ -8,6 +8,7 @@ import '../blocks/components/field-file/field-file.js';
 import '../blocks/components/collapse/collapse.js';
 import '../blocks/components/field-text/field-text.js';
 import '../blocks/components/form/form.js';
+import {FormStep} from "../blocks/components/form-step/form-step";
 
 $('[data-fancybox]').fancybox({
   touch: false
@@ -263,31 +264,43 @@ window.addEventListener('load', function () {
     }
 });
 
-const wrapCheckForm = document.querySelectorAll('.js-check-group');
+const elemsFormStep = document.querySelectorAll(".js-form-step");
 
-if(wrapCheckForm) {
-  wrapCheckForm.forEach((elem) => {
-    const btnElemNext = elem.querySelector('.js-form-next');
-    const btnElemPrev = elem.querySelector('.js-form-prev');
-
-    if (btnElemPrev) {
-      btnElemPrev.addEventListener('click', () => {
-        let parent = elem.closest('.form__fieldset');
-        parent.classList.add('d-none');
-        parent.previousElementSibling.classList.remove('d-none');
-      });
-    }
-
-    if (btnElemNext) {
-      btnElemNext.addEventListener('click', () => {
-        if (elem.querySelectorAll('input:checked').length === 0) return false;
-        let parent = elem.closest('.form__fieldset');
-        parent.classList.add('d-none');
-        parent.nextElementSibling.classList.remove('d-none');
-      });
+elemsFormStep.forEach((elem) => {
+  const fieldCheckInput = elem.querySelectorAll('[type="checkbox"], [type="radio"]');
+  const formStep = new FormStep(elem, {
+    parentGroup: '.form__fieldset',
+    btnNext: '.js-form-next',
+    btnPrev: '.js-form-prev',
+    onNextHandler: ($currentElementStep, cb) => {
+      const allCheckInputGroup = $currentElementStep.querySelectorAll('input:checked');
+      cb(allCheckInputGroup.length !== 0)
     }
   });
-}
+
+  let timeout;
+
+  function startTimeout(btnElem) {
+    timeout = setTimeout(() => {
+      btnElem.classList.remove('animated');
+      formStep.stepNext()
+    }, 500); // ХЗ сколько поставить, написано 0,7 но это пздц
+  }
+
+  function stopTimeout(btnElem) {
+    btnElem.classList.add('animated');
+    clearTimeout(timeout);
+  }
+
+  fieldCheckInput.forEach((input) => {
+    input.addEventListener('click', (evt) => {
+      const btnNext = evt.target.closest('.form__fieldset').querySelector('.js-form-next');
+      stopTimeout(btnNext);
+      startTimeout(btnNext);
+    })
+  })
+});
+
 
 const fieldTextarea = $('.js-tx-auto-height');
 
