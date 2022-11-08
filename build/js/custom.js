@@ -607,7 +607,7 @@
       timeout = setTimeout(() => {
         btnElem.classList.remove('animated');
         formStep.stepNext();
-      }, 500); // ХЗ сколько поставить, написано 0,7 но это пздц
+      }, 1500); // ХЗ сколько поставить, написано 0,7 но это пздц
     }
 
     function stopTimeout(btnElem) {
