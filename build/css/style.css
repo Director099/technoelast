@@ -1041,10 +1041,6 @@ a.btn--disabled {
     margin-bottom: 0;
 }
 
-.title-wrap__name {
-    margin-right: 8px;
-}
-
 .title-wrap__desc {
     width: 100%;
 }
@@ -3054,10 +3050,6 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 12px;
     font-weight: 600;
     letter-spacing: 0.1px;
-}
-
-.main-content__title-name {
-    margin-right: 8px;
 }
 
 .main-content__container {
