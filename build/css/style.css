@@ -5621,12 +5621,24 @@ input:checked ~ .field-checkbox__name-text:after {
         background-image: none !important;
     }
 
+    .production-list {
+        background-color: white;
+    }
+
     .production-list__item {
         border-bottom: 1px solid rgba(176, 182, 210, 0.33);
     }
 
     .production-list__item:first-child {
         border-top: 1px solid rgba(176, 182, 210, 0.33);
+    }
+
+    .production-all {
+        background-color: #efeff4;
+    }
+
+    .production-all .section-content__btn {
+        margin-top: 10px;
     }
 
     .block-content {

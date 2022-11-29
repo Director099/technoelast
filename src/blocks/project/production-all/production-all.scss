@@ -3,6 +3,13 @@
     background-color: transparent;
     padding: 0;
   }
+
+  @media (max-width: $screen-xl - 1) {
+    background-color: #efeff4;
+    .section-content__btn {
+      margin-top: 10px;
+    }
+  }
 }
 
 .production-all .section-content__wrap {

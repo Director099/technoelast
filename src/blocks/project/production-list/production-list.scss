@@ -9,6 +9,10 @@
     grid-template-columns: 1fr;
     margin-bottom: 16px;
   }
+
+  @media (max-width: $screen-xl - 1) {
+    background-color: $white;
+  }
 }
 
 .production-list__item {
