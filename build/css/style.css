@@ -3709,6 +3709,7 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 
 .product__img {
+    display: block;
     height: 137px;
 }
 
