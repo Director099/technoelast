@@ -4642,15 +4642,13 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .modal--char .modal__dialog {
-        width: auto;
+        max-width: 757px;
     }
 
     .modal--char .modal__body {
-        max-width: 757px;
         margin-left: auto;
         margin-right: auto;
         padding: 54px 54px 39px;
-        width: 100%;
     }
 
     .modal--char .line-clump {
@@ -4903,7 +4901,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .main-content--p-current .main-content__container {
-        max-width: 410px;
+        width: 410px;
         min-height: 410px;
         height: 100%;
         padding: 0;
