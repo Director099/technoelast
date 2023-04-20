@@ -213,11 +213,16 @@ $z-index-modal:               100 !default;
   }
 
   @media (min-width: $screen-xl) {
+    .modal__dialog {
+      width: auto;
+    }
+
     .modal__body {
-      max-width: 649px;
+      max-width: 757px;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 54px;
+      padding: 54px 54px 39px;
+      width: 100%;
     }
 
     .line-clump {

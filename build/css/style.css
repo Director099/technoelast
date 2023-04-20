@@ -381,7 +381,7 @@ template {
     text-decoration: none;
     text-transform: none;
     color: #212a40;
-    border-radius: 5px;
+    border-radius: 16px;
     border: 1px solid #cccccc;
     background-color: #e6e6e6;
     background-image: none;
@@ -784,7 +784,7 @@ a.btn--disabled {
     font-size: 13px;
     line-height: 17px;
     position: absolute;
-    right: 32px;
+    right: 15px;
     top: 23px;
     color: #3d81c6;
     font-weight: 500;
@@ -4640,11 +4640,16 @@ input:checked ~ .field-checkbox__name-text:after {
         padding: 108px 0;
     }
 
+    .modal--char .modal__dialog {
+        width: auto;
+    }
+
     .modal--char .modal__body {
-        max-width: 649px;
+        max-width: 757px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 54px;
+        padding: 54px 54px 39px;
+        width: 100%;
     }
 
     .modal--char .line-clump {
@@ -4897,8 +4902,8 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .main-content--p-current .main-content__container {
-        max-width: 255px;
-        min-height: 255px;
+        max-width: 410px;
+        min-height: 410px;
         height: 100%;
         padding: 0;
         background-color: #efeff4;
@@ -4957,13 +4962,7 @@ input:checked ~ .field-checkbox__name-text:after {
 
     .main-content__container--main {
         padding-top: 0;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-    }
-
-    .main-content__container--main .swiper-container {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
+        border-radius: 6px;
     }
 
     .main-content__pagination {
@@ -5578,8 +5577,7 @@ input:checked ~ .field-checkbox__name-text:after {
     }
 
     .page-footer__service {
-        padding-top: 38px;
-        padding-bottom: 38px;
+        padding: 38px 60px;
     }
 
     .page-footer__develop {

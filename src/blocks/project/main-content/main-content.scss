@@ -60,8 +60,8 @@
     padding: 16px 30px 16px 16px;
 
     .main-content__container {
-      max-width: 255px;
-      min-height: 255px;
+      max-width: 410px;
+      min-height: 410px;
       height: 100%;
       padding: 0;
       background-color: $color-light;
@@ -176,13 +176,7 @@
 
     @media (min-width: $screen-xl) {
       padding-top: 0;
-      border-top-left-radius: $border-radius-xl;
-      border-top-right-radius: $border-radius-xl;
-
-      .swiper-container {
-        border-top-left-radius: $border-radius-xl;
-        border-top-right-radius: $border-radius-xl;
-      }
+      border-radius: $border-radius-xl;
     }
   }
 }
