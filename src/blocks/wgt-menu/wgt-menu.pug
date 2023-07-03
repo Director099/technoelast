@@ -1,9 +1,11 @@
 mixin wgt-menu()
   .wgt-menu
-    button.wgt-menu__btn(type="button")
+    button.wgt-menu__btn(type="button" data-timer-show-message='15')
       span.wgt-menu__btn-wrap
         span.wgt-menu__btn-icon.wgt-menu__btn-icon--1
         span.wgt-menu__btn-icon.wgt-menu__btn-icon--2
+      span.wgt-menu__count-message 1
+      span.wgt-menu__tooltip Привет! На связи эксперт по остеклению загородных домов stekot.ru, какой у Вас вопрос?
     .wgt-menu__menu
       ul.wgt-menu__menu-list
         li.wgt-menu__menu-item
