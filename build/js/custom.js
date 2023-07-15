@@ -1,7 +1,7 @@
 (function (factory) {
   typeof define === 'function' && define.amd ? define('custom', factory) :
   factory();
-})((function () { 'use strict';
+}((function () { 'use strict';
 
   document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('to-top')) {
@@ -145,7 +145,7 @@
   });
 
   $('.js-form').each(function () {
-    new ValidateForm($(this));
+    var validForm = new ValidateForm($(this));
   });
   function ValidateForm(elem) {
     var _this = this;
@@ -201,7 +201,7 @@
           }
         }
         if (elem.type == 'tel') {
-          new Inputmask({
+          const tel = new Inputmask({
             mask: "+7 (999) 999 99 99",
             showMaskOnHover: false
           }).mask(document.querySelectorAll("[type='tel']"));
@@ -624,4 +624,4 @@
     });
   });
 
-}));
+})));
