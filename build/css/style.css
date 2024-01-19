@@ -304,9 +304,7 @@ template {
     margin: 0;
     padding: 13.5px 14px;
     white-space: nowrap;
-    -webkit-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     text-align: center;
     font-size: 17px;
     line-height: 21px;
@@ -552,17 +550,15 @@ a.btn--disabled {
     padding-left: 10px;
 }
 .grid {
-    display: -ms-grid;
-    display:     grid;
+    display: grid;
     grid-gap: 32px;
-    -ms-grid-columns: (minmax(125px, 1fr))[auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
 }
 .grid-row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 .grid-row > * {
     flex-basis: 100%;
@@ -570,8 +566,8 @@ a.btn--disabled {
 .grid-row--i-12 {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 6px;
-    margin-right: 6px;
+    margin-left: -6px;
+    margin-right: -6px;
     gap: 12px 0;
 }
 .grid-row--i-12 > * {
@@ -627,18 +623,14 @@ a.btn--disabled {
     padding-right: 8px;
 }
 .grid-tpl {
-    display: -ms-grid;
-    display:     grid;
+    display: grid;
     grid-gap: 12px;
-    -ms-grid-columns: (minmax(185px, 1fr))[auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
 }
 .grid-tpl--2 {
-    -ms-grid-columns: (minmax(288px, 1fr))[auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
 }
 .grid-tpl--3 {
-    -ms-grid-columns: (minmax(288px, 1fr))[auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
 }
 .grid-tpl--ai-s {
@@ -748,8 +740,8 @@ a.btn--disabled {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: -4px;
+    margin-right: -4px;
     flex-wrap: nowrap;
 }
 .tags-list > * {
@@ -786,9 +778,7 @@ a.btn--disabled {
     padding: 0;
     background: transparent;
     border: none;
-    -webkit-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     cursor: pointer;
     flex-shrink: 0;
 }
@@ -994,10 +984,6 @@ a.btn--disabled {
 }
 .field-text__input[type=color] {
     padding: 0;
-}
-.field-text__input:-ms-input-placeholder {
-    color: hsl(0, 0%, 50%);
-    opacity: 1;
 }
 .field-text__input::placeholder {
     color: hsl(0, 0%, 50%);
@@ -1470,9 +1456,7 @@ input:checked ~ .field-checkbox__name-text:after {
     margin-bottom: 8px;
 }
 .section-content__grid-review .swiper-wrapper {
-    display: -ms-grid;
-    display:     grid;
-    -ms-grid-columns: (minmax(136px, 1fr))[auto-fill];
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
     grid-gap: 12px;
 }
@@ -1648,6 +1632,7 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 17px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 11px;
 }
@@ -2135,6 +2120,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .tovar__title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 15px;
     line-height: 20px;
@@ -2153,6 +2139,7 @@ input:checked ~ .field-checkbox__name-text:after {
 .tovar__commet {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 13px;
     line-height: 17px;
@@ -2346,7 +2333,6 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 22px;
 }
 .privilege__price .sale {
-    -ms-grid-row-align: center;
     align-self: center;
     font-size: 12px;
     line-height: 14px;
@@ -2448,7 +2434,6 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 22px;
 }
 .service__price .sale {
-    -ms-grid-row-align: center;
     align-self: center;
     font-size: 12px;
     line-height: 14px;
@@ -3145,6 +3130,7 @@ input:checked ~ .field-checkbox__name-text:after {
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     min-height: 34px;
 }
@@ -3242,6 +3228,7 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 17px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     color: #212a40;
     opacity: 0.5;
@@ -3325,8 +3312,7 @@ input:checked ~ .field-checkbox__name-text:after {
     line-height: 25px;
 }
 .rubric-content__col {
-    display: -ms-grid;
-    display:     grid;
+    display: grid;
     grid-gap: 12px;
 }
 .modal-ios {
@@ -3338,9 +3324,11 @@ input:checked ~ .field-checkbox__name-text:after {
 .line-clump {
     display: -webkit-box;
     -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 .line-clump.active {
+    -webkit-box-orient: inherit;
     -webkit-line-clamp: inherit;
     display: block;
     max-height: inherit;
@@ -3507,7 +3495,6 @@ input:checked ~ .field-checkbox__name-text:after {
     }
     .grid {
         grid-gap: 36px;
-        -ms-grid-columns: (calc(25% - 27px))[4];
         grid-template-columns: repeat(4, calc(25% - 27px));
     }
     .grid-row--mb32 .grid-row__col:nth-child(n+5) {
@@ -3553,25 +3540,20 @@ input:checked ~ .field-checkbox__name-text:after {
         flex-basis: auto;
     }
     .grid-row-xl {
-        display: -ms-grid;
-        display:     grid;
+        display: grid;
         grid-gap: 12px;
-        -ms-grid-columns: (calc(20% - 9.6px))[auto-fill];
         grid-template-columns: repeat(auto-fill, calc(20% - 9.6px));
     }
     .grid-row-xl .section-content__item {
         margin-bottom: 0;
     }
     .grid-tpl--2 {
-        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
     .grid-tpl--3 {
-        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
     .grid-tpl--4 {
-        -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     .tag-link--filter {
@@ -3750,7 +3732,6 @@ input:checked ~ .field-checkbox__name-text:after {
         margin-bottom: 0;
     }
     .section-content__grid-review .swiper-wrapper {
-        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
     .section-content__grid-review .rev-img {
@@ -3836,6 +3817,7 @@ input:checked ~ .field-checkbox__name-text:after {
         line-height: 18px;
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
         overflow: hidden;
         min-height: 48px;
         line-height: 16px;
@@ -3873,6 +3855,7 @@ input:checked ~ .field-checkbox__name-text:after {
         max-width: 460px;
         display: -webkit-box;
         -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
         overflow: hidden;
     }
     .modal {
@@ -4266,7 +4249,7 @@ input:checked ~ .field-checkbox__name-text:after {
         border-bottom: 0;
     }
     .nav-list__link.active {
-        background-color: rgba(255, 255, 255, 0.0033);
+        background-color: rgba(255, 255, 255, 0.33);
     }
     .nav-list__link {
         padding-top: 9.5px;
@@ -4332,10 +4315,8 @@ input:checked ~ .field-checkbox__name-text:after {
         box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
     }
     .production-list {
-        display: -ms-grid;
-        display:     grid;
+        display: grid;
         grid-gap: 16px;
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         margin-bottom: 16px;
     }
@@ -4375,6 +4356,7 @@ input:checked ~ .field-checkbox__name-text:after {
     .product-item__desc {
         display: -webkit-box;
         -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
         overflow: hidden;
         font-size: 14px;
         line-height: 20px;
@@ -4738,12 +4720,12 @@ input:checked ~ .field-checkbox__name-text:after {
 }
 @media (min-width: none) {
     .grid-row {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
     .grid-row--i-12 {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 @media (max-width: 1200px) {

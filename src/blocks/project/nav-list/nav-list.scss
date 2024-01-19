@@ -112,9 +112,10 @@
 
   &.active {
     @media (min-width: $screen-xl) {
-      background-color: rgba($white, 0.33%);
+      background-color: rgba($white, 0.33);
     }
   }
+
 
   @media (min-width: $screen-xl) {
     padding-top: 9.5px;

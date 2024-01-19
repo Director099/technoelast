@@ -129,47 +129,47 @@ $grid-gutter-width:           30px !default;
   }
 
   @if ($xs-grid-gutter != 0) {
-    margin-left: math.div($xs-grid-gutter, 2);
-    margin-right: math.div($xs-grid-gutter, 2);
+    margin-left: math.div(-$xs-grid-gutter, 2);
+    margin-right: math.div(-$xs-grid-gutter, 2);
   }
 
   @if ($sm-grid-gutter != $xs-grid-gutter) {
 
     @media (min-width: $screen-sm) {
-      margin-left: math.div($sm-grid-gutter, 2);
-      margin-right: math.div($sm-grid-gutter, 2);
+      margin-left: math.div(-$sm-grid-gutter, 2);
+      margin-right: math.div(-$sm-grid-gutter, 2);
     }
   }
 
   @if ($md-grid-gutter != $sm-grid-gutter) {
 
     @media (min-width: $screen-md) {
-      margin-left: math.div($md-grid-gutter, 2);
-      margin-right: math.div($md-grid-gutter, 2);
+      margin-left: math.div(-$md-grid-gutter, 2);
+      margin-right: math.div(-$md-grid-gutter, 2);
     }
   }
 
   @if ($lg-grid-gutter != $md-grid-gutter) {
 
     @media (min-width: $screen-lg) {
-      margin-left: math.div($lg-grid-gutter, 2);
-      margin-right: math.div($lg-grid-gutter, 2);
+      margin-left: math.div(-$lg-grid-gutter, 2);
+      margin-right: math.div(-$lg-grid-gutter, 2);
     }
   }
 
   @if ($xl-grid-gutter != $lg-grid-gutter) {
 
     @media (min-width: $screen-xl) {
-      margin-left: math.div($xl-grid-gutter, 2);
-      margin-right: math.div($xl-grid-gutter, 2);
+      margin-left: math.div(-$xl-grid-gutter, 2);
+      margin-right: math.div(-$xl-grid-gutter, 2);
     }
   }
 
   @if ($xxl-grid-gutter != $xl-grid-gutter) {
 
     @media (min-width: $screen-xxl) {
-      margin-left: math.div($xxl-grid-gutter, 2);
-      margin-right: math.div($xxl-grid-gutter, 2);
+      margin-left: math.div(-$xxl-grid-gutter, 2);
+      margin-right: math.div(-$xxl-grid-gutter, 2);
     }
   }
 }
